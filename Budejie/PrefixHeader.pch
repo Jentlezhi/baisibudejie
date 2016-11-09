@@ -1,0 +1,26 @@
+//
+//  PrefixHeader.pch
+//  Budejie
+//
+//  Created by Jentle on 2016/11/7.
+//  Copyright © 2016年 Jentle. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+#import "BSLog.h"
+#import "SystemConfig.h"
+#import "UIColor+Extension.h"
+#import "UIImage+Extension.h"
+#import "UIView+Extension.h"
+#import "NSObject+Extension.h"
+#import "UIButton+Extension.h"
+#define MAS_SHORTHAND_GLOBALS
+#import "masonry.h"
+#import "BSColorConstant.h"
+#import "BSFontConstant.h"
+#import "BSSystemConstant.h"
+#import <ReactiveCocoa/ReactiveCocoa.h>
+
+#endif /* PrefixHeader_pch */

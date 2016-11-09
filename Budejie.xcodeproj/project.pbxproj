@@ -1,0 +1,954 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		8C4D7ECA1DD1B4300076D629 /* NSObject+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C4D7EC91DD1B4300076D629 /* NSObject+Extension.m */; };
+		8C5CB2AF1DD1C9EE008AB412 /* UIButton+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C5CB2AE1DD1C9EE008AB412 /* UIButton+Extension.m */; };
+		8C5CB2B21DD1D693008AB412 /* BSTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C5CB2B11DD1D693008AB412 /* BSTestViewController.m */; };
+		8CA5E3E71DD07359001EDAF2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CA5E3E61DD07359001EDAF2 /* main.m */; };
+		8CA5E3F21DD07359001EDAF2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8CA5E3F11DD07359001EDAF2 /* Assets.xcassets */; };
+		8CA5E4001DD0735A001EDAF2 /* BudejieTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CA5E3FF1DD0735A001EDAF2 /* BudejieTests.m */; };
+		8CA5E40B1DD0735A001EDAF2 /* BudejieUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CA5E40A1DD0735A001EDAF2 /* BudejieUITests.m */; };
+		8CA5E4241DD0754D001EDAF2 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CA5E41A1DD0754D001EDAF2 /* AppDelegate.m */; };
+		8CA5E4281DD077A6001EDAF2 /* BSBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CA5E4271DD077A6001EDAF2 /* BSBaseViewController.m */; };
+		8CA5E42A1DD077B0001EDAF2 /* BSBaseViewController.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 8CA5E4291DD077B0001EDAF2 /* BSBaseViewController.bundle */; };
+		8CA5E45D1DD07865001EDAF2 /* UIColor+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CA5E45C1DD07865001EDAF2 /* UIColor+Extension.m */; };
+		8CA5E4601DD078A9001EDAF2 /* UIImage+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CA5E45F1DD078A9001EDAF2 /* UIImage+Extension.m */; };
+		8CA5E4631DD078E0001EDAF2 /* UIView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CA5E4621DD078E0001EDAF2 /* UIView+Extension.m */; };
+		8CA5E4781DD07C24001EDAF2 /* BSNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CA5E4771DD07C24001EDAF2 /* BSNavigationController.m */; };
+		8CA5E4921DD07F95001EDAF2 /* BSAttentionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CA5E4911DD07F95001EDAF2 /* BSAttentionViewController.m */; };
+		8CA5E4951DD07FA9001EDAF2 /* BSEssenceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CA5E4941DD07FA9001EDAF2 /* BSEssenceViewController.m */; };
+		8CA5E4981DD07FCB001EDAF2 /* BSMineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CA5E4971DD07FCB001EDAF2 /* BSMineViewController.m */; };
+		8CA5E49B1DD07FDF001EDAF2 /* BSNewestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CA5E49A1DD07FDF001EDAF2 /* BSNewestViewController.m */; };
+		8CA5E4A01DD09233001EDAF2 /* BSTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CA5E49F1DD09233001EDAF2 /* BSTabBarController.m */; };
+		8CA5E4A31DD094CA001EDAF2 /* BSTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CA5E4A21DD094CA001EDAF2 /* BSTabBar.m */; };
+		C33B09807F6E49D1BCCC9C12 /* libPods-Budejie.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B7AF547169C538B5543672E /* libPods-Budejie.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		8CA5E3FC1DD0735A001EDAF2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8CA5E3DA1DD07359001EDAF2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8CA5E3E11DD07359001EDAF2;
+			remoteInfo = Budejie;
+		};
+		8CA5E4071DD0735A001EDAF2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8CA5E3DA1DD07359001EDAF2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8CA5E3E11DD07359001EDAF2;
+			remoteInfo = Budejie;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		076394FE801596C521CA8176 /* Pods-Budejie.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Budejie.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Budejie/Pods-Budejie.debug.xcconfig"; sourceTree = "<group>"; };
+		2B7AF547169C538B5543672E /* libPods-Budejie.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Budejie.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8C4D7EC81DD1B4300076D629 /* NSObject+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+Extension.h"; sourceTree = "<group>"; };
+		8C4D7EC91DD1B4300076D629 /* NSObject+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Extension.m"; sourceTree = "<group>"; };
+		8C5CB2AD1DD1C9EE008AB412 /* UIButton+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+Extension.h"; sourceTree = "<group>"; };
+		8C5CB2AE1DD1C9EE008AB412 /* UIButton+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+Extension.m"; sourceTree = "<group>"; };
+		8C5CB2B01DD1D693008AB412 /* BSTestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSTestViewController.h; sourceTree = "<group>"; };
+		8C5CB2B11DD1D693008AB412 /* BSTestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSTestViewController.m; sourceTree = "<group>"; };
+		8CA5E3E21DD07359001EDAF2 /* Budejie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Budejie.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8CA5E3E61DD07359001EDAF2 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		8CA5E3F11DD07359001EDAF2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		8CA5E3F61DD07359001EDAF2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8CA5E3FB1DD0735A001EDAF2 /* BudejieTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BudejieTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		8CA5E3FF1DD0735A001EDAF2 /* BudejieTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BudejieTests.m; sourceTree = "<group>"; };
+		8CA5E4011DD0735A001EDAF2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8CA5E4061DD0735A001EDAF2 /* BudejieUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BudejieUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		8CA5E40A1DD0735A001EDAF2 /* BudejieUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BudejieUITests.m; sourceTree = "<group>"; };
+		8CA5E40C1DD0735A001EDAF2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8CA5E4191DD0754D001EDAF2 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		8CA5E41A1DD0754D001EDAF2 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		8CA5E4251DD0756F001EDAF2 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		8CA5E4261DD077A6001EDAF2 /* BSBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSBaseViewController.h; sourceTree = "<group>"; };
+		8CA5E4271DD077A6001EDAF2 /* BSBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSBaseViewController.m; sourceTree = "<group>"; };
+		8CA5E4291DD077B0001EDAF2 /* BSBaseViewController.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = BSBaseViewController.bundle; sourceTree = "<group>"; };
+		8CA5E45B1DD07865001EDAF2 /* UIColor+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Extension.h"; sourceTree = "<group>"; };
+		8CA5E45C1DD07865001EDAF2 /* UIColor+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Extension.m"; sourceTree = "<group>"; };
+		8CA5E45E1DD078A9001EDAF2 /* UIImage+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Extension.h"; sourceTree = "<group>"; };
+		8CA5E45F1DD078A9001EDAF2 /* UIImage+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Extension.m"; sourceTree = "<group>"; };
+		8CA5E4611DD078E0001EDAF2 /* UIView+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Extension.h"; sourceTree = "<group>"; };
+		8CA5E4621DD078E0001EDAF2 /* UIView+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Extension.m"; sourceTree = "<group>"; };
+		8CA5E4641DD0791E001EDAF2 /* SystemConfig.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SystemConfig.h; sourceTree = "<group>"; };
+		8CA5E4651DD07954001EDAF2 /* BSLog.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BSLog.h; sourceTree = "<group>"; };
+		8CA5E4661DD079CF001EDAF2 /* BSColorConstant.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BSColorConstant.h; sourceTree = "<group>"; };
+		8CA5E4671DD079F3001EDAF2 /* BSFontConstant.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BSFontConstant.h; sourceTree = "<group>"; };
+		8CA5E4681DD07A08001EDAF2 /* BSInterfaceConstant.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BSInterfaceConstant.h; sourceTree = "<group>"; };
+		8CA5E46A1DD07A48001EDAF2 /* BSSystemConstant.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BSSystemConstant.h; sourceTree = "<group>"; };
+		8CA5E4761DD07C24001EDAF2 /* BSNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSNavigationController.h; sourceTree = "<group>"; };
+		8CA5E4771DD07C24001EDAF2 /* BSNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSNavigationController.m; sourceTree = "<group>"; };
+		8CA5E4901DD07F95001EDAF2 /* BSAttentionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSAttentionViewController.h; sourceTree = "<group>"; };
+		8CA5E4911DD07F95001EDAF2 /* BSAttentionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSAttentionViewController.m; sourceTree = "<group>"; };
+		8CA5E4931DD07FA9001EDAF2 /* BSEssenceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSEssenceViewController.h; sourceTree = "<group>"; };
+		8CA5E4941DD07FA9001EDAF2 /* BSEssenceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSEssenceViewController.m; sourceTree = "<group>"; };
+		8CA5E4961DD07FCB001EDAF2 /* BSMineViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSMineViewController.h; sourceTree = "<group>"; };
+		8CA5E4971DD07FCB001EDAF2 /* BSMineViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSMineViewController.m; sourceTree = "<group>"; };
+		8CA5E4991DD07FDF001EDAF2 /* BSNewestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSNewestViewController.h; sourceTree = "<group>"; };
+		8CA5E49A1DD07FDF001EDAF2 /* BSNewestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSNewestViewController.m; sourceTree = "<group>"; };
+		8CA5E49E1DD09233001EDAF2 /* BSTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSTabBarController.h; sourceTree = "<group>"; };
+		8CA5E49F1DD09233001EDAF2 /* BSTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSTabBarController.m; sourceTree = "<group>"; };
+		8CA5E4A11DD094CA001EDAF2 /* BSTabBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSTabBar.h; sourceTree = "<group>"; };
+		8CA5E4A21DD094CA001EDAF2 /* BSTabBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSTabBar.m; sourceTree = "<group>"; };
+		A28B3EFAD0A1696E7E47816E /* Pods-Budejie.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Budejie.release.xcconfig"; path = "Pods/Target Support Files/Pods-Budejie/Pods-Budejie.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8CA5E3DF1DD07359001EDAF2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C33B09807F6E49D1BCCC9C12 /* libPods-Budejie.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8CA5E3F81DD0735A001EDAF2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8CA5E4031DD0735A001EDAF2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		155224E25E047EB8B90225B9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2B7AF547169C538B5543672E /* libPods-Budejie.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8CA5E3D91DD07359001EDAF2 = {
+			isa = PBXGroup;
+			children = (
+				8CA5E3E41DD07359001EDAF2 /* Budejie */,
+				8CA5E3FE1DD0735A001EDAF2 /* BudejieTests */,
+				8CA5E4091DD0735A001EDAF2 /* BudejieUITests */,
+				8CA5E3E31DD07359001EDAF2 /* Products */,
+				AE0A346D401BB865D4F1EA42 /* Pods */,
+				155224E25E047EB8B90225B9 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		8CA5E3E31DD07359001EDAF2 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8CA5E3E21DD07359001EDAF2 /* Budejie.app */,
+				8CA5E3FB1DD0735A001EDAF2 /* BudejieTests.xctest */,
+				8CA5E4061DD0735A001EDAF2 /* BudejieUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		8CA5E3E41DD07359001EDAF2 /* Budejie */ = {
+			isa = PBXGroup;
+			children = (
+				8C5CB2B01DD1D693008AB412 /* BSTestViewController.h */,
+				8C5CB2B11DD1D693008AB412 /* BSTestViewController.m */,
+				8CA5E47C1DD07F21001EDAF2 /* Modules */,
+				8CA5E4431DD07831001EDAF2 /* Public */,
+				8CA5E4181DD0754D001EDAF2 /* AppDelegate */,
+				8CA5E41B1DD0754D001EDAF2 /* Main */,
+				8CA5E4231DD0754D001EDAF2 /* Others */,
+				8CA5E3E51DD07359001EDAF2 /* Supporting Files */,
+			);
+			path = Budejie;
+			sourceTree = "<group>";
+		};
+		8CA5E3E51DD07359001EDAF2 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				8CA5E3F11DD07359001EDAF2 /* Assets.xcassets */,
+				8CA5E3F61DD07359001EDAF2 /* Info.plist */,
+				8CA5E3E61DD07359001EDAF2 /* main.m */,
+				8CA5E4251DD0756F001EDAF2 /* PrefixHeader.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		8CA5E3FE1DD0735A001EDAF2 /* BudejieTests */ = {
+			isa = PBXGroup;
+			children = (
+				8CA5E3FF1DD0735A001EDAF2 /* BudejieTests.m */,
+				8CA5E4011DD0735A001EDAF2 /* Info.plist */,
+			);
+			path = BudejieTests;
+			sourceTree = "<group>";
+		};
+		8CA5E4091DD0735A001EDAF2 /* BudejieUITests */ = {
+			isa = PBXGroup;
+			children = (
+				8CA5E40A1DD0735A001EDAF2 /* BudejieUITests.m */,
+				8CA5E40C1DD0735A001EDAF2 /* Info.plist */,
+			);
+			path = BudejieUITests;
+			sourceTree = "<group>";
+		};
+		8CA5E4181DD0754D001EDAF2 /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				8CA5E4191DD0754D001EDAF2 /* AppDelegate.h */,
+				8CA5E41A1DD0754D001EDAF2 /* AppDelegate.m */,
+			);
+			path = AppDelegate;
+			sourceTree = "<group>";
+		};
+		8CA5E41B1DD0754D001EDAF2 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				8CA5E49C1DD09082001EDAF2 /* Views */,
+				8CA5E41C1DD0754D001EDAF2 /* BaseViewController */,
+				8CA5E41D1DD0754D001EDAF2 /* MainFrame */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		8CA5E41C1DD0754D001EDAF2 /* BaseViewController */ = {
+			isa = PBXGroup;
+			children = (
+				8CA5E4291DD077B0001EDAF2 /* BSBaseViewController.bundle */,
+				8CA5E4261DD077A6001EDAF2 /* BSBaseViewController.h */,
+				8CA5E4271DD077A6001EDAF2 /* BSBaseViewController.m */,
+			);
+			path = BaseViewController;
+			sourceTree = "<group>";
+		};
+		8CA5E41D1DD0754D001EDAF2 /* MainFrame */ = {
+			isa = PBXGroup;
+			children = (
+				8CA5E49D1DD0921C001EDAF2 /* TabBarController */,
+				8CA5E46B1DD07B9A001EDAF2 /* NavigationController */,
+			);
+			path = MainFrame;
+			sourceTree = "<group>";
+		};
+		8CA5E4231DD0754D001EDAF2 /* Others */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Others;
+			sourceTree = "<group>";
+		};
+		8CA5E4431DD07831001EDAF2 /* Public */ = {
+			isa = PBXGroup;
+			children = (
+				8CA5E4441DD07831001EDAF2 /* Category */,
+				8CA5E44B1DD07831001EDAF2 /* Config */,
+				8CA5E44D1DD07831001EDAF2 /* Controllers */,
+				8CA5E44E1DD07831001EDAF2 /* Macros */,
+				8CA5E4531DD07831001EDAF2 /* Models */,
+				8CA5E4541DD07831001EDAF2 /* Othsers */,
+				8CA5E4551DD07831001EDAF2 /* Tools */,
+				8CA5E4571DD07831001EDAF2 /* Views */,
+			);
+			path = Public;
+			sourceTree = "<group>";
+		};
+		8CA5E4441DD07831001EDAF2 /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				8CA5E45B1DD07865001EDAF2 /* UIColor+Extension.h */,
+				8CA5E45C1DD07865001EDAF2 /* UIColor+Extension.m */,
+				8CA5E45E1DD078A9001EDAF2 /* UIImage+Extension.h */,
+				8CA5E45F1DD078A9001EDAF2 /* UIImage+Extension.m */,
+				8CA5E4611DD078E0001EDAF2 /* UIView+Extension.h */,
+				8CA5E4621DD078E0001EDAF2 /* UIView+Extension.m */,
+				8C4D7EC81DD1B4300076D629 /* NSObject+Extension.h */,
+				8C4D7EC91DD1B4300076D629 /* NSObject+Extension.m */,
+				8C5CB2AD1DD1C9EE008AB412 /* UIButton+Extension.h */,
+				8C5CB2AE1DD1C9EE008AB412 /* UIButton+Extension.m */,
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
+		8CA5E44B1DD07831001EDAF2 /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				8CA5E4641DD0791E001EDAF2 /* SystemConfig.h */,
+			);
+			path = Config;
+			sourceTree = "<group>";
+		};
+		8CA5E44D1DD07831001EDAF2 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		8CA5E44E1DD07831001EDAF2 /* Macros */ = {
+			isa = PBXGroup;
+			children = (
+				8CA5E4661DD079CF001EDAF2 /* BSColorConstant.h */,
+				8CA5E4671DD079F3001EDAF2 /* BSFontConstant.h */,
+				8CA5E4681DD07A08001EDAF2 /* BSInterfaceConstant.h */,
+				8CA5E46A1DD07A48001EDAF2 /* BSSystemConstant.h */,
+			);
+			path = Macros;
+			sourceTree = "<group>";
+		};
+		8CA5E4531DD07831001EDAF2 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		8CA5E4541DD07831001EDAF2 /* Othsers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Othsers;
+			sourceTree = "<group>";
+		};
+		8CA5E4551DD07831001EDAF2 /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+				8CA5E4651DD07954001EDAF2 /* BSLog.h */,
+			);
+			path = Tools;
+			sourceTree = "<group>";
+		};
+		8CA5E4571DD07831001EDAF2 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		8CA5E46B1DD07B9A001EDAF2 /* NavigationController */ = {
+			isa = PBXGroup;
+			children = (
+				8CA5E4761DD07C24001EDAF2 /* BSNavigationController.h */,
+				8CA5E4771DD07C24001EDAF2 /* BSNavigationController.m */,
+			);
+			path = NavigationController;
+			sourceTree = "<group>";
+		};
+		8CA5E47C1DD07F21001EDAF2 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				8CA5E47D1DD07F21001EDAF2 /* Attention */,
+				8CA5E4811DD07F21001EDAF2 /* Essence */,
+				8CA5E4851DD07F21001EDAF2 /* Mine */,
+				8CA5E4891DD07F21001EDAF2 /* Newest */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		8CA5E47D1DD07F21001EDAF2 /* Attention */ = {
+			isa = PBXGroup;
+			children = (
+				8CA5E47E1DD07F21001EDAF2 /* Models */,
+				8CA5E47F1DD07F21001EDAF2 /* ViewModels */,
+				8CA5E4801DD07F21001EDAF2 /* Views */,
+			);
+			path = Attention;
+			sourceTree = "<group>";
+		};
+		8CA5E47E1DD07F21001EDAF2 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		8CA5E47F1DD07F21001EDAF2 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		8CA5E4801DD07F21001EDAF2 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				8CA5E4901DD07F95001EDAF2 /* BSAttentionViewController.h */,
+				8CA5E4911DD07F95001EDAF2 /* BSAttentionViewController.m */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		8CA5E4811DD07F21001EDAF2 /* Essence */ = {
+			isa = PBXGroup;
+			children = (
+				8CA5E4821DD07F21001EDAF2 /* Models */,
+				8CA5E4831DD07F21001EDAF2 /* ViewModels */,
+				8CA5E4841DD07F21001EDAF2 /* Views */,
+			);
+			path = Essence;
+			sourceTree = "<group>";
+		};
+		8CA5E4821DD07F21001EDAF2 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		8CA5E4831DD07F21001EDAF2 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		8CA5E4841DD07F21001EDAF2 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				8CA5E4931DD07FA9001EDAF2 /* BSEssenceViewController.h */,
+				8CA5E4941DD07FA9001EDAF2 /* BSEssenceViewController.m */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		8CA5E4851DD07F21001EDAF2 /* Mine */ = {
+			isa = PBXGroup;
+			children = (
+				8CA5E4861DD07F21001EDAF2 /* Models */,
+				8CA5E4871DD07F21001EDAF2 /* ViewModels */,
+				8CA5E4881DD07F21001EDAF2 /* Views */,
+			);
+			path = Mine;
+			sourceTree = "<group>";
+		};
+		8CA5E4861DD07F21001EDAF2 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		8CA5E4871DD07F21001EDAF2 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		8CA5E4881DD07F21001EDAF2 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				8CA5E4961DD07FCB001EDAF2 /* BSMineViewController.h */,
+				8CA5E4971DD07FCB001EDAF2 /* BSMineViewController.m */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		8CA5E4891DD07F21001EDAF2 /* Newest */ = {
+			isa = PBXGroup;
+			children = (
+				8CA5E48A1DD07F21001EDAF2 /* Models */,
+				8CA5E48B1DD07F21001EDAF2 /* ViewModels */,
+				8CA5E48C1DD07F21001EDAF2 /* Views */,
+			);
+			path = Newest;
+			sourceTree = "<group>";
+		};
+		8CA5E48A1DD07F21001EDAF2 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		8CA5E48B1DD07F21001EDAF2 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		8CA5E48C1DD07F21001EDAF2 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				8CA5E4991DD07FDF001EDAF2 /* BSNewestViewController.h */,
+				8CA5E49A1DD07FDF001EDAF2 /* BSNewestViewController.m */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		8CA5E49C1DD09082001EDAF2 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				8CA5E4A11DD094CA001EDAF2 /* BSTabBar.h */,
+				8CA5E4A21DD094CA001EDAF2 /* BSTabBar.m */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		8CA5E49D1DD0921C001EDAF2 /* TabBarController */ = {
+			isa = PBXGroup;
+			children = (
+				8CA5E49E1DD09233001EDAF2 /* BSTabBarController.h */,
+				8CA5E49F1DD09233001EDAF2 /* BSTabBarController.m */,
+			);
+			path = TabBarController;
+			sourceTree = "<group>";
+		};
+		AE0A346D401BB865D4F1EA42 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				076394FE801596C521CA8176 /* Pods-Budejie.debug.xcconfig */,
+				A28B3EFAD0A1696E7E47816E /* Pods-Budejie.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8CA5E3E11DD07359001EDAF2 /* Budejie */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8CA5E40F1DD0735A001EDAF2 /* Build configuration list for PBXNativeTarget "Budejie" */;
+			buildPhases = (
+				C58CBC3FEE62C43FBA9E4CDC /* [CP] Check Pods Manifest.lock */,
+				8CA5E3DE1DD07359001EDAF2 /* Sources */,
+				8CA5E3DF1DD07359001EDAF2 /* Frameworks */,
+				8CA5E3E01DD07359001EDAF2 /* Resources */,
+				0FDCD64DC1129A332EE6F371 /* [CP] Embed Pods Frameworks */,
+				699DB6F712587437BCB9CDE9 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Budejie;
+			productName = Budejie;
+			productReference = 8CA5E3E21DD07359001EDAF2 /* Budejie.app */;
+			productType = "com.apple.product-type.application";
+		};
+		8CA5E3FA1DD0735A001EDAF2 /* BudejieTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8CA5E4121DD0735A001EDAF2 /* Build configuration list for PBXNativeTarget "BudejieTests" */;
+			buildPhases = (
+				8CA5E3F71DD0735A001EDAF2 /* Sources */,
+				8CA5E3F81DD0735A001EDAF2 /* Frameworks */,
+				8CA5E3F91DD0735A001EDAF2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8CA5E3FD1DD0735A001EDAF2 /* PBXTargetDependency */,
+			);
+			name = BudejieTests;
+			productName = BudejieTests;
+			productReference = 8CA5E3FB1DD0735A001EDAF2 /* BudejieTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		8CA5E4051DD0735A001EDAF2 /* BudejieUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8CA5E4151DD0735A001EDAF2 /* Build configuration list for PBXNativeTarget "BudejieUITests" */;
+			buildPhases = (
+				8CA5E4021DD0735A001EDAF2 /* Sources */,
+				8CA5E4031DD0735A001EDAF2 /* Frameworks */,
+				8CA5E4041DD0735A001EDAF2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8CA5E4081DD0735A001EDAF2 /* PBXTargetDependency */,
+			);
+			name = BudejieUITests;
+			productName = BudejieUITests;
+			productReference = 8CA5E4061DD0735A001EDAF2 /* BudejieUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		8CA5E3DA1DD07359001EDAF2 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = BS;
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = Jentle;
+				TargetAttributes = {
+					8CA5E3E11DD07359001EDAF2 = {
+						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = ZRH7G9EDH6;
+					};
+					8CA5E3FA1DD0735A001EDAF2 = {
+						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = ZRH7G9EDH6;
+						TestTargetID = 8CA5E3E11DD07359001EDAF2;
+					};
+					8CA5E4051DD0735A001EDAF2 = {
+						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = ZRH7G9EDH6;
+						TestTargetID = 8CA5E3E11DD07359001EDAF2;
+					};
+				};
+			};
+			buildConfigurationList = 8CA5E3DD1DD07359001EDAF2 /* Build configuration list for PBXProject "Budejie" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 8CA5E3D91DD07359001EDAF2;
+			productRefGroup = 8CA5E3E31DD07359001EDAF2 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8CA5E3E11DD07359001EDAF2 /* Budejie */,
+				8CA5E3FA1DD0735A001EDAF2 /* BudejieTests */,
+				8CA5E4051DD0735A001EDAF2 /* BudejieUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8CA5E3E01DD07359001EDAF2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8CA5E3F21DD07359001EDAF2 /* Assets.xcassets in Resources */,
+				8CA5E42A1DD077B0001EDAF2 /* BSBaseViewController.bundle in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8CA5E3F91DD0735A001EDAF2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8CA5E4041DD0735A001EDAF2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0FDCD64DC1129A332EE6F371 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Budejie/Pods-Budejie-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		699DB6F712587437BCB9CDE9 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Budejie/Pods-Budejie-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C58CBC3FEE62C43FBA9E4CDC /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8CA5E3DE1DD07359001EDAF2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8CA5E4781DD07C24001EDAF2 /* BSNavigationController.m in Sources */,
+				8C5CB2AF1DD1C9EE008AB412 /* UIButton+Extension.m in Sources */,
+				8CA5E49B1DD07FDF001EDAF2 /* BSNewestViewController.m in Sources */,
+				8CA5E4241DD0754D001EDAF2 /* AppDelegate.m in Sources */,
+				8CA5E4A31DD094CA001EDAF2 /* BSTabBar.m in Sources */,
+				8CA5E4601DD078A9001EDAF2 /* UIImage+Extension.m in Sources */,
+				8CA5E4951DD07FA9001EDAF2 /* BSEssenceViewController.m in Sources */,
+				8C5CB2B21DD1D693008AB412 /* BSTestViewController.m in Sources */,
+				8CA5E45D1DD07865001EDAF2 /* UIColor+Extension.m in Sources */,
+				8CA5E4A01DD09233001EDAF2 /* BSTabBarController.m in Sources */,
+				8CA5E4631DD078E0001EDAF2 /* UIView+Extension.m in Sources */,
+				8CA5E4921DD07F95001EDAF2 /* BSAttentionViewController.m in Sources */,
+				8CA5E4981DD07FCB001EDAF2 /* BSMineViewController.m in Sources */,
+				8CA5E3E71DD07359001EDAF2 /* main.m in Sources */,
+				8CA5E4281DD077A6001EDAF2 /* BSBaseViewController.m in Sources */,
+				8C4D7ECA1DD1B4300076D629 /* NSObject+Extension.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8CA5E3F71DD0735A001EDAF2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8CA5E4001DD0735A001EDAF2 /* BudejieTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8CA5E4021DD0735A001EDAF2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8CA5E40B1DD0735A001EDAF2 /* BudejieUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		8CA5E3FD1DD0735A001EDAF2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8CA5E3E11DD07359001EDAF2 /* Budejie */;
+			targetProxy = 8CA5E3FC1DD0735A001EDAF2 /* PBXContainerItemProxy */;
+		};
+		8CA5E4081DD0735A001EDAF2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8CA5E3E11DD07359001EDAF2 /* Budejie */;
+			targetProxy = 8CA5E4071DD0735A001EDAF2 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		8CA5E40D1DD0735A001EDAF2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		8CA5E40E1DD0735A001EDAF2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		8CA5E4101DD0735A001EDAF2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 076394FE801596C521CA8176 /* Pods-Budejie.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = Budejie/PrefixHeader.pch;
+				INFOPLIST_FILE = Budejie/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.github.jentlezhi;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		8CA5E4111DD0735A001EDAF2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A28B3EFAD0A1696E7E47816E /* Pods-Budejie.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = Budejie/PrefixHeader.pch;
+				INFOPLIST_FILE = Budejie/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.github.jentlezhi;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		8CA5E4131DD0735A001EDAF2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = BudejieTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Jentle.zhi.BudejieTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Budejie.app/Budejie";
+			};
+			name = Debug;
+		};
+		8CA5E4141DD0735A001EDAF2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = BudejieTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Jentle.zhi.BudejieTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Budejie.app/Budejie";
+			};
+			name = Release;
+		};
+		8CA5E4161DD0735A001EDAF2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = BudejieUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Jentle.zhi.BudejieUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = Budejie;
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		8CA5E4171DD0735A001EDAF2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = BudejieUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Jentle.zhi.BudejieUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = Budejie;
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		8CA5E3DD1DD07359001EDAF2 /* Build configuration list for PBXProject "Budejie" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8CA5E40D1DD0735A001EDAF2 /* Debug */,
+				8CA5E40E1DD0735A001EDAF2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8CA5E40F1DD0735A001EDAF2 /* Build configuration list for PBXNativeTarget "Budejie" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8CA5E4101DD0735A001EDAF2 /* Debug */,
+				8CA5E4111DD0735A001EDAF2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8CA5E4121DD0735A001EDAF2 /* Build configuration list for PBXNativeTarget "BudejieTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8CA5E4131DD0735A001EDAF2 /* Debug */,
+				8CA5E4141DD0735A001EDAF2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8CA5E4151DD0735A001EDAF2 /* Build configuration list for PBXNativeTarget "BudejieUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8CA5E4161DD0735A001EDAF2 /* Debug */,
+				8CA5E4171DD0735A001EDAF2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 8CA5E3DA1DD07359001EDAF2 /* Project object */;
+}
