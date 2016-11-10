@@ -18,6 +18,7 @@
 /** 导航栏分割线 */
 @property(strong, nonatomic) UILabel *dividerLine;
 
+
 @end
 
 @implementation BSBaseViewController
@@ -47,12 +48,13 @@
  *  导航栏标题
  */
 - (UILabel *)navTitleLabel{
-    if (_navTitleLabel) {
+    if (!_navTitleLabel) {
         _navTitleLabel = [[UILabel alloc] init];
         _navTitleLabel.userInteractionEnabled = YES;
         _navTitleLabel.textAlignment = NSTextAlignmentCenter;
         _navTitleLabel.backgroundColor = [UIColor clearColor];
         _navTitleLabel.font = BSNavTitleFont;
+        _navTitleLabel.textColor = BSRGBColor(1, 1, 1);
         CGFloat navTitleLabelX = kScreenWidth/3;
         CGFloat navTitleLabelY = 0;
         CGFloat navTitleLabelW = kScreenWidth/3;
@@ -353,6 +355,18 @@
 - (void)rightButtonClick:(UIButton *)rightButton{
     
 }
-
+/**
+ *  取消网络请求任务
+ */
+- (void)cancelRequest{
+    [self.sessionDateTask cancel];
+}
+/**
+ *  控制器销毁，取消所有请求
+ */
+- (void)dealloc{
+    [self cancelRequest];
+    
+}
 
 @end

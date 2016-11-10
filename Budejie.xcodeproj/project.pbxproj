@@ -7,6 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8C31EF961DD2FEBD00CA3CEA /* BSAttentionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C31EF941DD2FEBD00CA3CEA /* BSAttentionViewController.m */; };
+		8C31EF991DD2FEDE00CA3CEA /* BSRecommendViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C31EF981DD2FEDE00CA3CEA /* BSRecommendViewController.m */; };
+		8C31EF9F1DD3026E00CA3CEA /* BSNetworkTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C31EF9E1DD3026E00CA3CEA /* BSNetworkTool.m */; };
+		8C31EFA61DD3197C00CA3CEA /* BSLeftTagModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C31EFA51DD3197C00CA3CEA /* BSLeftTagModel.m */; };
+		8C31EFA91DD31AEB00CA3CEA /* BSLeftTagResultModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C31EFA81DD31AEB00CA3CEA /* BSLeftTagResultModel.m */; };
+		8C31EFAC1DD320A300CA3CEA /* BSLeftTagNetworkTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C31EFAB1DD320A300CA3CEA /* BSLeftTagNetworkTool.m */; };
+		8C31EFAF1DD320F400CA3CEA /* BSLeftTagParameter.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C31EFAE1DD320F400CA3CEA /* BSLeftTagParameter.m */; };
+		8C31EFB21DD32FB000CA3CEA /* BSLeftTagCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C31EFB11DD32FB000CA3CEA /* BSLeftTagCell.m */; };
+		8C31EFB61DD410FB00CA3CEA /* BSUserGroupModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C31EFB51DD410FB00CA3CEA /* BSUserGroupModel.m */; };
+		8C31EFB91DD4111900CA3CEA /* BSUserGroupResultModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C31EFB81DD4111900CA3CEA /* BSUserGroupResultModel.m */; };
+		8C31EFBC1DD4113500CA3CEA /* BSUserGroupParameter.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C31EFBB1DD4113500CA3CEA /* BSUserGroupParameter.m */; };
+		8C31EFBF1DD413B100CA3CEA /* BSUserGroupNetworkTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C31EFBE1DD413B100CA3CEA /* BSUserGroupNetworkTool.m */; };
+		8C31EFC21DD4160500CA3CEA /* BSUserGroupCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C31EFC11DD4160500CA3CEA /* BSUserGroupCell.m */; };
+		8C31EFC51DD41BC800CA3CEA /* UIImageView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C31EFC41DD41BC800CA3CEA /* UIImageView+Extension.m */; };
 		8C4D7ECA1DD1B4300076D629 /* NSObject+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C4D7EC91DD1B4300076D629 /* NSObject+Extension.m */; };
 		8C5CB2AF1DD1C9EE008AB412 /* UIButton+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C5CB2AE1DD1C9EE008AB412 /* UIButton+Extension.m */; };
 		8C5CB2B21DD1D693008AB412 /* BSTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C5CB2B11DD1D693008AB412 /* BSTestViewController.m */; };
@@ -21,7 +35,6 @@
 		8CA5E4601DD078A9001EDAF2 /* UIImage+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CA5E45F1DD078A9001EDAF2 /* UIImage+Extension.m */; };
 		8CA5E4631DD078E0001EDAF2 /* UIView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CA5E4621DD078E0001EDAF2 /* UIView+Extension.m */; };
 		8CA5E4781DD07C24001EDAF2 /* BSNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CA5E4771DD07C24001EDAF2 /* BSNavigationController.m */; };
-		8CA5E4921DD07F95001EDAF2 /* BSAttentionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CA5E4911DD07F95001EDAF2 /* BSAttentionViewController.m */; };
 		8CA5E4951DD07FA9001EDAF2 /* BSEssenceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CA5E4941DD07FA9001EDAF2 /* BSEssenceViewController.m */; };
 		8CA5E4981DD07FCB001EDAF2 /* BSMineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CA5E4971DD07FCB001EDAF2 /* BSMineViewController.m */; };
 		8CA5E49B1DD07FDF001EDAF2 /* BSNewestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CA5E49A1DD07FDF001EDAF2 /* BSNewestViewController.m */; };
@@ -50,6 +63,35 @@
 /* Begin PBXFileReference section */
 		076394FE801596C521CA8176 /* Pods-Budejie.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Budejie.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Budejie/Pods-Budejie.debug.xcconfig"; sourceTree = "<group>"; };
 		2B7AF547169C538B5543672E /* libPods-Budejie.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Budejie.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8C31EF931DD2FEBD00CA3CEA /* BSAttentionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSAttentionViewController.h; sourceTree = "<group>"; };
+		8C31EF941DD2FEBD00CA3CEA /* BSAttentionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSAttentionViewController.m; sourceTree = "<group>"; };
+		8C31EF971DD2FEDE00CA3CEA /* BSRecommendViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSRecommendViewController.h; sourceTree = "<group>"; };
+		8C31EF981DD2FEDE00CA3CEA /* BSRecommendViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSRecommendViewController.m; sourceTree = "<group>"; };
+		8C31EF9B1DD301F900CA3CEA /* BSLog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSLog.h; sourceTree = "<group>"; };
+		8C31EF9D1DD3026E00CA3CEA /* BSNetworkTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSNetworkTool.h; sourceTree = "<group>"; };
+		8C31EF9E1DD3026E00CA3CEA /* BSNetworkTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSNetworkTool.m; sourceTree = "<group>"; };
+		8C31EFA41DD3197C00CA3CEA /* BSLeftTagModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSLeftTagModel.h; sourceTree = "<group>"; };
+		8C31EFA51DD3197C00CA3CEA /* BSLeftTagModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSLeftTagModel.m; sourceTree = "<group>"; };
+		8C31EFA71DD31AEB00CA3CEA /* BSLeftTagResultModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSLeftTagResultModel.h; sourceTree = "<group>"; };
+		8C31EFA81DD31AEB00CA3CEA /* BSLeftTagResultModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSLeftTagResultModel.m; sourceTree = "<group>"; };
+		8C31EFAA1DD320A300CA3CEA /* BSLeftTagNetworkTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSLeftTagNetworkTool.h; sourceTree = "<group>"; };
+		8C31EFAB1DD320A300CA3CEA /* BSLeftTagNetworkTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSLeftTagNetworkTool.m; sourceTree = "<group>"; };
+		8C31EFAD1DD320F400CA3CEA /* BSLeftTagParameter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSLeftTagParameter.h; sourceTree = "<group>"; };
+		8C31EFAE1DD320F400CA3CEA /* BSLeftTagParameter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSLeftTagParameter.m; sourceTree = "<group>"; };
+		8C31EFB01DD32FB000CA3CEA /* BSLeftTagCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSLeftTagCell.h; sourceTree = "<group>"; };
+		8C31EFB11DD32FB000CA3CEA /* BSLeftTagCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSLeftTagCell.m; sourceTree = "<group>"; };
+		8C31EFB41DD410FB00CA3CEA /* BSUserGroupModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSUserGroupModel.h; sourceTree = "<group>"; };
+		8C31EFB51DD410FB00CA3CEA /* BSUserGroupModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSUserGroupModel.m; sourceTree = "<group>"; };
+		8C31EFB71DD4111800CA3CEA /* BSUserGroupResultModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSUserGroupResultModel.h; sourceTree = "<group>"; };
+		8C31EFB81DD4111900CA3CEA /* BSUserGroupResultModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSUserGroupResultModel.m; sourceTree = "<group>"; };
+		8C31EFBA1DD4113500CA3CEA /* BSUserGroupParameter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSUserGroupParameter.h; sourceTree = "<group>"; };
+		8C31EFBB1DD4113500CA3CEA /* BSUserGroupParameter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSUserGroupParameter.m; sourceTree = "<group>"; };
+		8C31EFBD1DD413B100CA3CEA /* BSUserGroupNetworkTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSUserGroupNetworkTool.h; sourceTree = "<group>"; };
+		8C31EFBE1DD413B100CA3CEA /* BSUserGroupNetworkTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSUserGroupNetworkTool.m; sourceTree = "<group>"; };
+		8C31EFC01DD4160500CA3CEA /* BSUserGroupCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSUserGroupCell.h; sourceTree = "<group>"; };
+		8C31EFC11DD4160500CA3CEA /* BSUserGroupCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSUserGroupCell.m; sourceTree = "<group>"; };
+		8C31EFC31DD41BC800CA3CEA /* UIImageView+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+Extension.h"; sourceTree = "<group>"; };
+		8C31EFC41DD41BC800CA3CEA /* UIImageView+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+Extension.m"; sourceTree = "<group>"; };
 		8C4D7EC81DD1B4300076D629 /* NSObject+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+Extension.h"; sourceTree = "<group>"; };
 		8C4D7EC91DD1B4300076D629 /* NSObject+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Extension.m"; sourceTree = "<group>"; };
 		8C5CB2AD1DD1C9EE008AB412 /* UIButton+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+Extension.h"; sourceTree = "<group>"; };
@@ -79,15 +121,12 @@
 		8CA5E4611DD078E0001EDAF2 /* UIView+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Extension.h"; sourceTree = "<group>"; };
 		8CA5E4621DD078E0001EDAF2 /* UIView+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Extension.m"; sourceTree = "<group>"; };
 		8CA5E4641DD0791E001EDAF2 /* SystemConfig.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SystemConfig.h; sourceTree = "<group>"; };
-		8CA5E4651DD07954001EDAF2 /* BSLog.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BSLog.h; sourceTree = "<group>"; };
 		8CA5E4661DD079CF001EDAF2 /* BSColorConstant.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BSColorConstant.h; sourceTree = "<group>"; };
 		8CA5E4671DD079F3001EDAF2 /* BSFontConstant.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BSFontConstant.h; sourceTree = "<group>"; };
 		8CA5E4681DD07A08001EDAF2 /* BSInterfaceConstant.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BSInterfaceConstant.h; sourceTree = "<group>"; };
 		8CA5E46A1DD07A48001EDAF2 /* BSSystemConstant.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BSSystemConstant.h; sourceTree = "<group>"; };
 		8CA5E4761DD07C24001EDAF2 /* BSNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSNavigationController.h; sourceTree = "<group>"; };
 		8CA5E4771DD07C24001EDAF2 /* BSNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSNavigationController.m; sourceTree = "<group>"; };
-		8CA5E4901DD07F95001EDAF2 /* BSAttentionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSAttentionViewController.h; sourceTree = "<group>"; };
-		8CA5E4911DD07F95001EDAF2 /* BSAttentionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSAttentionViewController.m; sourceTree = "<group>"; };
 		8CA5E4931DD07FA9001EDAF2 /* BSEssenceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSEssenceViewController.h; sourceTree = "<group>"; };
 		8CA5E4941DD07FA9001EDAF2 /* BSEssenceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSEssenceViewController.m; sourceTree = "<group>"; };
 		8CA5E4961DD07FCB001EDAF2 /* BSMineViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSMineViewController.h; sourceTree = "<group>"; };
@@ -133,6 +172,100 @@
 				2B7AF547169C538B5543672E /* libPods-Budejie.a */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8C31EF921DD2FEBD00CA3CEA /* Attention */ = {
+			isa = PBXGroup;
+			children = (
+				8C31EF931DD2FEBD00CA3CEA /* BSAttentionViewController.h */,
+				8C31EF941DD2FEBD00CA3CEA /* BSAttentionViewController.m */,
+			);
+			path = Attention;
+			sourceTree = "<group>";
+		};
+		8C31EF951DD2FEBD00CA3CEA /* Recommend */ = {
+			isa = PBXGroup;
+			children = (
+				8C31EF971DD2FEDE00CA3CEA /* BSRecommendViewController.h */,
+				8C31EF981DD2FEDE00CA3CEA /* BSRecommendViewController.m */,
+				8C31EFB01DD32FB000CA3CEA /* BSLeftTagCell.h */,
+				8C31EFB11DD32FB000CA3CEA /* BSLeftTagCell.m */,
+				8C31EFC01DD4160500CA3CEA /* BSUserGroupCell.h */,
+				8C31EFC11DD4160500CA3CEA /* BSUserGroupCell.m */,
+			);
+			path = Recommend;
+			sourceTree = "<group>";
+		};
+		8C31EF9A1DD301F900CA3CEA /* Log */ = {
+			isa = PBXGroup;
+			children = (
+				8C31EF9B1DD301F900CA3CEA /* BSLog.h */,
+			);
+			path = Log;
+			sourceTree = "<group>";
+		};
+		8C31EF9C1DD301F900CA3CEA /* NetworkTool */ = {
+			isa = PBXGroup;
+			children = (
+				8C31EF9D1DD3026E00CA3CEA /* BSNetworkTool.h */,
+				8C31EF9E1DD3026E00CA3CEA /* BSNetworkTool.m */,
+			);
+			path = NetworkTool;
+			sourceTree = "<group>";
+		};
+		8C31EFA01DD309FD00CA3CEA /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+				8C31EFA11DD30E7000CA3CEA /* LeftTagNetworkTool */,
+				8C31EFA21DD30E7000CA3CEA /* UserGroupNetworkTool */,
+			);
+			path = Tools;
+			sourceTree = "<group>";
+		};
+		8C31EFA11DD30E7000CA3CEA /* LeftTagNetworkTool */ = {
+			isa = PBXGroup;
+			children = (
+				8C31EFAA1DD320A300CA3CEA /* BSLeftTagNetworkTool.h */,
+				8C31EFAB1DD320A300CA3CEA /* BSLeftTagNetworkTool.m */,
+			);
+			name = LeftTagNetworkTool;
+			path = NetworkTools/LeftTagNetworkTool;
+			sourceTree = "<group>";
+		};
+		8C31EFA21DD30E7000CA3CEA /* UserGroupNetworkTool */ = {
+			isa = PBXGroup;
+			children = (
+				8C31EFBD1DD413B100CA3CEA /* BSUserGroupNetworkTool.h */,
+				8C31EFBE1DD413B100CA3CEA /* BSUserGroupNetworkTool.m */,
+			);
+			name = UserGroupNetworkTool;
+			path = NetworkTools/UserGroupNetworkTool;
+			sourceTree = "<group>";
+		};
+		8C31EFA31DD3193B00CA3CEA /* LeftTagModel */ = {
+			isa = PBXGroup;
+			children = (
+				8C31EFA41DD3197C00CA3CEA /* BSLeftTagModel.h */,
+				8C31EFA51DD3197C00CA3CEA /* BSLeftTagModel.m */,
+				8C31EFA71DD31AEB00CA3CEA /* BSLeftTagResultModel.h */,
+				8C31EFA81DD31AEB00CA3CEA /* BSLeftTagResultModel.m */,
+				8C31EFAD1DD320F400CA3CEA /* BSLeftTagParameter.h */,
+				8C31EFAE1DD320F400CA3CEA /* BSLeftTagParameter.m */,
+			);
+			path = LeftTagModel;
+			sourceTree = "<group>";
+		};
+		8C31EFB31DD410DC00CA3CEA /* UserGroupModel */ = {
+			isa = PBXGroup;
+			children = (
+				8C31EFB41DD410FB00CA3CEA /* BSUserGroupModel.h */,
+				8C31EFB51DD410FB00CA3CEA /* BSUserGroupModel.m */,
+				8C31EFB71DD4111800CA3CEA /* BSUserGroupResultModel.h */,
+				8C31EFB81DD4111900CA3CEA /* BSUserGroupResultModel.m */,
+				8C31EFBA1DD4113500CA3CEA /* BSUserGroupParameter.h */,
+				8C31EFBB1DD4113500CA3CEA /* BSUserGroupParameter.m */,
+			);
+			path = UserGroupModel;
 			sourceTree = "<group>";
 		};
 		8CA5E3D91DD07359001EDAF2 = {
@@ -274,6 +407,8 @@
 				8C4D7EC91DD1B4300076D629 /* NSObject+Extension.m */,
 				8C5CB2AD1DD1C9EE008AB412 /* UIButton+Extension.h */,
 				8C5CB2AE1DD1C9EE008AB412 /* UIButton+Extension.m */,
+				8C31EFC31DD41BC800CA3CEA /* UIImageView+Extension.h */,
+				8C31EFC41DD41BC800CA3CEA /* UIImageView+Extension.m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -321,7 +456,8 @@
 		8CA5E4551DD07831001EDAF2 /* Tools */ = {
 			isa = PBXGroup;
 			children = (
-				8CA5E4651DD07954001EDAF2 /* BSLog.h */,
+				8C31EF9A1DD301F900CA3CEA /* Log */,
+				8C31EF9C1DD301F900CA3CEA /* NetworkTool */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -356,6 +492,7 @@
 		8CA5E47D1DD07F21001EDAF2 /* Attention */ = {
 			isa = PBXGroup;
 			children = (
+				8C31EFA01DD309FD00CA3CEA /* Tools */,
 				8CA5E47E1DD07F21001EDAF2 /* Models */,
 				8CA5E47F1DD07F21001EDAF2 /* ViewModels */,
 				8CA5E4801DD07F21001EDAF2 /* Views */,
@@ -366,6 +503,8 @@
 		8CA5E47E1DD07F21001EDAF2 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				8C31EFB31DD410DC00CA3CEA /* UserGroupModel */,
+				8C31EFA31DD3193B00CA3CEA /* LeftTagModel */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -380,8 +519,8 @@
 		8CA5E4801DD07F21001EDAF2 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				8CA5E4901DD07F95001EDAF2 /* BSAttentionViewController.h */,
-				8CA5E4911DD07F95001EDAF2 /* BSAttentionViewController.m */,
+				8C31EF921DD2FEBD00CA3CEA /* Attention */,
+				8C31EF951DD2FEBD00CA3CEA /* Recommend */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -696,22 +835,35 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8C31EF961DD2FEBD00CA3CEA /* BSAttentionViewController.m in Sources */,
+				8C31EFA91DD31AEB00CA3CEA /* BSLeftTagResultModel.m in Sources */,
 				8CA5E4781DD07C24001EDAF2 /* BSNavigationController.m in Sources */,
 				8C5CB2AF1DD1C9EE008AB412 /* UIButton+Extension.m in Sources */,
+				8C31EFAF1DD320F400CA3CEA /* BSLeftTagParameter.m in Sources */,
 				8CA5E49B1DD07FDF001EDAF2 /* BSNewestViewController.m in Sources */,
+				8C31EFB21DD32FB000CA3CEA /* BSLeftTagCell.m in Sources */,
+				8C31EF991DD2FEDE00CA3CEA /* BSRecommendViewController.m in Sources */,
 				8CA5E4241DD0754D001EDAF2 /* AppDelegate.m in Sources */,
+				8C31EFC21DD4160500CA3CEA /* BSUserGroupCell.m in Sources */,
 				8CA5E4A31DD094CA001EDAF2 /* BSTabBar.m in Sources */,
 				8CA5E4601DD078A9001EDAF2 /* UIImage+Extension.m in Sources */,
 				8CA5E4951DD07FA9001EDAF2 /* BSEssenceViewController.m in Sources */,
+				8C31EFAC1DD320A300CA3CEA /* BSLeftTagNetworkTool.m in Sources */,
+				8C31EFA61DD3197C00CA3CEA /* BSLeftTagModel.m in Sources */,
 				8C5CB2B21DD1D693008AB412 /* BSTestViewController.m in Sources */,
 				8CA5E45D1DD07865001EDAF2 /* UIColor+Extension.m in Sources */,
+				8C31EFB91DD4111900CA3CEA /* BSUserGroupResultModel.m in Sources */,
+				8C31EFBF1DD413B100CA3CEA /* BSUserGroupNetworkTool.m in Sources */,
+				8C31EFC51DD41BC800CA3CEA /* UIImageView+Extension.m in Sources */,
+				8C31EF9F1DD3026E00CA3CEA /* BSNetworkTool.m in Sources */,
 				8CA5E4A01DD09233001EDAF2 /* BSTabBarController.m in Sources */,
+				8C31EFBC1DD4113500CA3CEA /* BSUserGroupParameter.m in Sources */,
 				8CA5E4631DD078E0001EDAF2 /* UIView+Extension.m in Sources */,
-				8CA5E4921DD07F95001EDAF2 /* BSAttentionViewController.m in Sources */,
 				8CA5E4981DD07FCB001EDAF2 /* BSMineViewController.m in Sources */,
 				8CA5E3E71DD07359001EDAF2 /* main.m in Sources */,
 				8CA5E4281DD077A6001EDAF2 /* BSBaseViewController.m in Sources */,
 				8C4D7ECA1DD1B4300076D629 /* NSObject+Extension.m in Sources */,
+				8C31EFB61DD410FB00CA3CEA /* BSUserGroupModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -10,5 +10,10 @@
 #define BSSystemConstant_h
 
 #define BSMarigin 10.0f
+#define BSViewOriginY 64.0f
+#define BSViewHeight  (kScreenHeight - BSViewOriginY)
+#define BSDividerHeight 0.3f
+
+#define BSUserHeaderPlaceholder [UIImage imageWithColor:[UIColor grayColor]]
 
 #endif /* BSSystemConstant_h */

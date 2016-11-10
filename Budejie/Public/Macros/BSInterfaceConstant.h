@@ -9,5 +9,6 @@
 #ifndef BSInterfaceConstant_h
 #define BSInterfaceConstant_h
 
+#define kApiOpenUrl   @"http://api.budejie.com/api/api_open.php"
 
 #endif /* BSInterfaceConstant_h */

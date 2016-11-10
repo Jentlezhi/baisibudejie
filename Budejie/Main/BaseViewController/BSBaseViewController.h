@@ -17,6 +17,8 @@
 @property(strong, nonatomic) UIImageView *navigationBar;
 /** 是否隐藏导航栏分割线 */
 @property(assign, nonatomic) BOOL hiddenNavigationBarLine;
+/** 网络请求 */
+@property(strong, nonatomic) NSURLSessionDataTask *sessionDateTask;
 /**
  *  设置导航栏标题
  *
@@ -92,6 +94,11 @@
  *  右边按钮的点击
  */
 - (void)rightButtonClick:(UIButton *)rightButton;
+
+/**
+ *  取消网络请求任务
+ */
+- (void)cancelRequest;
 
 
 @end

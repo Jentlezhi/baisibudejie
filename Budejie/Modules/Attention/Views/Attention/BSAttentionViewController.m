@@ -7,6 +7,9 @@
 //
 
 #import "BSAttentionViewController.h"
+#import "BSRecommendViewController.h"
+#import "BSUserGroupNetworkTool.h"
+
 
 @interface BSAttentionViewController()
 
@@ -29,6 +32,10 @@
 - (void)attentionBasicConfig{
     //左按钮
     UIButton *leftButton = [UIButton buttonWithBackgroundNormalImage:[UIImage imageNamed:@"friendsRecommentIcon"] highlightImage:[UIImage imageNamed:@"friendsRecommentIcon-click"]];
+    [[leftButton rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(id x) {
+        BSRecommendViewController *recommendVC = [BSRecommendViewController recommendViewController];
+        [self.navigationController pushViewController:recommendVC animated:YES];
+    }];
     
     //标题按钮
     UILabel *titleButton = [[UILabel alloc] init];
@@ -86,5 +93,4 @@
     }];
     
 }
-
 @end
