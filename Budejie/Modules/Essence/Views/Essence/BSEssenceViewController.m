@@ -7,7 +7,7 @@
 //
 
 #import "BSEssenceViewController.h"
-#import "BSTestViewController.h"
+#import "BSTagViewController.h"
 
 @implementation BSEssenceViewController
 
@@ -32,7 +32,7 @@
     //左按钮
     UIButton *leftButton = [UIButton buttonWithBackgroundNormalImage:[UIImage imageNamed:@"MainTagSubIcon"] highlightImage:[UIImage imageNamed:@"MainTagSubIconClick"]];
     [[leftButton rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(id x) {
-        [self.navigationController pushViewController:[[BSTestViewController alloc] init]animated:YES];
+        [self.navigationController pushViewController:[[BSTagViewController alloc] init]animated:YES];
     }];
     //标题按钮
     UIImageView *titleButton = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"MainTitle"]];

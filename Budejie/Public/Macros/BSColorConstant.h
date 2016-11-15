@@ -10,7 +10,7 @@
 #define BSColorConstant_h
 
 #define BSRGBColor(r,g,b) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0  blue:(b)/255.0  alpha:1.0]
-#define BSGlobalCoolor BSRGBColor(239,239,239)
+#define BSGlobalColor BSRGBColor(239,239,239)
 
 #define BSRedColor BSRGBColor(251, 12, 68)
 

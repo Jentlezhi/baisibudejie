@@ -25,6 +25,7 @@
 #import "BSSystemConstant.h"
 #import <ReactiveCocoa/ReactiveCocoa.h>
 #import "SVProgressHUD.h"
+#import "MBProgressHUD+Extension.h"
 #import "AFNetworking.h"
 #import "UIImageView+WebCache.h"
 #import <MJExtension.h>

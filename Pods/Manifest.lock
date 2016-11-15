@@ -17,6 +17,7 @@ PODS:
   - HappyDNS (0.3.10)
   - LGAlertView (2.0.13)
   - Masonry (1.0.1)
+  - MBProgressHUD (1.0.0)
   - MJExtension (3.0.13)
   - MJRefresh (3.0.8)
   - Qiniu (7.1.0.1):
@@ -41,6 +42,7 @@ DEPENDENCIES:
   - AFNetworking (~> 3.1.0)
   - LGAlertView (~> 2.0.13)
   - Masonry (~> 1.0.1)
+  - MBProgressHUD
   - MJExtension (~> 3.0.8)
   - MJRefresh (~> 3.0.8)
   - Qiniu (~> 7.1)
@@ -55,6 +57,7 @@ SPEC CHECKSUMS:
   HappyDNS: 06a9fed2796663fd87626dbf02552933265bf059
   LGAlertView: 9a5dcbf4f81b02b718083539d7f222280adc9547
   Masonry: a1a931a0d08870ed8ae415a2ea5ea68ebcac77df
+  MBProgressHUD: 4890f671c94e8a0f3cf959aa731e9de2f036d71a
   MJExtension: 5932755f451458eefa24239358817f8d291240c7
   MJRefresh: fafde8f18f4afd66b434331a9beb67a6c0264056
   Qiniu: 0e92ff0d1b9afbc55275306671284e4ebeb08d03
@@ -64,6 +67,6 @@ SPEC CHECKSUMS:
   SDWebImage: 35f9627a3e44b4f292a8a8ce6a531fa488239b91
   SVProgressHUD: b0830714205bea1317ea1a2ebc71e5633af334d4
 
-PODFILE CHECKSUM: 1570a8d1f219b85e47156c4470e0dfcc000e1b78
+PODFILE CHECKSUM: 8f9e7b8181acaca5f9d14e18069fd609c8a49e22
 
 COCOAPODS: 1.0.1

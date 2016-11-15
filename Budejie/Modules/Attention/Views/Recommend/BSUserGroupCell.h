@@ -15,6 +15,9 @@
 /** 左侧标签 */
 @property(strong, nonatomic) BSUserGroupModel *userGroupModel;
 
+/** 关注按钮的点击 */
+@property(copy, nonatomic) void(^acctionBtnClick)(BSUserGroupModel *);
+
 + (instancetype)userGroupCellForTableView:(UITableView *)tableView indexPath:(NSIndexPath *)indexPath;
 
 @end

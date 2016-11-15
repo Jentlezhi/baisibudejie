@@ -28,5 +28,14 @@
  *  @return 返回指定颜色1个点的图片
  */
 + (instancetype)imageWithColor:(UIColor *)color;
+/**
+ *  图片渲染
+ *
+ *  @param image 原图片
+ *  @param color 渲染颜色
+ *
+ *  @return 渲染后图片
+ */
++ (instancetype)image:(UIImage *)image withTintColor:(UIColor *)color;
 
 @end

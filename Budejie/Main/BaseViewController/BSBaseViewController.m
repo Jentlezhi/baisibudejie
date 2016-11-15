@@ -92,7 +92,7 @@
  *  基本配置
  */
 - (void)baseBasicConfig{
-    self.view.backgroundColor = BSGlobalCoolor;
+    self.view.backgroundColor = BSGlobalColor;
     self.automaticallyAdjustsScrollViewInsets = NO;
 }
 /**

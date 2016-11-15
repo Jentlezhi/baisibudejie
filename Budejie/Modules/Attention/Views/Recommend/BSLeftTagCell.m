@@ -32,7 +32,8 @@
  *  基本配置
  */
 - (void)leftTagCellBasicConfig{
-    self.backgroundColor = BSGlobalCoolor;
+    self.backgroundColor = BSGlobalColor;
+    
 }
 /**
  *  初始化子控件
@@ -60,6 +61,15 @@
         make.left.equalTo(_selectedView.mas_right);
     }];
     
+    //分割线
+    UILabel *dividerLine = [[UILabel alloc] init];
+    dividerLine.backgroundColor = [UIColor whiteColor];
+    [self.contentView addSubview:dividerLine];
+    [dividerLine mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.right.bottom.equalTo(self.contentView);
+        make.height.equalTo(BSDividerHeight);
+    }];
+    
 }
 
 + (instancetype)leftTagCellForTableView:(UITableView *)tableView indexPath:(NSIndexPath *)indexPath{
@@ -82,9 +92,11 @@
     if (selected) {
         self.selectedView.hidden = NO;
         self.tagLabel.textColor = BSRedColor;
+        self.backgroundColor = [UIColor whiteColor];
     }else{
         self.selectedView.hidden = YES;
         self.tagLabel.textColor = BSRGBColor(33, 33, 33);
+        self.backgroundColor = BSGlobalColor;
     }
 }
 

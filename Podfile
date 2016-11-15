@@ -2,7 +2,8 @@ platform :ios, '7.0'
 
 target 'Budejie' do
     pod 'AFNetworking','~> 3.1.0'
-    pod 'SVProgressHUD'
+    pod 'SVProgressHUD','~> 2.0.3'
+    pod 'MBProgressHUD','~> 1.0.0'
     pod 'MJRefresh','~> 3.0.8'
     pod 'MJExtension','~> 3.0.8'
     pod 'Masonry','~> 1.0.1'

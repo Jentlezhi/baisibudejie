@@ -11,10 +11,12 @@
 #import "BSUserGroupNetworkTool.h"
 #import "BSLeftTagCell.h"
 #import "BSLeftTagModel.h"
+#import "BSUserGroupModel.h"
 #import "BSUserGroupCell.h"
 
 #define BSLeftTagCellHeight   BSALayoutV(70)
 #define BSUserGroupCellHeight BSALayoutV(100)
+#define loadFrame CGRectMake(BSALayoutH(150), BSViewOriginY, kScreenWidth - BSALayoutH(150), BSViewHeight)
 
 @interface BSRecommendViewController()<UITableViewDelegate,UITableViewDataSource>
 
@@ -39,7 +41,7 @@
     if (!_leftTagTableView) {
         CGRect tableViewF = CGRectMake(0, BSViewOriginY,BSALayoutH(150),BSViewHeight);
         _leftTagTableView = [[UITableView alloc] initWithFrame:tableViewF];
-        _leftTagTableView.backgroundColor = BSGlobalCoolor;
+        _leftTagTableView.backgroundColor = BSGlobalColor;
         _leftTagTableView.separatorStyle = UITableViewCellSeparatorStyleNone;
         _leftTagTableView.tableFooterView = [[UIView alloc] init];
         _leftTagTableView.dataSource = self;
@@ -60,6 +62,7 @@
         _userGroupTableView = [[UITableView alloc] init];
         _userGroupTableView.separatorStyle = UITableViewCellSeparatorStyleNone;
         _userGroupTableView.tableFooterView = [[UIView alloc] init];
+        _userGroupTableView.backgroundColor = BSGlobalColor;
         _userGroupTableView.delegate = self;
         _userGroupTableView.dataSource = self;
     }
@@ -102,14 +105,17 @@
     BSLeftTagParameter *leftTagParameter = [BSLeftTagParameter leftTagParameter];
     leftTagParameter.a = @"category";
     leftTagParameter.c = @"subscribe";
-    [SVProgressHUD showWithStatus:@"正在加载..."];
+    [MBProgressHUD showInView:self.view withMessage:@"正在加载..."];
     self.sessionDateTask = [BSLeftTagNetworkTool leftTagWithParameterss:leftTagParameter success:^(BSLeftTagResultModel *result) {
-        [SVProgressHUD dismiss];
+        [MBProgressHUD hidden];
         self.leftTagData = result.list;
         [self.leftTagTableView reloadData];
         [self.leftTagTableView selectRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:0] animated:NO scrollPosition:UITableViewScrollPositionTop];
+        //刷新第一个标签对应的表格
+        [self.userGroupTableView.mj_header beginRefreshing];
     } failure:^(NSError *error) {
-        [SVProgressHUD showErrorWithStatus:@"请求失败"];
+        [MBProgressHUD hidden];
+        [MBProgressHUD showErrorWithMessage:@"加载数据失败"];
     }];
 }
 
@@ -124,12 +130,10 @@
     userGroupParameter.page = page;
     //记录本次的请求参数
     self.requestPar = userGroupParameter;
-    [SVProgressHUD showWithStatus:@"正在加载..."];
     self.sessionDateTask = [BSUserGroupNetworkTool userGroupWithParameterss:userGroupParameter success:^(BSUserGroupResultModel *result) {
         //如果两次请求参数不一样则取消请求
         if (self.requestPar != userGroupParameter)return;
         [self.userGroupTableView.mj_header endRefreshing];
-        [SVProgressHUD dismiss];
         //记录下次请求的页码
         leftTagModel.userListNextPage = result.next_page;
         if (result.list.count) {
@@ -148,11 +152,11 @@
         if (self.requestPar != userGroupParameter)return;
         [self.userGroupTableView.mj_header endRefreshing];
         [self.userGroupTableView.mj_footer endRefreshing];
-        [SVProgressHUD showErrorWithStatus:@"加载数据失败"];
+        [MBProgressHUD showErrorWithMessage:@"加载数据失败"];
     }];
 }
 
-- (void)refreshUserList{
+- (void)refreshUserList{   
     __weak typeof(self) weakSelf = self;
     //加载更多
     self.userGroupTableView.mj_footer = [MJRefreshBackNormalFooter footerWithRefreshingBlock:^{
@@ -197,6 +201,9 @@
         BSUserGroupCell *cell = [BSUserGroupCell userGroupCellForTableView:tableView indexPath:indexPath];
         BSLeftTagModel *leftTagModel = self.leftTagData[self.leftTagTableView.indexPathForSelectedRow.row];
         cell.userGroupModel = leftTagModel.userList[indexPath.row];
+        cell.acctionBtnClick = ^(BSUserGroupModel *userGroupModel){
+            BSLogBlue(@"%@",userGroupModel.screen_name);
+        };
         return cell;
     }
 }
@@ -226,9 +233,8 @@
             [self.userGroupTableView.mj_header beginRefreshing];
         }
     }else{
-        
+        [tableView deselectRowAtIndexPath:indexPath animated:YES];
     }
-
 }
 
 

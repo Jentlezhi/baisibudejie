@@ -35,11 +35,17 @@
 		8CA5E4601DD078A9001EDAF2 /* UIImage+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CA5E45F1DD078A9001EDAF2 /* UIImage+Extension.m */; };
 		8CA5E4631DD078E0001EDAF2 /* UIView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CA5E4621DD078E0001EDAF2 /* UIView+Extension.m */; };
 		8CA5E4781DD07C24001EDAF2 /* BSNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CA5E4771DD07C24001EDAF2 /* BSNavigationController.m */; };
-		8CA5E4951DD07FA9001EDAF2 /* BSEssenceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CA5E4941DD07FA9001EDAF2 /* BSEssenceViewController.m */; };
 		8CA5E4981DD07FCB001EDAF2 /* BSMineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CA5E4971DD07FCB001EDAF2 /* BSMineViewController.m */; };
 		8CA5E49B1DD07FDF001EDAF2 /* BSNewestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CA5E49A1DD07FDF001EDAF2 /* BSNewestViewController.m */; };
 		8CA5E4A01DD09233001EDAF2 /* BSTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CA5E49F1DD09233001EDAF2 /* BSTabBarController.m */; };
 		8CA5E4A31DD094CA001EDAF2 /* BSTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CA5E4A21DD094CA001EDAF2 /* BSTabBar.m */; };
+		8CD4098F1DD567AF00FB43CD /* MBProgressHUD+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CD4098E1DD567AF00FB43CD /* MBProgressHUD+Extension.m */; };
+		8CD409991DD5C9B700FB43CD /* BSEssenceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CD409951DD5C9B700FB43CD /* BSEssenceViewController.m */; };
+		8CD4099A1DD5C9B700FB43CD /* BSTagViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CD409981DD5C9B700FB43CD /* BSTagViewController.m */; };
+		8CD4099D1DD5CB3400FB43CD /* BSTagCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CD4099C1DD5CB3400FB43CD /* BSTagCell.m */; };
+		8CD409A01DD5CB9900FB43CD /* BSTagModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CD4099F1DD5CB9900FB43CD /* BSTagModel.m */; };
+		8CD409A51DD5CC2D00FB43CD /* BSTagNetworkTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CD409A41DD5CC2D00FB43CD /* BSTagNetworkTool.m */; };
+		8CD409AB1DD5CCF100FB43CD /* BSTagParameter.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CD409AA1DD5CCF100FB43CD /* BSTagParameter.m */; };
 		C33B09807F6E49D1BCCC9C12 /* libPods-Budejie.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B7AF547169C538B5543672E /* libPods-Budejie.a */; };
 /* End PBXBuildFile section */
 
@@ -127,8 +133,6 @@
 		8CA5E46A1DD07A48001EDAF2 /* BSSystemConstant.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BSSystemConstant.h; sourceTree = "<group>"; };
 		8CA5E4761DD07C24001EDAF2 /* BSNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSNavigationController.h; sourceTree = "<group>"; };
 		8CA5E4771DD07C24001EDAF2 /* BSNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSNavigationController.m; sourceTree = "<group>"; };
-		8CA5E4931DD07FA9001EDAF2 /* BSEssenceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSEssenceViewController.h; sourceTree = "<group>"; };
-		8CA5E4941DD07FA9001EDAF2 /* BSEssenceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSEssenceViewController.m; sourceTree = "<group>"; };
 		8CA5E4961DD07FCB001EDAF2 /* BSMineViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSMineViewController.h; sourceTree = "<group>"; };
 		8CA5E4971DD07FCB001EDAF2 /* BSMineViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSMineViewController.m; sourceTree = "<group>"; };
 		8CA5E4991DD07FDF001EDAF2 /* BSNewestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSNewestViewController.h; sourceTree = "<group>"; };
@@ -137,6 +141,20 @@
 		8CA5E49F1DD09233001EDAF2 /* BSTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSTabBarController.m; sourceTree = "<group>"; };
 		8CA5E4A11DD094CA001EDAF2 /* BSTabBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSTabBar.h; sourceTree = "<group>"; };
 		8CA5E4A21DD094CA001EDAF2 /* BSTabBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSTabBar.m; sourceTree = "<group>"; };
+		8CD4098D1DD567AF00FB43CD /* MBProgressHUD+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MBProgressHUD+Extension.h"; sourceTree = "<group>"; };
+		8CD4098E1DD567AF00FB43CD /* MBProgressHUD+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MBProgressHUD+Extension.m"; sourceTree = "<group>"; };
+		8CD409941DD5C9B700FB43CD /* BSEssenceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSEssenceViewController.h; sourceTree = "<group>"; };
+		8CD409951DD5C9B700FB43CD /* BSEssenceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSEssenceViewController.m; sourceTree = "<group>"; };
+		8CD409971DD5C9B700FB43CD /* BSTagViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSTagViewController.h; sourceTree = "<group>"; };
+		8CD409981DD5C9B700FB43CD /* BSTagViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSTagViewController.m; sourceTree = "<group>"; };
+		8CD4099B1DD5CB3400FB43CD /* BSTagCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSTagCell.h; sourceTree = "<group>"; };
+		8CD4099C1DD5CB3400FB43CD /* BSTagCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSTagCell.m; sourceTree = "<group>"; };
+		8CD4099E1DD5CB9900FB43CD /* BSTagModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSTagModel.h; sourceTree = "<group>"; };
+		8CD4099F1DD5CB9900FB43CD /* BSTagModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSTagModel.m; sourceTree = "<group>"; };
+		8CD409A31DD5CC2D00FB43CD /* BSTagNetworkTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSTagNetworkTool.h; sourceTree = "<group>"; };
+		8CD409A41DD5CC2D00FB43CD /* BSTagNetworkTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSTagNetworkTool.m; sourceTree = "<group>"; };
+		8CD409A91DD5CCF100FB43CD /* BSTagParameter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSTagParameter.h; sourceTree = "<group>"; };
+		8CD409AA1DD5CCF100FB43CD /* BSTagParameter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSTagParameter.m; sourceTree = "<group>"; };
 		A28B3EFAD0A1696E7E47816E /* Pods-Budejie.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Budejie.release.xcconfig"; path = "Pods/Target Support Files/Pods-Budejie/Pods-Budejie.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -409,6 +427,8 @@
 				8C5CB2AE1DD1C9EE008AB412 /* UIButton+Extension.m */,
 				8C31EFC31DD41BC800CA3CEA /* UIImageView+Extension.h */,
 				8C31EFC41DD41BC800CA3CEA /* UIImageView+Extension.m */,
+				8CD4098D1DD567AF00FB43CD /* MBProgressHUD+Extension.h */,
+				8CD4098E1DD567AF00FB43CD /* MBProgressHUD+Extension.m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -528,6 +548,7 @@
 		8CA5E4811DD07F21001EDAF2 /* Essence */ = {
 			isa = PBXGroup;
 			children = (
+				8CD409A11DD5CC1E00FB43CD /* Tools */,
 				8CA5E4821DD07F21001EDAF2 /* Models */,
 				8CA5E4831DD07F21001EDAF2 /* ViewModels */,
 				8CA5E4841DD07F21001EDAF2 /* Views */,
@@ -538,6 +559,10 @@
 		8CA5E4821DD07F21001EDAF2 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				8CD409A91DD5CCF100FB43CD /* BSTagParameter.h */,
+				8CD409AA1DD5CCF100FB43CD /* BSTagParameter.m */,
+				8CD4099E1DD5CB9900FB43CD /* BSTagModel.h */,
+				8CD4099F1DD5CB9900FB43CD /* BSTagModel.m */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -552,8 +577,8 @@
 		8CA5E4841DD07F21001EDAF2 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				8CA5E4931DD07FA9001EDAF2 /* BSEssenceViewController.h */,
-				8CA5E4941DD07FA9001EDAF2 /* BSEssenceViewController.m */,
+				8CD409931DD5C9B700FB43CD /* Essence */,
+				8CD409961DD5C9B700FB43CD /* Tag */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -640,6 +665,43 @@
 				8CA5E49F1DD09233001EDAF2 /* BSTabBarController.m */,
 			);
 			path = TabBarController;
+			sourceTree = "<group>";
+		};
+		8CD409931DD5C9B700FB43CD /* Essence */ = {
+			isa = PBXGroup;
+			children = (
+				8CD409941DD5C9B700FB43CD /* BSEssenceViewController.h */,
+				8CD409951DD5C9B700FB43CD /* BSEssenceViewController.m */,
+			);
+			path = Essence;
+			sourceTree = "<group>";
+		};
+		8CD409961DD5C9B700FB43CD /* Tag */ = {
+			isa = PBXGroup;
+			children = (
+				8CD409971DD5C9B700FB43CD /* BSTagViewController.h */,
+				8CD409981DD5C9B700FB43CD /* BSTagViewController.m */,
+				8CD4099B1DD5CB3400FB43CD /* BSTagCell.h */,
+				8CD4099C1DD5CB3400FB43CD /* BSTagCell.m */,
+			);
+			path = Tag;
+			sourceTree = "<group>";
+		};
+		8CD409A11DD5CC1E00FB43CD /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+				8CD409A21DD5CC1E00FB43CD /* TagNetworkTool */,
+			);
+			path = Tools;
+			sourceTree = "<group>";
+		};
+		8CD409A21DD5CC1E00FB43CD /* TagNetworkTool */ = {
+			isa = PBXGroup;
+			children = (
+				8CD409A31DD5CC2D00FB43CD /* BSTagNetworkTool.h */,
+				8CD409A41DD5CC2D00FB43CD /* BSTagNetworkTool.m */,
+			);
+			path = TagNetworkTool;
 			sourceTree = "<group>";
 		};
 		AE0A346D401BB865D4F1EA42 /* Pods */ = {
@@ -836,6 +898,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8C31EF961DD2FEBD00CA3CEA /* BSAttentionViewController.m in Sources */,
+				8CD409A01DD5CB9900FB43CD /* BSTagModel.m in Sources */,
 				8C31EFA91DD31AEB00CA3CEA /* BSLeftTagResultModel.m in Sources */,
 				8CA5E4781DD07C24001EDAF2 /* BSNavigationController.m in Sources */,
 				8C5CB2AF1DD1C9EE008AB412 /* UIButton+Extension.m in Sources */,
@@ -844,18 +907,23 @@
 				8C31EFB21DD32FB000CA3CEA /* BSLeftTagCell.m in Sources */,
 				8C31EF991DD2FEDE00CA3CEA /* BSRecommendViewController.m in Sources */,
 				8CA5E4241DD0754D001EDAF2 /* AppDelegate.m in Sources */,
+				8CD409A51DD5CC2D00FB43CD /* BSTagNetworkTool.m in Sources */,
 				8C31EFC21DD4160500CA3CEA /* BSUserGroupCell.m in Sources */,
 				8CA5E4A31DD094CA001EDAF2 /* BSTabBar.m in Sources */,
+				8CD4098F1DD567AF00FB43CD /* MBProgressHUD+Extension.m in Sources */,
 				8CA5E4601DD078A9001EDAF2 /* UIImage+Extension.m in Sources */,
-				8CA5E4951DD07FA9001EDAF2 /* BSEssenceViewController.m in Sources */,
 				8C31EFAC1DD320A300CA3CEA /* BSLeftTagNetworkTool.m in Sources */,
+				8CD409991DD5C9B700FB43CD /* BSEssenceViewController.m in Sources */,
 				8C31EFA61DD3197C00CA3CEA /* BSLeftTagModel.m in Sources */,
 				8C5CB2B21DD1D693008AB412 /* BSTestViewController.m in Sources */,
 				8CA5E45D1DD07865001EDAF2 /* UIColor+Extension.m in Sources */,
+				8CD409AB1DD5CCF100FB43CD /* BSTagParameter.m in Sources */,
+				8CD4099A1DD5C9B700FB43CD /* BSTagViewController.m in Sources */,
 				8C31EFB91DD4111900CA3CEA /* BSUserGroupResultModel.m in Sources */,
 				8C31EFBF1DD413B100CA3CEA /* BSUserGroupNetworkTool.m in Sources */,
 				8C31EFC51DD41BC800CA3CEA /* UIImageView+Extension.m in Sources */,
 				8C31EF9F1DD3026E00CA3CEA /* BSNetworkTool.m in Sources */,
+				8CD4099D1DD5CB3400FB43CD /* BSTagCell.m in Sources */,
 				8CA5E4A01DD09233001EDAF2 /* BSTabBarController.m in Sources */,
 				8C31EFBC1DD4113500CA3CEA /* BSUserGroupParameter.m in Sources */,
 				8CA5E4631DD078E0001EDAF2 /* UIView+Extension.m in Sources */,

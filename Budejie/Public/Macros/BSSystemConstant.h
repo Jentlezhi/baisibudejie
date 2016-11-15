@@ -12,7 +12,7 @@
 #define BSMarigin 10.0f
 #define BSViewOriginY 64.0f
 #define BSViewHeight  (kScreenHeight - BSViewOriginY)
-#define BSDividerHeight 0.3f
+#define BSDividerHeight 0.4f
 
 #define BSUserHeaderPlaceholder [UIImage imageWithColor:[UIColor grayColor]]
 

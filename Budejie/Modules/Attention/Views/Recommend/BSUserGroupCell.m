@@ -34,6 +34,9 @@
  */
 - (void)userGroupCellBasicConfig{
     self.backgroundColor = [UIColor whiteColor];
+    //cell选中时颜色设置
+    self.selectedBackgroundView = [[UIView alloc] initWithFrame:self.frame];
+    self.selectedBackgroundView.backgroundColor = BSGlobalColor;
 }
 /**
  *  初始化子控件
@@ -59,6 +62,11 @@
     [attentionBtn setTitleColor:BSRedColor forState:UIControlStateNormal];
     [attentionBtn setTitle:@"+ 关注" forState:UIControlStateNormal];
     attentionBtn.titleLabel.font = [UIFont systemFontOfSize:13];
+    [[attentionBtn rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(id x) {
+        if (self.acctionBtnClick) {
+            self.acctionBtnClick(self.userGroupModel);
+        }
+    }];
     [self.contentView addSubview:attentionBtn];
     [attentionBtn mas_makeConstraints:^(MASConstraintMaker *make) {
         make.size.equalTo(CGSizeMake(BSALayoutH(90), BSALayoutV(40)));
@@ -97,7 +105,7 @@
     
     //分割线
     UILabel *dividerLabel = [[UILabel alloc] init];
-    dividerLabel.backgroundColor = BSGlobalCoolor;
+    dividerLabel.backgroundColor = BSGlobalColor;
     [self.contentView addSubview:dividerLabel];
     [dividerLabel mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.bottom.right.equalTo(self.contentView);
