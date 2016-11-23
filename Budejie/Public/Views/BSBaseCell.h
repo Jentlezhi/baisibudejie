@@ -27,6 +27,10 @@
 @property(copy, nonatomic) void(^commentBtnClick)(id);
 /** 查看大图 */
 @property(copy, nonatomic) void(^seeBigPicBlock)(id);
+/** 播放音频 */
+@property(copy, nonatomic) void(^voicePlayBlock)(id);
+/** 播放视频 */
+@property(copy, nonatomic) void(^videoPlayBlock)(id);
 
 /**
  * 工具条按钮设置

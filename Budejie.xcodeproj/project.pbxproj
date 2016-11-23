@@ -8,6 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		8C2225401DE4F71F00ABAD21 /* BSPublishView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C22253F1DE4F71F00ABAD21 /* BSPublishView.m */; };
+		8C2225821DE593B000ABAD21 /* BSEssencePictureView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C2225811DE593B000ABAD21 /* BSEssencePictureView.m */; };
+		8C2225871DE597FC00ABAD21 /* BSEssenceVoiceView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C2225861DE597FC00ABAD21 /* BSEssenceVoiceView.m */; };
+		8C22258A1DE59FD500ABAD21 /* NSString+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C2225891DE59FD500ABAD21 /* NSString+Extension.m */; };
+		8C22258B1DE5C72B00ABAD21 /* BSEssenceVoiceView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C2225861DE597FC00ABAD21 /* BSEssenceVoiceView.m */; };
+		8C2225901DE5D40800ABAD21 /* BSToolbarButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C22258E1DE5D40800ABAD21 /* BSToolbarButton.m */; };
+		8C2225931DE5D43B00ABAD21 /* BSEssenceVideoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C2225921DE5D43B00ABAD21 /* BSEssenceVideoView.m */; };
 		8C31EF961DD2FEBD00CA3CEA /* BSAttentionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C31EF941DD2FEBD00CA3CEA /* BSAttentionViewController.m */; };
 		8C31EF991DD2FEDE00CA3CEA /* BSRecommendViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C31EF981DD2FEDE00CA3CEA /* BSRecommendViewController.m */; };
 		8C31EF9F1DD3026E00CA3CEA /* BSNetworkTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C31EF9E1DD3026E00CA3CEA /* BSNetworkTool.m */; };
@@ -34,23 +40,11 @@
 		8C85E1301DE153CF007E53B4 /* BSEssenceResult.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C85E12F1DE153CF007E53B4 /* BSEssenceResult.m */; };
 		8C85E1331DE15407007E53B4 /* BSEssenceListModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C85E1321DE15407007E53B4 /* BSEssenceListModel.m */; };
 		8C85E1371DE15618007E53B4 /* BSEssenceNetworkTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C85E1361DE15618007E53B4 /* BSEssenceNetworkTool.m */; };
-		8C85E1551DE15822007E53B4 /* BSAllViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C85E13B1DE15822007E53B4 /* BSAllViewController.m */; };
 		8C85E1561DE15822007E53B4 /* BSEssenceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C85E13D1DE15822007E53B4 /* BSEssenceViewController.m */; };
-		8C85E1571DE15822007E53B4 /* BSJokesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C85E13F1DE15822007E53B4 /* BSJokesViewController.m */; };
-		8C85E1581DE15822007E53B4 /* BSPictureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C85E1411DE15822007E53B4 /* BSPictureViewController.m */; };
-		8C85E1591DE15822007E53B4 /* BSTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C85E1431DE15822007E53B4 /* BSTestViewController.m */; };
-		8C85E15A1DE15822007E53B4 /* BSVideoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C85E1451DE15822007E53B4 /* BSVideoViewController.m */; };
-		8C85E15B1DE15822007E53B4 /* BSVoiceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C85E1471DE15822007E53B4 /* BSVoiceViewController.m */; };
-		8C85E15C1DE15822007E53B4 /* BSJokeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C85E14A1DE15822007E53B4 /* BSJokeCell.m */; };
-		8C85E15D1DE15822007E53B4 /* BSToolbarButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C85E14C1DE15822007E53B4 /* BSToolbarButton.m */; };
 		8C85E15E1DE15822007E53B4 /* BSTagCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C85E1501DE15822007E53B4 /* BSTagCell.m */; };
 		8C85E15F1DE15822007E53B4 /* BSTagViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C85E1521DE15822007E53B4 /* BSTagViewController.m */; };
 		8C85E1621DE15839007E53B4 /* BSAllCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C85E1611DE15839007E53B4 /* BSAllCell.m */; };
-		8C85E1651DE15847007E53B4 /* BSPictureCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C85E1641DE15847007E53B4 /* BSPictureCell.m */; };
-		8C85E1681DE15851007E53B4 /* BSVideoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C85E1671DE15851007E53B4 /* BSVideoCell.m */; };
-		8C85E16B1DE1585C007E53B4 /* BSVoiceCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C85E16A1DE1585C007E53B4 /* BSVoiceCell.m */; };
 		8C85E16E1DE15EE7007E53B4 /* BSEssenceBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C85E16D1DE15EE7007E53B4 /* BSEssenceBaseViewController.m */; };
-		8C85E1751DE2A4F3007E53B4 /* BSEssencePictureView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C85E1741DE2A4F3007E53B4 /* BSEssencePictureView.m */; };
 		8C85E1791DE3E71E007E53B4 /* BSProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C85E1781DE3E71E007E53B4 /* BSProgressView.m */; };
 		8C85E17D1DE3ED27007E53B4 /* BSShowBigPicViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C85E17C1DE3ED27007E53B4 /* BSShowBigPicViewController.m */; };
 		8CA5E3E71DD07359001EDAF2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CA5E3E61DD07359001EDAF2 /* main.m */; };
@@ -101,6 +95,16 @@
 		2B7AF547169C538B5543672E /* libPods-Budejie.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Budejie.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8C22253E1DE4F71F00ABAD21 /* BSPublishView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSPublishView.h; sourceTree = "<group>"; };
 		8C22253F1DE4F71F00ABAD21 /* BSPublishView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSPublishView.m; sourceTree = "<group>"; };
+		8C2225811DE593B000ABAD21 /* BSEssencePictureView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSEssencePictureView.m; sourceTree = "<group>"; };
+		8C2225831DE593CA00ABAD21 /* BSEssencePictureView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSEssencePictureView.h; sourceTree = "<group>"; };
+		8C2225851DE597FC00ABAD21 /* BSEssenceVoiceView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSEssenceVoiceView.h; sourceTree = "<group>"; };
+		8C2225861DE597FC00ABAD21 /* BSEssenceVoiceView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSEssenceVoiceView.m; sourceTree = "<group>"; };
+		8C2225881DE59FD500ABAD21 /* NSString+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Extension.h"; sourceTree = "<group>"; };
+		8C2225891DE59FD500ABAD21 /* NSString+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Extension.m"; sourceTree = "<group>"; };
+		8C22258D1DE5D40800ABAD21 /* BSToolbarButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSToolbarButton.h; sourceTree = "<group>"; };
+		8C22258E1DE5D40800ABAD21 /* BSToolbarButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSToolbarButton.m; sourceTree = "<group>"; };
+		8C2225911DE5D43B00ABAD21 /* BSEssenceVideoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSEssenceVideoView.h; sourceTree = "<group>"; };
+		8C2225921DE5D43B00ABAD21 /* BSEssenceVideoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSEssenceVideoView.m; sourceTree = "<group>"; };
 		8C31EF931DD2FEBD00CA3CEA /* BSAttentionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSAttentionViewController.h; sourceTree = "<group>"; };
 		8C31EF941DD2FEBD00CA3CEA /* BSAttentionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSAttentionViewController.m; sourceTree = "<group>"; };
 		8C31EF971DD2FEDE00CA3CEA /* BSRecommendViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSRecommendViewController.h; sourceTree = "<group>"; };
@@ -154,41 +158,17 @@
 		8C85E1321DE15407007E53B4 /* BSEssenceListModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSEssenceListModel.m; sourceTree = "<group>"; };
 		8C85E1351DE15618007E53B4 /* BSEssenceNetworkTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSEssenceNetworkTool.h; sourceTree = "<group>"; };
 		8C85E1361DE15618007E53B4 /* BSEssenceNetworkTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSEssenceNetworkTool.m; sourceTree = "<group>"; };
-		8C85E13A1DE15822007E53B4 /* BSAllViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSAllViewController.h; sourceTree = "<group>"; };
-		8C85E13B1DE15822007E53B4 /* BSAllViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSAllViewController.m; sourceTree = "<group>"; };
 		8C85E13C1DE15822007E53B4 /* BSEssenceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSEssenceViewController.h; sourceTree = "<group>"; };
 		8C85E13D1DE15822007E53B4 /* BSEssenceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSEssenceViewController.m; sourceTree = "<group>"; };
-		8C85E13E1DE15822007E53B4 /* BSJokesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSJokesViewController.h; sourceTree = "<group>"; };
-		8C85E13F1DE15822007E53B4 /* BSJokesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSJokesViewController.m; sourceTree = "<group>"; };
-		8C85E1401DE15822007E53B4 /* BSPictureViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSPictureViewController.h; sourceTree = "<group>"; };
-		8C85E1411DE15822007E53B4 /* BSPictureViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSPictureViewController.m; sourceTree = "<group>"; };
-		8C85E1421DE15822007E53B4 /* BSTestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSTestViewController.h; sourceTree = "<group>"; };
-		8C85E1431DE15822007E53B4 /* BSTestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSTestViewController.m; sourceTree = "<group>"; };
-		8C85E1441DE15822007E53B4 /* BSVideoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSVideoViewController.h; sourceTree = "<group>"; };
-		8C85E1451DE15822007E53B4 /* BSVideoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSVideoViewController.m; sourceTree = "<group>"; };
-		8C85E1461DE15822007E53B4 /* BSVoiceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSVoiceViewController.h; sourceTree = "<group>"; };
-		8C85E1471DE15822007E53B4 /* BSVoiceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSVoiceViewController.m; sourceTree = "<group>"; };
-		8C85E1491DE15822007E53B4 /* BSJokeCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSJokeCell.h; sourceTree = "<group>"; };
-		8C85E14A1DE15822007E53B4 /* BSJokeCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSJokeCell.m; sourceTree = "<group>"; };
-		8C85E14B1DE15822007E53B4 /* BSToolbarButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSToolbarButton.h; sourceTree = "<group>"; };
-		8C85E14C1DE15822007E53B4 /* BSToolbarButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSToolbarButton.m; sourceTree = "<group>"; };
 		8C85E14F1DE15822007E53B4 /* BSTagCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSTagCell.h; sourceTree = "<group>"; };
 		8C85E1501DE15822007E53B4 /* BSTagCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSTagCell.m; sourceTree = "<group>"; };
 		8C85E1511DE15822007E53B4 /* BSTagViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSTagViewController.h; sourceTree = "<group>"; };
 		8C85E1521DE15822007E53B4 /* BSTagViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSTagViewController.m; sourceTree = "<group>"; };
 		8C85E1601DE15839007E53B4 /* BSAllCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSAllCell.h; sourceTree = "<group>"; };
 		8C85E1611DE15839007E53B4 /* BSAllCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSAllCell.m; sourceTree = "<group>"; };
-		8C85E1631DE15847007E53B4 /* BSPictureCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSPictureCell.h; sourceTree = "<group>"; };
-		8C85E1641DE15847007E53B4 /* BSPictureCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSPictureCell.m; sourceTree = "<group>"; };
-		8C85E1661DE15851007E53B4 /* BSVideoCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSVideoCell.h; sourceTree = "<group>"; };
-		8C85E1671DE15851007E53B4 /* BSVideoCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSVideoCell.m; sourceTree = "<group>"; };
-		8C85E1691DE1585C007E53B4 /* BSVoiceCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSVoiceCell.h; sourceTree = "<group>"; };
-		8C85E16A1DE1585C007E53B4 /* BSVoiceCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSVoiceCell.m; sourceTree = "<group>"; };
 		8C85E16C1DE15EE7007E53B4 /* BSEssenceBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSEssenceBaseViewController.h; sourceTree = "<group>"; };
 		8C85E16D1DE15EE7007E53B4 /* BSEssenceBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSEssenceBaseViewController.m; sourceTree = "<group>"; };
 		8C85E16F1DE29D48007E53B4 /* BSEnum.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BSEnum.h; sourceTree = "<group>"; };
-		8C85E1731DE2A4F3007E53B4 /* BSEssencePictureView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSEssencePictureView.h; sourceTree = "<group>"; };
-		8C85E1741DE2A4F3007E53B4 /* BSEssencePictureView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSEssencePictureView.m; sourceTree = "<group>"; };
 		8C85E1771DE3E71E007E53B4 /* BSProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSProgressView.h; sourceTree = "<group>"; };
 		8C85E1781DE3E71E007E53B4 /* BSProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSProgressView.m; sourceTree = "<group>"; };
 		8C85E17B1DE3ED27007E53B4 /* BSShowBigPicViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSShowBigPicViewController.h; sourceTree = "<group>"; };
@@ -288,6 +268,42 @@
 				8C22253F1DE4F71F00ABAD21 /* BSPublishView.m */,
 			);
 			path = Publish;
+			sourceTree = "<group>";
+		};
+		8C2225801DE593B000ABAD21 /* PictureView */ = {
+			isa = PBXGroup;
+			children = (
+				8C2225831DE593CA00ABAD21 /* BSEssencePictureView.h */,
+				8C2225811DE593B000ABAD21 /* BSEssencePictureView.m */,
+			);
+			path = PictureView;
+			sourceTree = "<group>";
+		};
+		8C2225841DE593FB00ABAD21 /* VoiceView */ = {
+			isa = PBXGroup;
+			children = (
+				8C2225851DE597FC00ABAD21 /* BSEssenceVoiceView.h */,
+				8C2225861DE597FC00ABAD21 /* BSEssenceVoiceView.m */,
+			);
+			path = VoiceView;
+			sourceTree = "<group>";
+		};
+		8C22258C1DE5D40800ABAD21 /* Public */ = {
+			isa = PBXGroup;
+			children = (
+				8C22258D1DE5D40800ABAD21 /* BSToolbarButton.h */,
+				8C22258E1DE5D40800ABAD21 /* BSToolbarButton.m */,
+			);
+			path = Public;
+			sourceTree = "<group>";
+		};
+		8C22258F1DE5D40800ABAD21 /* VideoView */ = {
+			isa = PBXGroup;
+			children = (
+				8C2225911DE5D43B00ABAD21 /* BSEssenceVideoView.h */,
+				8C2225921DE5D43B00ABAD21 /* BSEssenceVideoView.m */,
+			);
+			path = VideoView;
 			sourceTree = "<group>";
 		};
 		8C31EF921DD2FEBD00CA3CEA /* Attention */ = {
@@ -441,44 +457,12 @@
 		8C85E1391DE15822007E53B4 /* Essence */ = {
 			isa = PBXGroup;
 			children = (
-				8C85E13A1DE15822007E53B4 /* BSAllViewController.h */,
-				8C85E13B1DE15822007E53B4 /* BSAllViewController.m */,
 				8C85E13C1DE15822007E53B4 /* BSEssenceViewController.h */,
 				8C85E13D1DE15822007E53B4 /* BSEssenceViewController.m */,
-				8C85E13E1DE15822007E53B4 /* BSJokesViewController.h */,
-				8C85E13F1DE15822007E53B4 /* BSJokesViewController.m */,
-				8C85E1401DE15822007E53B4 /* BSPictureViewController.h */,
-				8C85E1411DE15822007E53B4 /* BSPictureViewController.m */,
-				8C85E1421DE15822007E53B4 /* BSTestViewController.h */,
-				8C85E1431DE15822007E53B4 /* BSTestViewController.m */,
-				8C85E1441DE15822007E53B4 /* BSVideoViewController.h */,
-				8C85E1451DE15822007E53B4 /* BSVideoViewController.m */,
-				8C85E1461DE15822007E53B4 /* BSVoiceViewController.h */,
-				8C85E1471DE15822007E53B4 /* BSVoiceViewController.m */,
 				8C85E16C1DE15EE7007E53B4 /* BSEssenceBaseViewController.h */,
 				8C85E16D1DE15EE7007E53B4 /* BSEssenceBaseViewController.m */,
 			);
 			path = Essence;
-			sourceTree = "<group>";
-		};
-		8C85E1481DE15822007E53B4 /* JokeCell */ = {
-			isa = PBXGroup;
-			children = (
-				8C85E1491DE15822007E53B4 /* BSJokeCell.h */,
-				8C85E14A1DE15822007E53B4 /* BSJokeCell.m */,
-				8C85E14B1DE15822007E53B4 /* BSToolbarButton.h */,
-				8C85E14C1DE15822007E53B4 /* BSToolbarButton.m */,
-			);
-			path = JokeCell;
-			sourceTree = "<group>";
-		};
-		8C85E14D1DE15822007E53B4 /* PictureCell */ = {
-			isa = PBXGroup;
-			children = (
-				8C85E1631DE15847007E53B4 /* BSPictureCell.h */,
-				8C85E1641DE15847007E53B4 /* BSPictureCell.m */,
-			);
-			path = PictureCell;
 			sourceTree = "<group>";
 		};
 		8C85E14E1DE15822007E53B4 /* Tag */ = {
@@ -490,24 +474,6 @@
 				8C85E1521DE15822007E53B4 /* BSTagViewController.m */,
 			);
 			path = Tag;
-			sourceTree = "<group>";
-		};
-		8C85E1531DE15822007E53B4 /* VideoCell */ = {
-			isa = PBXGroup;
-			children = (
-				8C85E1661DE15851007E53B4 /* BSVideoCell.h */,
-				8C85E1671DE15851007E53B4 /* BSVideoCell.m */,
-			);
-			path = VideoCell;
-			sourceTree = "<group>";
-		};
-		8C85E1541DE15822007E53B4 /* VoiceCell */ = {
-			isa = PBXGroup;
-			children = (
-				8C85E1691DE1585C007E53B4 /* BSVoiceCell.h */,
-				8C85E16A1DE1585C007E53B4 /* BSVoiceCell.m */,
-			);
-			path = VoiceCell;
 			sourceTree = "<group>";
 		};
 		8C85E1761DE3E70D007E53B4 /* ProgressView */ = {
@@ -671,6 +637,8 @@
 				8CD4098E1DD567AF00FB43CD /* MBProgressHUD+Extension.m */,
 				8C85E1241DE04E4A007E53B4 /* NSDate+Extension.h */,
 				8C85E1251DE04E4A007E53B4 /* NSDate+Extension.m */,
+				8C2225881DE59FD500ABAD21 /* NSString+Extension.h */,
+				8C2225891DE59FD500ABAD21 /* NSString+Extension.m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -734,8 +702,6 @@
 				8CBFA8CF1DDBE0A6000C74CA /* BSPushGuidView.xib */,
 				8C85E1211DDEFAFD007E53B4 /* BSBaseCell.h */,
 				8C85E1221DDEFAFD007E53B4 /* BSBaseCell.m */,
-				8C85E1731DE2A4F3007E53B4 /* BSEssencePictureView.h */,
-				8C85E1741DE2A4F3007E53B4 /* BSEssencePictureView.m */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -828,14 +794,14 @@
 		8CA5E4841DD07F21001EDAF2 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				8C22258C1DE5D40800ABAD21 /* Public */,
+				8C22258F1DE5D40800ABAD21 /* VideoView */,
+				8C2225841DE593FB00ABAD21 /* VoiceView */,
+				8C2225801DE593B000ABAD21 /* PictureView */,
 				8C85E17A1DE3ED11007E53B4 /* ShowBigPicViewController */,
 				8C85E1381DE15822007E53B4 /* AllCell */,
 				8C85E1391DE15822007E53B4 /* Essence */,
-				8C85E1481DE15822007E53B4 /* JokeCell */,
-				8C85E14D1DE15822007E53B4 /* PictureCell */,
 				8C85E14E1DE15822007E53B4 /* Tag */,
-				8C85E1531DE15822007E53B4 /* VideoCell */,
-				8C85E1541DE15822007E53B4 /* VoiceCell */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -1161,7 +1127,6 @@
 			files = (
 				8C31EF961DD2FEBD00CA3CEA /* BSAttentionViewController.m in Sources */,
 				8C31EFA91DD31AEB00CA3CEA /* BSLeftTagResultModel.m in Sources */,
-				8C85E15C1DE15822007E53B4 /* BSJokeCell.m in Sources */,
 				8CA5E4781DD07C24001EDAF2 /* BSNavigationController.m in Sources */,
 				8C85E16E1DE15EE7007E53B4 /* BSEssenceBaseViewController.m in Sources */,
 				8C5CB2AF1DD1C9EE008AB412 /* UIButton+Extension.m in Sources */,
@@ -1170,56 +1135,50 @@
 				8C31EFB21DD32FB000CA3CEA /* BSLeftTagCell.m in Sources */,
 				8C31EF991DD2FEDE00CA3CEA /* BSRecommendViewController.m in Sources */,
 				8C85E1621DE15839007E53B4 /* BSAllCell.m in Sources */,
-				8C85E1751DE2A4F3007E53B4 /* BSEssencePictureView.m in Sources */,
 				8CA5E4241DD0754D001EDAF2 /* AppDelegate.m in Sources */,
 				8CBFA8CE1DDBE092000C74CA /* BSPushGuidView.m in Sources */,
 				8C85E1371DE15618007E53B4 /* BSEssenceNetworkTool.m in Sources */,
+				8C2225871DE597FC00ABAD21 /* BSEssenceVoiceView.m in Sources */,
 				8C85E15E1DE15822007E53B4 /* BSTagCell.m in Sources */,
 				8C2225401DE4F71F00ABAD21 /* BSPublishView.m in Sources */,
 				8C85E17D1DE3ED27007E53B4 /* BSShowBigPicViewController.m in Sources */,
 				8C85E12D1DE1537A007E53B4 /* BSEssenceParameter.m in Sources */,
 				8CEDC0BE1DDAF1EB00EE6F56 /* BSMineViewController.m in Sources */,
 				8CBFA8CB1DDB0A3D000C74CA /* BSVerticalButton.m in Sources */,
+				8C2225821DE593B000ABAD21 /* BSEssencePictureView.m in Sources */,
 				8C85E1161DDDB2CF007E53B4 /* BSInfoModel.m in Sources */,
 				8CD409A51DD5CC2D00FB43CD /* BSTagNetworkTool.m in Sources */,
 				8CC48E051DDAF3FD007E881B /* BSLoginRegisterViewController.m in Sources */,
 				8C31EFC21DD4160500CA3CEA /* BSUserGroupCell.m in Sources */,
 				8CBFA8C81DDB0472000C74CA /* BSTextField.m in Sources */,
-				8C85E1581DE15822007E53B4 /* BSPictureViewController.m in Sources */,
 				8CA5E4A31DD094CA001EDAF2 /* BSTabBar.m in Sources */,
 				8CD4098F1DD567AF00FB43CD /* MBProgressHUD+Extension.m in Sources */,
 				8C85E15F1DE15822007E53B4 /* BSTagViewController.m in Sources */,
-				8C85E1681DE15851007E53B4 /* BSVideoCell.m in Sources */,
 				8CA5E4601DD078A9001EDAF2 /* UIImage+Extension.m in Sources */,
-				8C85E1651DE15847007E53B4 /* BSPictureCell.m in Sources */,
-				8C85E1571DE15822007E53B4 /* BSJokesViewController.m in Sources */,
 				8C31EFAC1DD320A300CA3CEA /* BSLeftTagNetworkTool.m in Sources */,
 				8C85E1091DDDB079007E53B4 /* BSTagModel.m in Sources */,
 				8C31EFA61DD3197C00CA3CEA /* BSLeftTagModel.m in Sources */,
 				8CA5E45D1DD07865001EDAF2 /* UIColor+Extension.m in Sources */,
 				8C85E1191DDDB31C007E53B4 /* BSThemsModel.m in Sources */,
-				8C85E16B1DE1585C007E53B4 /* BSVoiceCell.m in Sources */,
 				8C85E10A1DDDB079007E53B4 /* BSTagParameter.m in Sources */,
 				8C31EFB91DD4111900CA3CEA /* BSUserGroupResultModel.m in Sources */,
 				8C85E1561DE15822007E53B4 /* BSEssenceViewController.m in Sources */,
 				8C85E1231DDEFAFD007E53B4 /* BSBaseCell.m in Sources */,
+				8C22258A1DE59FD500ABAD21 /* NSString+Extension.m in Sources */,
 				8C31EFBF1DD413B100CA3CEA /* BSUserGroupNetworkTool.m in Sources */,
 				8C31EFC51DD41BC800CA3CEA /* UIImageView+Extension.m in Sources */,
 				8C85E1301DE153CF007E53B4 /* BSEssenceResult.m in Sources */,
-				8C85E15B1DE15822007E53B4 /* BSVoiceViewController.m in Sources */,
 				8C85E1791DE3E71E007E53B4 /* BSProgressView.m in Sources */,
 				8C31EF9F1DD3026E00CA3CEA /* BSNetworkTool.m in Sources */,
-				8C85E1591DE15822007E53B4 /* BSTestViewController.m in Sources */,
 				8CA5E4A01DD09233001EDAF2 /* BSTabBarController.m in Sources */,
 				8C31EFBC1DD4113500CA3CEA /* BSUserGroupParameter.m in Sources */,
 				8C85E1261DE04E4A007E53B4 /* NSDate+Extension.m in Sources */,
 				8CA5E4631DD078E0001EDAF2 /* UIView+Extension.m in Sources */,
-				8C85E15D1DE15822007E53B4 /* BSToolbarButton.m in Sources */,
 				8C85E1331DE15407007E53B4 /* BSEssenceListModel.m in Sources */,
+				8C2225901DE5D40800ABAD21 /* BSToolbarButton.m in Sources */,
 				8CA5E3E71DD07359001EDAF2 /* main.m in Sources */,
+				8C2225931DE5D43B00ABAD21 /* BSEssenceVideoView.m in Sources */,
 				8CA5E4281DD077A6001EDAF2 /* BSBaseViewController.m in Sources */,
-				8C85E15A1DE15822007E53B4 /* BSVideoViewController.m in Sources */,
-				8C85E1551DE15822007E53B4 /* BSAllViewController.m in Sources */,
 				8C4D7ECA1DD1B4300076D629 /* NSObject+Extension.m in Sources */,
 				8C31EFB61DD410FB00CA3CEA /* BSUserGroupModel.m in Sources */,
 			);
@@ -1230,6 +1189,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8CA5E4001DD0735A001EDAF2 /* BudejieTests.m in Sources */,
+				8C22258B1DE5C72B00ABAD21 /* BSEssenceVoiceView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

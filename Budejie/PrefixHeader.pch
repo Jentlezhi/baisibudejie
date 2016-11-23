@@ -17,6 +17,7 @@
 #import "UIView+Extension.h"
 #import "NSObject+Extension.h"
 #import "UIButton+Extension.h"
+#import "NSString+Extension.h"
 #define MAS_SHORTHAND_GLOBALS
 #import "masonry.h"
 #import "BSColorConstant.h"

@@ -50,11 +50,19 @@
 @property (nonatomic, copy) NSString *large_image;
 /** 帖子的类型 */
 @property (nonatomic, assign) BSTopicType type;
+/** 音频时长 */
+@property (nonatomic, assign) NSInteger voicetime;
+/** 视频时长 */
+@property (nonatomic, assign) NSInteger videotime;
+/** 播放次数 */
+@property (nonatomic, assign) NSInteger playcount;
 
 /** cell的高度 */
 @property (nonatomic, assign, readonly) CGFloat cellHeight;
-/** picture的frame */
+/** pic的frame */
 @property (nonatomic, assign, readonly) CGRect pictureF;
+/** voice的frame */
+@property (nonatomic, assign, readonly) CGRect voiceF;
 /** 是否为大图 */
 @property (nonatomic, assign, getter=isBigPic) BOOL bigPic;
 /** 是否为gif图 */

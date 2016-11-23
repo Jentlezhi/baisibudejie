@@ -169,7 +169,16 @@
         BSShowBigPicViewController *showBigPicViewController = [BSShowBigPicViewController showBigPicViewController];
         showBigPicViewController.essenceListModel = essenceListModel;
         [self presentViewController:showBigPicViewController animated:NO completion:nil];
-        BSLog(@"查看大图->%@",essenceListModel.name);
+    };
+    
+    //播放音频
+    baseCell.voicePlayBlock = ^(BSEssenceListModel *essenceListModel){
+        BSLog(@"播放音频->%@",essenceListModel.name);
+    };
+    
+    //播放视频
+    baseCell.videoPlayBlock = ^(BSEssenceListModel *essenceListModel){
+        BSLog(@"播放视频->%@",essenceListModel.name);
     };
     return baseCell;
 }

@@ -10,6 +10,8 @@
 #import "BSToolbarButton.h"
 #import "BSEssenceListModel.h"
 #import "BSEssencePictureView.h"
+#import "BSEssenceVoiceView.h"
+#import "BSEssenceVideoView.h"
 
 @interface BSBaseCell()
 
@@ -27,6 +29,10 @@
 @property(weak, nonatomic) UILabel *contentLabel;
 /** 图片 */
 @property(weak, nonatomic) BSEssencePictureView *essencePictureView;
+/** 音频 */
+@property(weak, nonatomic) BSEssenceVoiceView *essenceVoiceView;
+/** 视频 */
+@property(weak, nonatomic) BSEssenceVideoView *essenceVideoView;
 /** 工具条 */
 @property(weak, nonatomic) UIView *toolBar;
 /** 点赞 */
@@ -46,15 +52,38 @@
     if (!_essencePictureView) {
         BSEssencePictureView *essencePictureView = [[BSEssencePictureView alloc] init];
         [essencePictureView.seeBigPicSignal subscribeNext:^(BSEssenceListModel *essenceListModel) {
-            if (self.seeBigPicBlock) {
-                self.seeBigPicBlock(essenceListModel);
-            }
+            !self.seeBigPicBlock?:self.seeBigPicBlock(essenceListModel);
         }];
         [self.contentView addSubview:essencePictureView];
         _essencePictureView = essencePictureView;
     }
     return _essencePictureView;
 }
+
+- (BSEssenceVoiceView *)essenceVoiceView{
+    if (!_essenceVoiceView) {
+        BSEssenceVoiceView *essenceVoiceView = [[BSEssenceVoiceView alloc] init];
+        [essenceVoiceView.voicePlaySignal subscribeNext:^(BSEssenceListModel *essenceListModel) {
+            !self.voicePlayBlock?:self.voicePlayBlock(essenceListModel);
+        }];
+        [self.contentView addSubview:essenceVoiceView];
+        _essenceVoiceView = essenceVoiceView;
+    }
+    return _essenceVoiceView;
+}
+
+- (BSEssenceVideoView *)essenceVideoView{
+    if (!_essenceVideoView) {
+        BSEssenceVideoView *essenceVideoView = [[BSEssenceVideoView alloc] init];
+        [essenceVideoView.videoPlaySignal subscribeNext:^(BSEssenceListModel *essenceListModel) {
+            !self.videoPlayBlock?:self.videoPlayBlock(essenceListModel);
+        }];
+        [self.contentView addSubview:essenceVideoView];
+        _essenceVideoView = essenceVideoView;
+    }
+    return _essenceVideoView;
+}
+
 
 - (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier{
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
@@ -288,6 +317,9 @@
     
     //图片
     if (essenceListModel.type == BSTopicTypePicture) {
+        self.essencePictureView.hidden = NO;
+        self.essenceVoiceView.hidden = YES;
+        self.essenceVideoView.hidden = YES;
         self.essencePictureView.essenceListModel = essenceListModel;
         //添加约束
         [self.essencePictureView mas_remakeConstraints:^(MASConstraintMaker *make) {
@@ -302,8 +334,46 @@
             make.top.equalTo(_essencePictureView.mas_bottom).offset(BSEssenceCellMargin);
             make.height.equalTo(BSALayoutV(80));
         }];
-    }else{
+    }else if (essenceListModel.type == BSTopicTypeVoice){//音频
+        self.essenceVoiceView.hidden = NO;
         self.essencePictureView.hidden = YES;
+        self.essenceVideoView.hidden = YES;
+        self.essenceVoiceView.essenceListModel = essenceListModel;
+        //添加约束
+        [self.essenceVoiceView mas_remakeConstraints:^(MASConstraintMaker *make) {
+            make.top.equalTo(self.contentLabel.mas_bottom).offset(2*BSEssenceCellMargin);
+            make.left.right.equalTo(self.contentLabel);
+            make.height.equalTo(essenceListModel.voiceF.size.height);
+        }];
+        
+        //工具条更改约束
+        [self.toolBar mas_remakeConstraints:^(MASConstraintMaker *make) {
+            make.left.right.equalTo(self.contentView);
+            make.top.equalTo(_essenceVoiceView.mas_bottom).offset(BSEssenceCellMargin);
+            make.height.equalTo(BSALayoutV(80));
+        }];
+    }else if (essenceListModel.type == BSTopicTypeVideo){//视频
+        self.essenceVideoView.hidden = NO;
+        self.essencePictureView.hidden = YES;
+        self.essenceVoiceView.hidden = YES;
+        self.essenceVideoView.essenceListModel = essenceListModel;
+        //添加约束
+        [self.essenceVideoView mas_remakeConstraints:^(MASConstraintMaker *make) {
+            make.top.equalTo(self.contentLabel.mas_bottom).offset(2*BSEssenceCellMargin);
+            make.left.right.equalTo(self.contentLabel);
+            make.height.equalTo(essenceListModel.voiceF.size.height);
+        }];
+        
+        //工具条更改约束
+        [self.toolBar mas_remakeConstraints:^(MASConstraintMaker *make) {
+            make.left.right.equalTo(self.contentView);
+            make.top.equalTo(_essenceVideoView.mas_bottom).offset(BSEssenceCellMargin);
+            make.height.equalTo(BSALayoutV(80));
+        }];
+    }else{//段子
+        self.essencePictureView.hidden = YES;
+        self.essenceVoiceView.hidden = YES;
+        self.essenceVideoView.hidden = YES;
         [self.toolBar mas_remakeConstraints:^(MASConstraintMaker *make) {
             make.left.right.equalTo(self.contentView);
             make.top.equalTo(self.contentLabel.mas_bottom);

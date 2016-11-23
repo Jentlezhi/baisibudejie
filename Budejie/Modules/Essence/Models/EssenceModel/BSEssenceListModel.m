@@ -62,6 +62,7 @@
         CGSize maxSize = CGSizeMake(BSEssenceCellContentW, MAXFLOAT);
         CGFloat textH = [self.text boundingRectWithSize:maxSize options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName : BSEssenceTextFont} context:nil].size.height;
         CGFloat pictureH = 0.f;
+        CGFloat voiceH = 0.f;
         if (self.type == BSTopicTypePicture) {
             CGFloat pictureX = 0;
             CGFloat pictureY = BSEssenceCellTextY + textH;
@@ -73,8 +74,15 @@
                 self.bigPic = YES;
             }
             _pictureF = CGRectMake(pictureX, pictureY, pictureW, pictureH);
+        }else if (self.type == BSTopicTypeVoice || self.type == BSTopicTypeVideo){
+            CGFloat voiceX = 0;
+            CGFloat voiceY = BSEssenceCellTextY + textH;
+            CGFloat voiceW = BSEssenceCellContentW;
+            voiceH = BSEssenceCellContentW*self.height/self.width;
+            _cellHeight = 3*BSEssenceCellMargin;
+            _voiceF = CGRectMake(voiceX, voiceY, voiceW, voiceH);
         }
-        _cellHeight += (BSEssenceCellTextY + textH + BSEssenceToolBarH + 3*BSEssenceCellMargin + pictureH);
+        _cellHeight += (BSEssenceCellTextY + textH + BSEssenceToolBarH + 3*BSEssenceCellMargin + pictureH + voiceH);
     }
 
     return _cellHeight;
