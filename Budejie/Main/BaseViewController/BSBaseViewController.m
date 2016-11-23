@@ -9,8 +9,6 @@
 #import "BSBaseViewController.h"
 
 @interface BSBaseViewController()
-/** 状态栏 */
-@property(strong, nonatomic) UIImageView *statusBar;
 /** 导航栏标题 */
 @property(strong, nonatomic) UILabel *navTitleLabel;
 /** 导航栏图片 */
@@ -29,20 +27,34 @@
     if (!_statusBar) {
         _statusBar = [[UIImageView alloc] init];
         _statusBar.userInteractionEnabled = YES;
+        _statusBar.backgroundColor = kTranslucenceColor;
         _statusBar.frame = CGRectMake(0, 0, kScreenWidth, BSStatusBarHeight);
     }
     return _statusBar;
 }
 /**
- *  状态栏
+ *  导航栏
  */
 - (UIImageView *)navigationBar{
     if (!_navigationBar) {
         _navigationBar = [[UIImageView alloc] init];
         _navigationBar.userInteractionEnabled = YES;
+        _navigationBar.backgroundColor = kTranslucenceColor;
         _navigationBar.frame = CGRectMake(0, CGRectGetMaxY(self.statusBar.frame), kScreenWidth, BSNavigationBarHeight);
     }
     return _navigationBar;
+}
+/**
+ *  导航区域
+ */
+- (UIImageView *)navigationZone{
+    if (!_navigationZone) {
+        _navigationZone = [[UIImageView alloc] init];
+        _navigationZone.userInteractionEnabled = YES;
+        _navigationZone.backgroundColor = [UIColor clearColor];
+        _navigationZone.frame = CGRectMake(0, 0, kScreenWidth, 64);
+    }
+    return _navigationZone;
 }
 /**
  *  导航栏标题
@@ -71,9 +83,9 @@
 - (UILabel *)dividerLine{
     if (!_dividerLine) {
         _dividerLine = [[UILabel alloc] init];
-        _dividerLine.backgroundColor = [UIColor lightGrayColor];
+        _dividerLine.backgroundColor = BSGlobalColor;
         CGFloat dividerLineW = kScreenWidth;
-        CGFloat dividerLineH = 0.2;
+        CGFloat dividerLineH = BSDividerHeight;
         CGFloat dividerLineX = 0;
         CGFloat dividerLineY = BSNavigationBarHeight-dividerLineH;
         _dividerLine.frame = CGRectMake(dividerLineX , dividerLineY, dividerLineW, dividerLineH);
@@ -92,21 +104,24 @@
  *  基本配置
  */
 - (void)baseBasicConfig{
-    self.view.backgroundColor = BSGlobalColor;
+    self.view.backgroundColor = [UIColor whiteColor];
     self.automaticallyAdjustsScrollViewInsets = NO;
 }
 /**
  *  初始化子控件
  */
 - (void)baseInitComponents{
+    //导航区域
+    [self.view addSubview:self.navigationZone];
     //状态栏
-    [self.view addSubview:self.statusBar];
+    [self.navigationZone addSubview:self.statusBar];
     
     //导航栏
-    [self.view addSubview:self.navigationBar];
+    [self.navigationZone addSubview:self.navigationBar];
     
     //导航栏分割线
     [self.navigationBar addSubview:self.dividerLine];
+
     
 }
 /**
@@ -144,7 +159,7 @@
  */
 
 - (void)navigationBarDefaultSetting{
-    _navigationBar.image = [UIImage imageNamed:@"navigationbarBackgroundWhite"];
+//    _navigationBar.image = [UIImage imageNamed:@"navigationbarBackgroundWhite"];
 }
 
 /**
@@ -152,7 +167,7 @@
  */
 
 - (void)statusBarDefaultSetting{
-    _statusBar.image = [UIImage imageNamed:@"navigationbarBackgroundWhite"];
+//    _statusBar.image = [UIImage imageNamed:@"navigationbarBackgroundWhite"];
 }
 
 /**

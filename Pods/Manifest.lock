@@ -14,15 +14,12 @@ PODS:
   - AFNetworking/Serialization (3.1.0)
   - AFNetworking/UIKit (3.1.0):
     - AFNetworking/NSURLSession
-  - HappyDNS (0.3.10)
-  - LGAlertView (2.0.13)
+  - M13ProgressSuite (1.2.7)
   - Masonry (1.0.1)
   - MBProgressHUD (1.0.0)
   - MJExtension (3.0.13)
   - MJRefresh (3.0.8)
-  - Qiniu (7.1.0.1):
-    - AFNetworking (~> 3)
-    - HappyDNS (~> 0.3)
+  - pop (1.0.9)
   - Reachability (3.2)
   - ReactiveCocoa (2.5):
     - ReactiveCocoa/UI (= 2.5)
@@ -31,8 +28,6 @@ PODS:
   - ReactiveCocoa/no-arc (2.5)
   - ReactiveCocoa/UI (2.5):
     - ReactiveCocoa/Core
-  - SDCycleScrollView (1.65):
-    - SDWebImage (~> 3.7)
   - SDWebImage (3.8.1):
     - SDWebImage/Core (= 3.8.1)
   - SDWebImage/Core (3.8.1)
@@ -40,33 +35,30 @@ PODS:
 
 DEPENDENCIES:
   - AFNetworking (~> 3.1.0)
-  - LGAlertView (~> 2.0.13)
+  - M13ProgressSuite (~> 1.2.7)
   - Masonry (~> 1.0.1)
-  - MBProgressHUD
+  - MBProgressHUD (~> 1.0.0)
   - MJExtension (~> 3.0.8)
   - MJRefresh (~> 3.0.8)
-  - Qiniu (~> 7.1)
+  - pop (~> 1.0.9)
   - Reachability (~> 3.2)
   - ReactiveCocoa (~> 2.5)
-  - SDCycleScrollView (~> 1.65)
   - SDWebImage (~> 3.8.1)
-  - SVProgressHUD
+  - SVProgressHUD (~> 2.0.3)
 
 SPEC CHECKSUMS:
   AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
-  HappyDNS: 06a9fed2796663fd87626dbf02552933265bf059
-  LGAlertView: 9a5dcbf4f81b02b718083539d7f222280adc9547
+  M13ProgressSuite: 03d194af6359da440641ba758aed5a18b0386a86
   Masonry: a1a931a0d08870ed8ae415a2ea5ea68ebcac77df
   MBProgressHUD: 4890f671c94e8a0f3cf959aa731e9de2f036d71a
   MJExtension: 5932755f451458eefa24239358817f8d291240c7
   MJRefresh: fafde8f18f4afd66b434331a9beb67a6c0264056
-  Qiniu: 0e92ff0d1b9afbc55275306671284e4ebeb08d03
+  pop: f667631a5108a2e60d9e8797c9b32ddaf2080bce
   Reachability: 33e18b67625424e47b6cde6d202dce689ad7af96
   ReactiveCocoa: e2db045570aa97c695e7aa97c2bcab222ae51f4a
-  SDCycleScrollView: f72904c77698a7f93a41bcbbc2d78b073bf7326c
   SDWebImage: 35f9627a3e44b4f292a8a8ce6a531fa488239b91
   SVProgressHUD: b0830714205bea1317ea1a2ebc71e5633af334d4
 
-PODFILE CHECKSUM: 8f9e7b8181acaca5f9d14e18069fd609c8a49e22
+PODFILE CHECKSUM: 7175c5ff3928658d7a09c77ba6915f3d0a6ecc10
 
 COCOAPODS: 1.0.1

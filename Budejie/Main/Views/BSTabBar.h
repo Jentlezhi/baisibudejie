@@ -10,4 +10,6 @@
 
 @interface BSTabBar : UITabBar
 
+@property(copy, nonatomic) void(^publishBtnClicked)();
+
 @end

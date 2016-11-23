@@ -21,6 +21,7 @@
 #import "masonry.h"
 #import "BSColorConstant.h"
 #import "BSFontConstant.h"
+#import "BSEnum.h"
 #import "BSInterfaceConstant.h"
 #import "BSSystemConstant.h"
 #import <ReactiveCocoa/ReactiveCocoa.h>

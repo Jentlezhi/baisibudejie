@@ -20,10 +20,15 @@
 - (instancetype)initWithFrame:(CGRect)frame{
     if (self = [super initWithFrame:frame]) {
         //设置tabBar背景
-        [self setBackgroundImage:[UIImage imageNamed:@"tabbar-light"]];
+//        [self setBackgroundImage:[UIImage imageNamed:@"tabbar-light"]];
         UIButton *publishButton = [UIButton buttonWithType:UIButtonTypeCustom];
         [publishButton setBackgroundImage:[UIImage imageNamed:@"tabBar_publish_icon"] forState:UIControlStateNormal];
         [publishButton setBackgroundImage:[UIImage imageNamed:@"tabBar_publish_click_icon"] forState:UIControlStateHighlighted];
+        [[publishButton rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(id x) {
+            if (self.publishBtnClicked) {
+                self.publishBtnClicked();
+            }
+        }];
         [self addSubview:publishButton];
         _publishButton = publishButton;
     }

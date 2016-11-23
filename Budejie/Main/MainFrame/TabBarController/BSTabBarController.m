@@ -12,13 +12,27 @@
 #import "BSNewestViewController.h"
 #import "BSAttentionViewController.h"
 #import "BSMineViewController.h"
+#import "BSPublishView.h"
 #import "BSTabBar.h"
 
 //TabBar文字颜色
 #define kTabBarNormalFontColor   [UIColor lightGrayColor]
 #define kTabBarSelectedFontColor [UIColor darkGrayColor]
 
+@interface BSTabBarController()
+
+@property(strong, nonatomic) BSTabBar *myTabBar;
+
+@end
+
 @implementation BSTabBarController
+
+- (BSTabBar *)myTabBar{
+    if (!_myTabBar) {
+        _myTabBar = [[BSTabBar alloc] init];
+    }
+    return _myTabBar;
+}
 
 + (void)load{
     //修改按钮文字
@@ -29,8 +43,15 @@
 
 - (void)viewDidLoad{
     [super viewDidLoad];
+    [self publishButtonClick];
     [self createSubViewControllers];
     [self reloadImage];
+}
+
+- (void)publishButtonClick{
+    self.myTabBar.publishBtnClicked = ^{
+        [BSPublishView show];
+    };
 }
 
 
@@ -111,7 +132,7 @@
 
 - (void)setSelectedIndex:(NSUInteger)selectedIndex{
     //替换系统tabBar
-    [self setValue:[[BSTabBar alloc] init] forKeyPath:@"tabBar"];
+    [self setValue:self.myTabBar forKeyPath:@"tabBar"];
 
 }
 

@@ -9,6 +9,8 @@
 #ifndef BSFontConstant_h
 #define BSFontConstant_h
 
-#define BSNavTitleFont [UIFont systemFontOfSize:18]
+#define BSNavTitleFont    [UIFont systemFontOfSize:18]
+
+#define BSEssenceTextFont [UIFont systemFontOfSize:15]
 
 #endif /* BSFontConstant_h */

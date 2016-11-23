@@ -86,7 +86,7 @@
     [screenNameLabel mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.equalTo(userHeaderImgv.mas_top);
         make.left.equalTo(userHeaderImgv.mas_right).offset(BSALayoutH(10));
-        make.right.equalTo(attentionBtn.mas_left);
+        make.right.equalTo(attentionBtn.mas_left).offset(-BSALayoutH(10));
         make.height.equalTo(screenNameLabel.font.pointSize);
     }];
     

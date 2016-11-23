@@ -13,8 +13,12 @@
 @property(strong, nonatomic) UIColor *statusBarColor;
 /** 导航栏颜色 */
 @property(strong, nonatomic) UIColor *navigationBarColor;
+/** 状态栏 */
+@property(strong, nonatomic) UIImageView *statusBar;
 /** 导航栏 */
 @property(strong, nonatomic) UIImageView *navigationBar;
+/** 导航区域 */
+@property(strong, nonatomic) UIImageView *navigationZone;
 /** 是否隐藏导航栏分割线 */
 @property(assign, nonatomic) BOOL hiddenNavigationBarLine;
 /** 网络请求 */

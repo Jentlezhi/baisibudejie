@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "BSTabBarController.h"
+#import "BSPushGuidView.h"
 
 @interface AppDelegate ()
 
@@ -18,9 +19,11 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    self.window.backgroundColor = [UIColor whiteColor];
+    self.window.backgroundColor = [UIColor clearColor];
     [self setRootViewController];
     [self.window makeKeyAndVisible];
+    //推送引导
+    [BSPushGuidView show];
     return YES;
 }
 
@@ -53,5 +56,6 @@
 - (void)applicationWillTerminate:(UIApplication *)application {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
+
 
 @end

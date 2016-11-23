@@ -155,7 +155,9 @@
         [MBProgressHUD showErrorWithMessage:@"加载数据失败"];
     }];
 }
-
+/**
+ * 刷新数据
+ */
 - (void)refreshUserList{   
     __weak typeof(self) weakSelf = self;
     //加载更多

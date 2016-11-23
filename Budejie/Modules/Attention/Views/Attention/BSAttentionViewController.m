@@ -9,6 +9,7 @@
 #import "BSAttentionViewController.h"
 #import "BSRecommendViewController.h"
 #import "BSUserGroupNetworkTool.h"
+#import "BSLoginRegisterViewController.h"
 
 
 @interface BSAttentionViewController()
@@ -86,6 +87,10 @@
     [loginBtn setTitle:@"立即登录注册" forState:UIControlStateNormal];
     loginBtn.adjustsImageWhenHighlighted = NO;
     [_notLoginView addSubview:loginBtn];
+    [[loginBtn rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(id x) {
+        BSLoginRegisterViewController *loginVC = [[BSLoginRegisterViewController alloc] init];
+        [self presentViewController:loginVC animated:YES completion:nil];
+    }];
     [loginBtn mas_makeConstraints:^(MASConstraintMaker *make) {
         make.size.equalTo(CGSizeMake(loginBtn.currentBackgroundImage.size.width, loginBtn.currentBackgroundImage.size.height));
         make.top.equalTo(tipLabel.mas_bottom).offset(BSALayoutV(40));

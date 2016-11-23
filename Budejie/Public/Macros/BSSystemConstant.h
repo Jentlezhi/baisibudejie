@@ -14,6 +14,12 @@
 #define BSViewHeight  (kScreenHeight - BSViewOriginY)
 #define BSDividerHeight 0.4f
 
-#define BSUserHeaderPlaceholder [UIImage imageWithColor:[UIColor grayColor]]
+#define BSEssenceCellTextY     BSALayoutH(70)
+#define BSEssenceToolBarH      BSALayoutV(80)
+#define BSEssenceCellMargin    BSALayoutH(12)
+#define BSEssenceCellContentW (kScreenWidth - 4*BSEssenceCellMargin)
+#define BSEssenceCellPicBreakH   BSALayoutH(1000)
+#define BSEssenceCellPicMaxH     BSALayoutH(500)
+#define BSUserHeaderPlaceholder [UIImage imageWithColor:[UIColor lightGrayColor]]
 
 #endif /* BSSystemConstant_h */
