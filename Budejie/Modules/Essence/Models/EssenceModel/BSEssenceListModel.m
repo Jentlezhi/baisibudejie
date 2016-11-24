@@ -9,6 +9,8 @@
 #import "BSEssenceListModel.h"
 #import "BSThemsModel.h"
 #import "NSDate+Extension.h"
+#import "BSCommentModel.h"
+#import "BSUserModel.h"
 
 
 @implementation BSEssenceListModel
@@ -26,8 +28,10 @@
 
 
 + (NSDictionary *)objectClassInArray{
-    return @{@"themes" : [BSThemsModel class]};
+    return @{@"themes" : [BSThemsModel class],
+             @"top_cmt": [BSCommentModel class]};
 }
+
 
 - (NSString *)create_time{
     NSDateFormatter *fmt = [[NSDateFormatter alloc] init];
@@ -63,6 +67,9 @@
         CGFloat textH = [self.text boundingRectWithSize:maxSize options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName : BSEssenceTextFont} context:nil].size.height;
         CGFloat pictureH = 0.f;
         CGFloat voiceH = 0.f;
+        CGFloat topCmtH = 0.f;
+        CGFloat jokeMargin = 0.f;
+        
         if (self.type == BSTopicTypePicture) {
             CGFloat pictureX = 0;
             CGFloat pictureY = BSEssenceCellTextY + textH;
@@ -81,8 +88,23 @@
             voiceH = BSEssenceCellContentW*self.height/self.width;
             _cellHeight = 3*BSEssenceCellMargin;
             _voiceF = CGRectMake(voiceX, voiceY, voiceW, voiceH);
+        }else{
+            jokeMargin = BSEssenceCellMargin;
         }
-        _cellHeight += (BSEssenceCellTextY + textH + BSEssenceToolBarH + 3*BSEssenceCellMargin + pictureH + voiceH);
+        
+        //最热评论
+        BSCommentModel *commentModel = [self.top_cmt firstObject];
+        if (commentModel) {//有最热评论
+            NSString *topCmtContent = [NSString stringWithFormat:@"%@ : %@",commentModel.user.username,commentModel.content];
+            CGFloat commentH = [NSString sizeForContent:topCmtContent font:[UIFont systemFontOfSize:14.0f] size:CGSizeMake(BSEssenceCellContentW+2*BSEssenceCellMargin, CGFLOAT_MAX)].height;
+            topCmtH = BSTopCmtTopMargin + 2*BSEssenceCellMargin + commentH;
+            CGFloat topCmtX = 0;
+            CGFloat topCmtY = BSEssenceCellTextY + textH + pictureH + voiceH;
+            CGFloat topCmtW = BSEssenceCellContentW;
+            _topCmtF = CGRectMake(topCmtX, topCmtY, topCmtW, topCmtH);
+            topCmtH += BSEssenceCellMargin;
+        }
+        _cellHeight += (BSEssenceCellTextY + textH + BSEssenceToolBarH + 3*BSEssenceCellMargin + pictureH + voiceH + topCmtH + jokeMargin);
     }
 
     return _cellHeight;

@@ -18,10 +18,12 @@
 #import "NSObject+Extension.h"
 #import "UIButton+Extension.h"
 #import "NSString+Extension.h"
+#import "NSMutableAttributedString+Extension.h"
 #define MAS_SHORTHAND_GLOBALS
 #import "masonry.h"
 #import "BSColorConstant.h"
 #import "BSFontConstant.h"
+#import "BSEssenceUIConstant.h"
 #import "BSEnum.h"
 #import "BSInterfaceConstant.h"
 #import "BSSystemConstant.h"

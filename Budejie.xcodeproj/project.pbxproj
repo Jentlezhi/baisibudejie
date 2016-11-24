@@ -14,6 +14,10 @@
 		8C22258B1DE5C72B00ABAD21 /* BSEssenceVoiceView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C2225861DE597FC00ABAD21 /* BSEssenceVoiceView.m */; };
 		8C2225901DE5D40800ABAD21 /* BSToolbarButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C22258E1DE5D40800ABAD21 /* BSToolbarButton.m */; };
 		8C2225931DE5D43B00ABAD21 /* BSEssenceVideoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C2225921DE5D43B00ABAD21 /* BSEssenceVideoView.m */; };
+		8C2225971DE65C4D00ABAD21 /* BSEssenceTopCommentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C2225961DE65C4D00ABAD21 /* BSEssenceTopCommentView.m */; };
+		8C22259A1DE65EF000ABAD21 /* BSCommentModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C2225991DE65EF000ABAD21 /* BSCommentModel.m */; };
+		8C22259D1DE65F1800ABAD21 /* BSUserModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C22259C1DE65F1800ABAD21 /* BSUserModel.m */; };
+		8C2225A11DE6C78600ABAD21 /* NSMutableAttributedString+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C2225A01DE6C78600ABAD21 /* NSMutableAttributedString+Extension.m */; };
 		8C31EF961DD2FEBD00CA3CEA /* BSAttentionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C31EF941DD2FEBD00CA3CEA /* BSAttentionViewController.m */; };
 		8C31EF991DD2FEDE00CA3CEA /* BSRecommendViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C31EF981DD2FEDE00CA3CEA /* BSRecommendViewController.m */; };
 		8C31EF9F1DD3026E00CA3CEA /* BSNetworkTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C31EF9E1DD3026E00CA3CEA /* BSNetworkTool.m */; };
@@ -43,7 +47,6 @@
 		8C85E1561DE15822007E53B4 /* BSEssenceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C85E13D1DE15822007E53B4 /* BSEssenceViewController.m */; };
 		8C85E15E1DE15822007E53B4 /* BSTagCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C85E1501DE15822007E53B4 /* BSTagCell.m */; };
 		8C85E15F1DE15822007E53B4 /* BSTagViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C85E1521DE15822007E53B4 /* BSTagViewController.m */; };
-		8C85E1621DE15839007E53B4 /* BSAllCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C85E1611DE15839007E53B4 /* BSAllCell.m */; };
 		8C85E16E1DE15EE7007E53B4 /* BSEssenceBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C85E16D1DE15EE7007E53B4 /* BSEssenceBaseViewController.m */; };
 		8C85E1791DE3E71E007E53B4 /* BSProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C85E1781DE3E71E007E53B4 /* BSProgressView.m */; };
 		8C85E17D1DE3ED27007E53B4 /* BSShowBigPicViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C85E17C1DE3ED27007E53B4 /* BSShowBigPicViewController.m */; };
@@ -105,6 +108,15 @@
 		8C22258E1DE5D40800ABAD21 /* BSToolbarButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSToolbarButton.m; sourceTree = "<group>"; };
 		8C2225911DE5D43B00ABAD21 /* BSEssenceVideoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSEssenceVideoView.h; sourceTree = "<group>"; };
 		8C2225921DE5D43B00ABAD21 /* BSEssenceVideoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSEssenceVideoView.m; sourceTree = "<group>"; };
+		8C2225951DE65C4D00ABAD21 /* BSEssenceTopCommentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSEssenceTopCommentView.h; sourceTree = "<group>"; };
+		8C2225961DE65C4D00ABAD21 /* BSEssenceTopCommentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSEssenceTopCommentView.m; sourceTree = "<group>"; };
+		8C2225981DE65EF000ABAD21 /* BSCommentModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSCommentModel.h; sourceTree = "<group>"; };
+		8C2225991DE65EF000ABAD21 /* BSCommentModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSCommentModel.m; sourceTree = "<group>"; };
+		8C22259B1DE65F1800ABAD21 /* BSUserModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSUserModel.h; sourceTree = "<group>"; };
+		8C22259C1DE65F1800ABAD21 /* BSUserModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSUserModel.m; sourceTree = "<group>"; };
+		8C22259E1DE6919A00ABAD21 /* BSEssenceUIConstant.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BSEssenceUIConstant.h; sourceTree = "<group>"; };
+		8C22259F1DE6C78600ABAD21 /* NSMutableAttributedString+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableAttributedString+Extension.h"; sourceTree = "<group>"; };
+		8C2225A01DE6C78600ABAD21 /* NSMutableAttributedString+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableAttributedString+Extension.m"; sourceTree = "<group>"; };
 		8C31EF931DD2FEBD00CA3CEA /* BSAttentionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSAttentionViewController.h; sourceTree = "<group>"; };
 		8C31EF941DD2FEBD00CA3CEA /* BSAttentionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSAttentionViewController.m; sourceTree = "<group>"; };
 		8C31EF971DD2FEDE00CA3CEA /* BSRecommendViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSRecommendViewController.h; sourceTree = "<group>"; };
@@ -164,8 +176,6 @@
 		8C85E1501DE15822007E53B4 /* BSTagCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSTagCell.m; sourceTree = "<group>"; };
 		8C85E1511DE15822007E53B4 /* BSTagViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSTagViewController.h; sourceTree = "<group>"; };
 		8C85E1521DE15822007E53B4 /* BSTagViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSTagViewController.m; sourceTree = "<group>"; };
-		8C85E1601DE15839007E53B4 /* BSAllCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSAllCell.h; sourceTree = "<group>"; };
-		8C85E1611DE15839007E53B4 /* BSAllCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSAllCell.m; sourceTree = "<group>"; };
 		8C85E16C1DE15EE7007E53B4 /* BSEssenceBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSEssenceBaseViewController.h; sourceTree = "<group>"; };
 		8C85E16D1DE15EE7007E53B4 /* BSEssenceBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSEssenceBaseViewController.m; sourceTree = "<group>"; };
 		8C85E16F1DE29D48007E53B4 /* BSEnum.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BSEnum.h; sourceTree = "<group>"; };
@@ -306,6 +316,15 @@
 			path = VideoView;
 			sourceTree = "<group>";
 		};
+		8C2225941DE65C4300ABAD21 /* TopComment */ = {
+			isa = PBXGroup;
+			children = (
+				8C2225951DE65C4D00ABAD21 /* BSEssenceTopCommentView.h */,
+				8C2225961DE65C4D00ABAD21 /* BSEssenceTopCommentView.m */,
+			);
+			path = TopComment;
+			sourceTree = "<group>";
+		};
 		8C31EF921DD2FEBD00CA3CEA /* Attention */ = {
 			isa = PBXGroup;
 			children = (
@@ -432,6 +451,10 @@
 				8C85E1151DDDB2CF007E53B4 /* BSInfoModel.m */,
 				8C85E1171DDDB31C007E53B4 /* BSThemsModel.h */,
 				8C85E1181DDDB31C007E53B4 /* BSThemsModel.m */,
+				8C2225981DE65EF000ABAD21 /* BSCommentModel.h */,
+				8C2225991DE65EF000ABAD21 /* BSCommentModel.m */,
+				8C22259B1DE65F1800ABAD21 /* BSUserModel.h */,
+				8C22259C1DE65F1800ABAD21 /* BSUserModel.m */,
 			);
 			path = EssenceModel;
 			sourceTree = "<group>";
@@ -443,15 +466,6 @@
 				8C85E1361DE15618007E53B4 /* BSEssenceNetworkTool.m */,
 			);
 			path = EssenceNetworkTool;
-			sourceTree = "<group>";
-		};
-		8C85E1381DE15822007E53B4 /* AllCell */ = {
-			isa = PBXGroup;
-			children = (
-				8C85E1601DE15839007E53B4 /* BSAllCell.h */,
-				8C85E1611DE15839007E53B4 /* BSAllCell.m */,
-			);
-			path = AllCell;
 			sourceTree = "<group>";
 		};
 		8C85E1391DE15822007E53B4 /* Essence */ = {
@@ -639,6 +653,8 @@
 				8C85E1251DE04E4A007E53B4 /* NSDate+Extension.m */,
 				8C2225881DE59FD500ABAD21 /* NSString+Extension.h */,
 				8C2225891DE59FD500ABAD21 /* NSString+Extension.m */,
+				8C22259F1DE6C78600ABAD21 /* NSMutableAttributedString+Extension.h */,
+				8C2225A01DE6C78600ABAD21 /* NSMutableAttributedString+Extension.m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -666,6 +682,7 @@
 				8CA5E4681DD07A08001EDAF2 /* BSInterfaceConstant.h */,
 				8CA5E46A1DD07A48001EDAF2 /* BSSystemConstant.h */,
 				8C85E16F1DE29D48007E53B4 /* BSEnum.h */,
+				8C22259E1DE6919A00ABAD21 /* BSEssenceUIConstant.h */,
 			);
 			path = Macros;
 			sourceTree = "<group>";
@@ -794,12 +811,12 @@
 		8CA5E4841DD07F21001EDAF2 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				8C2225941DE65C4300ABAD21 /* TopComment */,
 				8C22258C1DE5D40800ABAD21 /* Public */,
 				8C22258F1DE5D40800ABAD21 /* VideoView */,
 				8C2225841DE593FB00ABAD21 /* VoiceView */,
 				8C2225801DE593B000ABAD21 /* PictureView */,
 				8C85E17A1DE3ED11007E53B4 /* ShowBigPicViewController */,
-				8C85E1381DE15822007E53B4 /* AllCell */,
 				8C85E1391DE15822007E53B4 /* Essence */,
 				8C85E14E1DE15822007E53B4 /* Tag */,
 			);
@@ -1134,7 +1151,8 @@
 				8CA5E49B1DD07FDF001EDAF2 /* BSNewestViewController.m in Sources */,
 				8C31EFB21DD32FB000CA3CEA /* BSLeftTagCell.m in Sources */,
 				8C31EF991DD2FEDE00CA3CEA /* BSRecommendViewController.m in Sources */,
-				8C85E1621DE15839007E53B4 /* BSAllCell.m in Sources */,
+				8C22259A1DE65EF000ABAD21 /* BSCommentModel.m in Sources */,
+				8C2225A11DE6C78600ABAD21 /* NSMutableAttributedString+Extension.m in Sources */,
 				8CA5E4241DD0754D001EDAF2 /* AppDelegate.m in Sources */,
 				8CBFA8CE1DDBE092000C74CA /* BSPushGuidView.m in Sources */,
 				8C85E1371DE15618007E53B4 /* BSEssenceNetworkTool.m in Sources */,
@@ -1167,6 +1185,8 @@
 				8C22258A1DE59FD500ABAD21 /* NSString+Extension.m in Sources */,
 				8C31EFBF1DD413B100CA3CEA /* BSUserGroupNetworkTool.m in Sources */,
 				8C31EFC51DD41BC800CA3CEA /* UIImageView+Extension.m in Sources */,
+				8C22259D1DE65F1800ABAD21 /* BSUserModel.m in Sources */,
+				8C2225971DE65C4D00ABAD21 /* BSEssenceTopCommentView.m in Sources */,
 				8C85E1301DE153CF007E53B4 /* BSEssenceResult.m in Sources */,
 				8C85E1791DE3E71E007E53B4 /* BSProgressView.m in Sources */,
 				8C31EF9F1DD3026E00CA3CEA /* BSNetworkTool.m in Sources */,

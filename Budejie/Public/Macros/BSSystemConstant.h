@@ -20,6 +20,6 @@
 #define BSEssenceCellContentW (kScreenWidth - 4*BSEssenceCellMargin)
 #define BSEssenceCellPicBreakH   BSALayoutH(1000)
 #define BSEssenceCellPicMaxH     BSALayoutH(500)
-#define BSUserHeaderPlaceholder [UIImage imageWithColor:[UIColor lightGrayColor]]
+#define BSUserHeaderPlaceholder [UIImage imageWithColor:BSGlobalColor]
 
 #endif /* BSSystemConstant_h */

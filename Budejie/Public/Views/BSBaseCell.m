@@ -12,6 +12,8 @@
 #import "BSEssencePictureView.h"
 #import "BSEssenceVoiceView.h"
 #import "BSEssenceVideoView.h"
+#import "BSEssenceTopCommentView.h"
+#import "BSCommentModel.h"
 
 @interface BSBaseCell()
 
@@ -33,6 +35,8 @@
 @property(weak, nonatomic) BSEssenceVoiceView *essenceVoiceView;
 /** 视频 */
 @property(weak, nonatomic) BSEssenceVideoView *essenceVideoView;
+/** 最热评论 */
+@property(weak, nonatomic) BSEssenceTopCommentView *essenceTopCommentView;
 /** 工具条 */
 @property(weak, nonatomic) UIView *toolBar;
 /** 点赞 */
@@ -71,6 +75,16 @@
     }
     return _essenceVoiceView;
 }
+
+- (BSEssenceTopCommentView *)essenceTopCommentView{
+    if (!_essenceTopCommentView) {
+        BSEssenceTopCommentView *essenceTopCommentView = [[BSEssenceTopCommentView alloc] init];
+        [self.contentView addSubview:essenceTopCommentView];
+        _essenceTopCommentView = essenceTopCommentView;
+    }
+    return _essenceTopCommentView;
+}
+
 
 - (BSEssenceVideoView *)essenceVideoView{
     if (!_essenceVideoView) {
@@ -305,7 +319,9 @@
 
 - (void)setEssenceListModel:(BSEssenceListModel *)essenceListModel{
     _essenceListModel = essenceListModel;
-    [_userHeaderImgv sd_setImageWithURL:[NSURL URLWithString:essenceListModel.profile_image]];
+
+    //用户头像
+    [_userHeaderImgv sd_setImageWithURL:[NSURL URLWithString:essenceListModel.profile_image]placeholderImage:BSUserHeaderPlaceholder];
     _addv.hidden = !essenceListModel.isSina_v;
     _nikenameLabel.text = essenceListModel.name;
     _sendTimeLabel.text = essenceListModel.create_time;
@@ -326,13 +342,6 @@
             make.top.equalTo(self.contentLabel.mas_bottom).offset(2*BSEssenceCellMargin);
             make.left.right.equalTo(self.contentLabel);
             make.height.equalTo(essenceListModel.pictureF.size.height);
-        }];
-        
-        //工具条更改约束
-        [self.toolBar mas_remakeConstraints:^(MASConstraintMaker *make) {
-            make.left.right.equalTo(self.contentView);
-            make.top.equalTo(_essencePictureView.mas_bottom).offset(BSEssenceCellMargin);
-            make.height.equalTo(BSALayoutV(80));
         }];
     }else if (essenceListModel.type == BSTopicTypeVoice){//音频
         self.essenceVoiceView.hidden = NO;
@@ -374,12 +383,10 @@
         self.essencePictureView.hidden = YES;
         self.essenceVoiceView.hidden = YES;
         self.essenceVideoView.hidden = YES;
-        [self.toolBar mas_remakeConstraints:^(MASConstraintMaker *make) {
-            make.left.right.equalTo(self.contentView);
-            make.top.equalTo(self.contentLabel.mas_bottom);
-            make.height.equalTo(BSALayoutV(80));
-        }];
     }
+    
+    //评论的约束
+    [self constraintCmtViewWithModel:essenceListModel];
 }
 
 + (instancetype)baseCellForTableView:(UITableView *)tableView indexPath:(NSIndexPath *)indexPath{
@@ -389,6 +396,49 @@
         cell = [[BSBaseCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identifier];
     }
     return cell;
+}
+/**
+ * 约束评论
+ */
+- (void)constraintCmtViewWithModel:(BSEssenceListModel *)essenceListModel{
+    //加载最热评论
+    BSCommentModel *cmtModel = [essenceListModel.top_cmt firstObject];
+    UIView *toolBarTopView = [[UIView alloc] init];
+    if (essenceListModel.type == BSTopicTypePicture) {
+        toolBarTopView = self.essencePictureView;
+    }else if (essenceListModel.type == BSTopicTypeVoice){
+        toolBarTopView = self.essenceVideoView;
+    }else if (essenceListModel.type == BSTopicTypeVideo){
+        toolBarTopView = self.essenceVideoView;
+    }else{
+        toolBarTopView = self.contentLabel;
+    }
+    if (cmtModel) {//有评论
+        self.essenceTopCommentView.hidden = NO;
+        self.essenceTopCommentView.essenceListModel = essenceListModel;
+        //工具条更改约束
+        [self.toolBar mas_remakeConstraints:^(MASConstraintMaker *make) {
+            make.left.right.equalTo(self.contentView);
+            make.top.equalTo(toolBarTopView.mas_bottom).offset(BSEssenceCellMargin);
+            make.height.equalTo(BSALayoutV(80));
+        }];
+        
+        //修改约束
+        [self.essenceTopCommentView mas_remakeConstraints:^(MASConstraintMaker *make) {
+            make.top.equalTo(self.toolBar.mas_bottom);
+            make.left.right.equalTo(self.contentLabel);
+            make.height.equalTo(essenceListModel.topCmtF.size.height);
+        }];
+    }else{
+        self.essenceTopCommentView.hidden = YES;
+        //工具条更改约束
+        [self.toolBar mas_remakeConstraints:^(MASConstraintMaker *make) {
+            make.left.right.equalTo(self.contentView);
+            make.top.equalTo(toolBarTopView.mas_bottom).offset(BSEssenceCellMargin);
+            make.height.equalTo(BSALayoutV(80));
+        }];
+    }
+
 }
 
 @end

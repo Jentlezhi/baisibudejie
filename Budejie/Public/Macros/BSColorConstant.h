@@ -14,6 +14,8 @@
 #define BSRGBColor(r,g,b) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0  blue:(b)/255.0  alpha:1.0]
 #define BSGlobalColor BSRGBColor(239,239,239)
 
+#define BSGrayColor(grayLevel) BSRGBColor(grayLevel,grayLevel,grayLevel)
+
 #define BSRedColor BSRGBColor(251, 12, 68)
 
 #endif /* BSColorConstant_h */

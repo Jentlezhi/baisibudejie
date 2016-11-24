@@ -56,6 +56,8 @@
 @property (nonatomic, assign) NSInteger videotime;
 /** 播放次数 */
 @property (nonatomic, assign) NSInteger playcount;
+/** 最热评论(数组中是Comment模型) */
+@property (nonatomic, strong) NSArray *top_cmt;
 
 /** cell的高度 */
 @property (nonatomic, assign, readonly) CGFloat cellHeight;
@@ -63,11 +65,15 @@
 @property (nonatomic, assign, readonly) CGRect pictureF;
 /** voice的frame */
 @property (nonatomic, assign, readonly) CGRect voiceF;
+/** 最热评论的frame */
+@property (nonatomic, assign, readonly) CGRect topCmtF;
 /** 是否为大图 */
 @property (nonatomic, assign, getter=isBigPic) BOOL bigPic;
 /** 是否为gif图 */
 @property (nonatomic, assign, getter=isGifPic) BOOL gifPic;
 /** 图片的下载进度 */
 @property (nonatomic, assign) CGFloat picProgressValue;
+
+
 
 @end

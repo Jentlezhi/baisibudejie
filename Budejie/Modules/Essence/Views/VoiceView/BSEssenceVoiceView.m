@@ -104,7 +104,8 @@
     //播放按钮
     UIButton *playVoiceButton = [UIButton buttonWithType:UIButtonTypeCustom];
     playVoiceButton.adjustsImageWhenHighlighted = NO;
-    [playVoiceButton setBackgroundImage:[UIImage imageNamed:@"playButtonPlay"] forState:UIControlStateNormal];
+    [playVoiceButton setImage:[UIImage imageNamed:@"playButtonPlay"] forState:UIControlStateNormal];
+    [playVoiceButton setBackgroundImage:[UIImage imageNamed:@"playButton"] forState:UIControlStateNormal];
     [[playVoiceButton rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(id x) {
         [self.voicePlaySignal sendNext:self.essenceListModel];
     }];
