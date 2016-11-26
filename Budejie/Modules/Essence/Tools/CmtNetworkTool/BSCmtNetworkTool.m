@@ -21,7 +21,7 @@
             success(result);
         }
     } failure:^(NSError *error) {
-        if (failure) {
+        if (failure && error.code != -999) {
             failure(error);
         }
     }];

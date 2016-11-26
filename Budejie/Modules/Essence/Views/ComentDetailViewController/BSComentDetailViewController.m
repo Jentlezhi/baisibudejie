@@ -202,6 +202,7 @@
 }
 
 - (void)requestCmtListWithType:(BSRequestType)requestType{
+    [self.sessionDateTask cancel];
     requestType == BSRequestTypeRefresh?self.currentPage=1:self.currentPage++;
     
     __weak typeof(self) weakSelf = self;
@@ -228,7 +229,6 @@
         }else{
             [weakSelf.latestComments addObjectsFromArray:result.data];
         }
-        
         //footer状态设置
         if (weakSelf.latestComments.count>=lastCmtTotal) {
             [weakSelf.comentDetailTableView.mj_footer endRefreshingWithNoMoreData];
@@ -242,6 +242,7 @@
         weakSelf.currentPage--;
         [weakSelf.comentDetailTableView.mj_header endRefreshing];
         [weakSelf.comentDetailTableView.mj_footer endRefreshing];
+        BSLog(@"%@",error);
         [MBProgressHUD showErrorWithMessage:@"数据加载失败"];
     }];
 }
