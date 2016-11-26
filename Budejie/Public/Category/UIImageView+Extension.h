@@ -19,6 +19,4 @@
  */
 + (instancetype)roundWithImageView:(UIImageView *)imgv;
 
-- (void)animationWithImages:(NSArray<UIImage *>*)images duration:(NSTimeInterval)duration repeatCount:(NSInteger)repeatCount;
-
 @end

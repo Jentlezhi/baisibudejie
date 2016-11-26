@@ -145,8 +145,7 @@ static NSString *animationFnishKey = @"animationFnish";
     rotationAnimation.cumulative = YES;
     rotationAnimation.repeatCount = repeatCount;
     rotationAnimation.fillMode = kCAFillModeForwards;
-    CALayer *layer = [self valueForKey:@"layer"];
-    [layer addAnimation:rotationAnimation forKey:@"rotationAnimation"];
+    [self.layer addAnimation:rotationAnimation forKey:nil];
     self.animationFnish = !completion?nil:completion;
 
 }
@@ -154,6 +153,25 @@ static NSString *animationFnishKey = @"animationFnish";
 - (void)animationDidStop:(CAAnimation *)anim finished:(BOOL)flag{
     !self.animationFnish?:self.self.animationFnish();
 }
+
+- (void)animationWithImages:(NSArray<UIImage *>*)images duration:(NSTimeInterval)duration repeatCount:(NSInteger)repeatCount{
+    NSMutableArray *cgImages = [NSMutableArray array];
+    for (UIImage *item in images) {
+        CGImageRef cgImage = item.CGImage;
+        [cgImages addObject:(__bridge UIImage *)cgImage];
+    }
+    CAKeyframeAnimation *imageAnimation = [CAKeyframeAnimation animation];
+    imageAnimation.delegate = self;
+    imageAnimation.keyPath = @"contents";
+    imageAnimation.values = cgImages;
+    imageAnimation.duration = duration;
+    imageAnimation.repeatCount = repeatCount;
+    imageAnimation.removedOnCompletion = YES;
+    imageAnimation.fillMode = kCAFillModeForwards;
+    [self.layer addAnimation:imageAnimation forKey:nil];
+
+}
+
 
 
 
