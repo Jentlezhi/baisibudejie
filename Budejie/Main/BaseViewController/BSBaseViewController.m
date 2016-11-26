@@ -312,7 +312,7 @@
             UILabel *titleButton = (UILabel *)titleView;
             titleButton.font = BSNavTitleFont;
             titleButton.userInteractionEnabled = YES;
-            titleButtonW = [self sizeForString:titleButton.text font:titleButton.font size:CGSizeMake(CGFLOAT_MAX, titleButtonH)].width;
+            titleButtonW = [titleButton.text sizeWithFont:titleButton.font maxSize:CGSizeMake(CGFLOAT_MAX, titleButtonH)].width;
             titleButtonH = titleButton.font.pointSize;
             [titleButton addGestureRecognizer:titleTap];
         }else if ([titleView isKindOfClass:[UIImageView class]]){

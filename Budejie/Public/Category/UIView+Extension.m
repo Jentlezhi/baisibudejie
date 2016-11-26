@@ -8,6 +8,14 @@
 
 #import "UIView+Extension.h"
 
+static NSString *animationFnishKey = @"animationFnish";
+
+@interface UIView()<CAAnimationDelegate>
+
+@property(copy, nonatomic) void(^animationFnish)();
+
+@end
+
 @implementation UIView (Extension)
 
 /**
@@ -115,6 +123,38 @@
 -(CGFloat)centerY{
     return self.center.y;
 }
+
+/**
+ *  动态添加animationFnish属性
+ */
+- (void)setAnimationFnish:(void (^)())animationFnish{
+    objc_setAssociatedObject(self, &animationFnishKey, animationFnish, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+}
+
+- (void (^)())animationFnish{
+    return objc_getAssociatedObject(self, &animationFnishKey);
+}
+
+- (void)rotationWithType:(BSAnimationRotationType)rotationType animationDuration:(CFTimeInterval)duration circle:(CGFloat)circle repaatCount:(float)repeatCount completion:(void (^ __nullable)())completion{
+    NSString *keyPath = rotationType==BSAnimationRotationTypeUpdown?@"transform.rotation.x":@"transform.rotation.y";
+    CABasicAnimation *rotationAnimation = [CABasicAnimation animationWithKeyPath:keyPath];
+    rotationAnimation.delegate = self;
+    rotationAnimation.removedOnCompletion = YES;
+    rotationAnimation.toValue = [NSNumber numberWithFloat: M_PI * circle];
+    rotationAnimation.duration = duration;
+    rotationAnimation.cumulative = YES;
+    rotationAnimation.repeatCount = repeatCount;
+    rotationAnimation.fillMode = kCAFillModeForwards;
+    CALayer *layer = [self valueForKey:@"layer"];
+    [layer addAnimation:rotationAnimation forKey:@"rotationAnimation"];
+    self.animationFnish = !completion?nil:completion;
+
+}
+
+- (void)animationDidStop:(CAAnimation *)anim finished:(BOOL)flag{
+    !self.animationFnish?:self.self.animationFnish();
+}
+
 
 
 @end

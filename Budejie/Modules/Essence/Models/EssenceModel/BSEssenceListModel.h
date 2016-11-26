@@ -8,10 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
+@class BSCommentModel;
+
 @interface BSEssenceListModel : NSObject
 
 /** 帖子id */
-@property (nonatomic, assign) int ID;
+@property (nonatomic, copy) NSString *ID;
 /** 用户id */
 @property (nonatomic, copy) NSString *user_id;
 /** 名称 */
@@ -56,8 +58,9 @@
 @property (nonatomic, assign) NSInteger videotime;
 /** 播放次数 */
 @property (nonatomic, assign) NSInteger playcount;
-/** 最热评论(数组中是Comment模型) */
-@property (nonatomic, strong) NSArray *top_cmt;
+/** 最热评论(数组中是Comment模型) 废除*/
+/** 最热评论(直接是Comment模型) */
+@property (nonatomic, strong) BSCommentModel *top_cmt;
 
 /** cell的高度 */
 @property (nonatomic, assign, readonly) CGFloat cellHeight;

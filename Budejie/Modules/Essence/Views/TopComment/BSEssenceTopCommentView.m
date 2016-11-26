@@ -70,10 +70,9 @@
 
 - (void)setEssenceListModel:(BSEssenceListModel *)essenceListModel{
     _essenceListModel = essenceListModel;
-    BSCommentModel *commentModel = [essenceListModel.top_cmt firstObject];
-    NSString *topCmtContent = [NSString stringWithFormat:@"%@ : %@",commentModel.user.username,commentModel.content];
+    NSString *topCmtContent = [NSString stringWithFormat:@"%@ : %@",essenceListModel.top_cmt.user.username,essenceListModel.top_cmt.content];
     //富文本
-    NSMutableAttributedString *attributedString = [NSMutableAttributedString stringwithContent:topCmtContent desContent:commentModel.user.username fontSize:13.0f textColor:BSRGBColor(50, 95, 153)];
+    NSMutableAttributedString *attributedString = [NSMutableAttributedString stringwithContent:topCmtContent desContent:essenceListModel.top_cmt.user.username fontSize:13.0f textColor:BSRGBColor(50, 95, 153)];
     NSMutableParagraphStyle *paragraphStyle = [[NSMutableParagraphStyle alloc] init];
     [paragraphStyle setLineSpacing:BSTopCmtLineParagraphMargin];
     [attributedString addAttribute:NSParagraphStyleAttributeName value:paragraphStyle range:NSMakeRange(0, [topCmtContent length])];

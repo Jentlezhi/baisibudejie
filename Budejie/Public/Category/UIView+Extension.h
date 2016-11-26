@@ -8,6 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
+typedef enum {
+    BSAnimationRotationTypeUpdown = 0,
+    BSAnimationRotationTypeLeftRight
+} BSAnimationRotationType;
+
 @interface UIView (Extension)
 
 @property (nonatomic, assign) CGSize size;
@@ -18,5 +23,7 @@
 @property (nonatomic, assign) CGFloat y;
 @property (nonatomic, assign) CGFloat centerX;
 @property (nonatomic, assign) CGFloat centerY;
+
+- (void)rotationWithType:(BSAnimationRotationType)rotationType animationDuration:(CFTimeInterval)duration circle:(CGFloat)circle repaatCount:(float)repeatCount completion:(void (^ __nullable)())completion;
 
 @end

@@ -301,8 +301,8 @@
 -(void)setFrame:(CGRect)frame{
     CGFloat margin = BSEssenceCellMargin;
     frame.origin.x = margin;
-    frame.size.width -= 2*frame.origin.x;
-    frame.size.height -= margin;
+    frame.size.width = kScreenWidth - 2*margin;
+    frame.size.height = self.essenceListModel.cellHeight-margin;
     frame.origin.y += margin;
     [super setFrame:frame];
 }
@@ -354,13 +354,6 @@
             make.left.right.equalTo(self.contentLabel);
             make.height.equalTo(essenceListModel.voiceF.size.height);
         }];
-        
-        //工具条更改约束
-        [self.toolBar mas_remakeConstraints:^(MASConstraintMaker *make) {
-            make.left.right.equalTo(self.contentView);
-            make.top.equalTo(_essenceVoiceView.mas_bottom).offset(BSEssenceCellMargin);
-            make.height.equalTo(BSALayoutV(80));
-        }];
     }else if (essenceListModel.type == BSTopicTypeVideo){//视频
         self.essenceVideoView.hidden = NO;
         self.essencePictureView.hidden = YES;
@@ -371,13 +364,6 @@
             make.top.equalTo(self.contentLabel.mas_bottom).offset(2*BSEssenceCellMargin);
             make.left.right.equalTo(self.contentLabel);
             make.height.equalTo(essenceListModel.voiceF.size.height);
-        }];
-        
-        //工具条更改约束
-        [self.toolBar mas_remakeConstraints:^(MASConstraintMaker *make) {
-            make.left.right.equalTo(self.contentView);
-            make.top.equalTo(_essenceVideoView.mas_bottom).offset(BSEssenceCellMargin);
-            make.height.equalTo(BSALayoutV(80));
         }];
     }else{//段子
         self.essencePictureView.hidden = YES;
@@ -402,18 +388,17 @@
  */
 - (void)constraintCmtViewWithModel:(BSEssenceListModel *)essenceListModel{
     //加载最热评论
-    BSCommentModel *cmtModel = [essenceListModel.top_cmt firstObject];
     UIView *toolBarTopView = [[UIView alloc] init];
     if (essenceListModel.type == BSTopicTypePicture) {
         toolBarTopView = self.essencePictureView;
     }else if (essenceListModel.type == BSTopicTypeVoice){
-        toolBarTopView = self.essenceVideoView;
+        toolBarTopView = self.essenceVoiceView;
     }else if (essenceListModel.type == BSTopicTypeVideo){
         toolBarTopView = self.essenceVideoView;
     }else{
         toolBarTopView = self.contentLabel;
     }
-    if (cmtModel) {//有评论
+    if (essenceListModel.top_cmt) {//有评论
         self.essenceTopCommentView.hidden = NO;
         self.essenceTopCommentView.essenceListModel = essenceListModel;
         //工具条更改约束

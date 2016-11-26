@@ -10,6 +10,6 @@
 
 @interface NSString (Extension)
 
-+ (CGSize)sizeForContent:(NSString *)content font:(UIFont *)font size:(CGSize)size;
+- (CGSize)sizeWithFont:(UIFont *)font maxSize:(CGSize)maxSize;
 
 @end

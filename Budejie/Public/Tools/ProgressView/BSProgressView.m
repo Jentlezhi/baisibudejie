@@ -12,7 +12,6 @@
 - (void)setCircleColor:(UIColor *)circleColor{
     _circleColor = circleColor;
     self.primaryColor = circleColor;
-    
 }
 
 - (void)setProgressColor:(UIColor *)progressColor{

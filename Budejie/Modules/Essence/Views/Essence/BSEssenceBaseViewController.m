@@ -12,6 +12,7 @@
 #import "BSInfoModel.h"
 #import "BSBaseCell.h"
 #import "BSShowBigPicViewController.h"
+#import "BSComentDetailViewController.h"
 
 @interface BSEssenceBaseViewController ()<UITableViewDataSource,UITableViewDelegate>
 /** 表格视图 */
@@ -191,6 +192,9 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    BSComentDetailViewController *comentDetailVC = [[BSComentDetailViewController alloc] init];
+    comentDetailVC.essenceListModel = self.essenceData[indexPath.row];
+    [self.navigationController pushViewController:comentDetailVC animated:YES];
 }
 
 

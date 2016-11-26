@@ -23,13 +23,13 @@
     return @{@"ID" : @"id",
              @"small_image"  : @"image0",
              @"middle_image" : @"image1",
-             @"large_image"  : @"image2"};
+             @"large_image"  : @"image2",
+             @"top_cmt"      : @"top_cmt[0]"};
 }
 
 
 + (NSDictionary *)objectClassInArray{
-    return @{@"themes" : [BSThemsModel class],
-             @"top_cmt": [BSCommentModel class]};
+    return @{@"themes" : [BSThemsModel class]};
 }
 
 
@@ -93,10 +93,10 @@
         }
         
         //最热评论
-        BSCommentModel *commentModel = [self.top_cmt firstObject];
-        if (commentModel) {//有最热评论
-            NSString *topCmtContent = [NSString stringWithFormat:@"%@ : %@",commentModel.user.username,commentModel.content];
-            CGFloat commentH = [NSString sizeForContent:topCmtContent font:[UIFont systemFontOfSize:14.0f] size:CGSizeMake(BSEssenceCellContentW+2*BSEssenceCellMargin, CGFLOAT_MAX)].height;
+//        BSCommentModel *commentModel = [self.top_cmt firstObject];
+        if (self.top_cmt) {//有最热评论
+            NSString *topCmtContent = [NSString stringWithFormat:@"%@ : %@",self.top_cmt.user.username,self.top_cmt.content];
+            CGFloat commentH = [topCmtContent sizeWithFont:[UIFont systemFontOfSize:14.0f] maxSize:CGSizeMake(BSEssenceCellContentW+2*BSEssenceCellMargin, CGFLOAT_MAX)].height;
             topCmtH = BSTopCmtTopMargin + 2*BSEssenceCellMargin + commentH;
             CGFloat topCmtX = 0;
             CGFloat topCmtY = BSEssenceCellTextY + textH + pictureH + voiceH;

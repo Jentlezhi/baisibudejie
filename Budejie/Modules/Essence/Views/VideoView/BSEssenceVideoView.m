@@ -125,7 +125,7 @@
     //总播放量
     NSString *playCount = [NSString stringWithFormat:@"%zd次播放",essenceListModel.playcount];
     self.playCountLabel.text = playCount;
-    CGFloat playCountLabelW = [NSString sizeForContent:playCount font:BSVideoLabelFont size:CGSizeMake(CGFLOAT_MAX, self.playCountLabel.font.pointSize)].width+10;
+    CGFloat playCountLabelW = [playCount sizeWithFont:BSVideoLabelFont maxSize:CGSizeMake(CGFLOAT_MAX, self.playCountLabel.font.pointSize)].width+10;
     [self.playCountLabel mas_remakeConstraints:^(MASConstraintMaker *make) {
         make.top.right.equalTo(self);
         make.size.equalTo(CGSizeMake(playCountLabelW, BSALayoutH(40)));
@@ -135,7 +135,7 @@
     NSInteger second = essenceListModel.videotime % 60;
     NSString *voiceLaststime = [NSString stringWithFormat:@"%02zd:%02zd",minute,second];
     self.videoLaststimeLabel.text = voiceLaststime;
-    CGFloat voiceLaststimeW = [NSString sizeForContent:voiceLaststime font:BSVideoLabelFont size:CGSizeMake(CGFLOAT_MAX, self.videoLaststimeLabel.font.pointSize)].width+10;
+    CGFloat voiceLaststimeW = [voiceLaststime sizeWithFont:BSVideoLabelFont maxSize:CGSizeMake(CGFLOAT_MAX, self.videoLaststimeLabel.font.pointSize)].width+10;
     [self.videoLaststimeLabel mas_remakeConstraints:^(MASConstraintMaker *make) {
         make.right.bottom.equalTo(self);
         make.size.equalTo(CGSizeMake(voiceLaststimeW, BSALayoutH(40)));

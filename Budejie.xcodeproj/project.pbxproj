@@ -18,6 +18,7 @@
 		8C22259A1DE65EF000ABAD21 /* BSCommentModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C2225991DE65EF000ABAD21 /* BSCommentModel.m */; };
 		8C22259D1DE65F1800ABAD21 /* BSUserModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C22259C1DE65F1800ABAD21 /* BSUserModel.m */; };
 		8C2225A11DE6C78600ABAD21 /* NSMutableAttributedString+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C2225A01DE6C78600ABAD21 /* NSMutableAttributedString+Extension.m */; };
+		8C2225A51DE6E2C100ABAD21 /* BSComentDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C2225A41DE6E2C100ABAD21 /* BSComentDetailViewController.m */; };
 		8C31EF961DD2FEBD00CA3CEA /* BSAttentionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C31EF941DD2FEBD00CA3CEA /* BSAttentionViewController.m */; };
 		8C31EF991DD2FEDE00CA3CEA /* BSRecommendViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C31EF981DD2FEDE00CA3CEA /* BSRecommendViewController.m */; };
 		8C31EF9F1DD3026E00CA3CEA /* BSNetworkTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C31EF9E1DD3026E00CA3CEA /* BSNetworkTool.m */; };
@@ -50,6 +51,11 @@
 		8C85E16E1DE15EE7007E53B4 /* BSEssenceBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C85E16D1DE15EE7007E53B4 /* BSEssenceBaseViewController.m */; };
 		8C85E1791DE3E71E007E53B4 /* BSProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C85E1781DE3E71E007E53B4 /* BSProgressView.m */; };
 		8C85E17D1DE3ED27007E53B4 /* BSShowBigPicViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C85E17C1DE3ED27007E53B4 /* BSShowBigPicViewController.m */; };
+		8CA453241DE7D5A300EA93DB /* BSCmtDetailParameter.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CA453231DE7D5A300EA93DB /* BSCmtDetailParameter.m */; };
+		8CA453271DE7E0BF00EA93DB /* BSCmtDetailResult.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CA453261DE7E0BF00EA93DB /* BSCmtDetailResult.m */; };
+		8CA453311DE7E3BA00EA93DB /* BSCmtNetworkTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CA453301DE7E3BA00EA93DB /* BSCmtNetworkTool.m */; };
+		8CA453351DE80C6100EA93DB /* BSCmtSectionHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CA453341DE80C6100EA93DB /* BSCmtSectionHeader.m */; };
+		8CA453391DE8126C00EA93DB /* BSCommentCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CA453381DE8126C00EA93DB /* BSCommentCell.m */; };
 		8CA5E3E71DD07359001EDAF2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CA5E3E61DD07359001EDAF2 /* main.m */; };
 		8CA5E3F21DD07359001EDAF2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8CA5E3F11DD07359001EDAF2 /* Assets.xcassets */; };
 		8CA5E4001DD0735A001EDAF2 /* BudejieTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CA5E3FF1DD0735A001EDAF2 /* BudejieTests.m */; };
@@ -117,6 +123,8 @@
 		8C22259E1DE6919A00ABAD21 /* BSEssenceUIConstant.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BSEssenceUIConstant.h; sourceTree = "<group>"; };
 		8C22259F1DE6C78600ABAD21 /* NSMutableAttributedString+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableAttributedString+Extension.h"; sourceTree = "<group>"; };
 		8C2225A01DE6C78600ABAD21 /* NSMutableAttributedString+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableAttributedString+Extension.m"; sourceTree = "<group>"; };
+		8C2225A31DE6E2C100ABAD21 /* BSComentDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSComentDetailViewController.h; sourceTree = "<group>"; };
+		8C2225A41DE6E2C100ABAD21 /* BSComentDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSComentDetailViewController.m; sourceTree = "<group>"; };
 		8C31EF931DD2FEBD00CA3CEA /* BSAttentionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSAttentionViewController.h; sourceTree = "<group>"; };
 		8C31EF941DD2FEBD00CA3CEA /* BSAttentionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSAttentionViewController.m; sourceTree = "<group>"; };
 		8C31EF971DD2FEDE00CA3CEA /* BSRecommendViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSRecommendViewController.h; sourceTree = "<group>"; };
@@ -183,6 +191,16 @@
 		8C85E1781DE3E71E007E53B4 /* BSProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSProgressView.m; sourceTree = "<group>"; };
 		8C85E17B1DE3ED27007E53B4 /* BSShowBigPicViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSShowBigPicViewController.h; sourceTree = "<group>"; };
 		8C85E17C1DE3ED27007E53B4 /* BSShowBigPicViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSShowBigPicViewController.m; sourceTree = "<group>"; };
+		8CA453221DE7D5A300EA93DB /* BSCmtDetailParameter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSCmtDetailParameter.h; sourceTree = "<group>"; };
+		8CA453231DE7D5A300EA93DB /* BSCmtDetailParameter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSCmtDetailParameter.m; sourceTree = "<group>"; };
+		8CA453251DE7E0BF00EA93DB /* BSCmtDetailResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSCmtDetailResult.h; sourceTree = "<group>"; };
+		8CA453261DE7E0BF00EA93DB /* BSCmtDetailResult.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSCmtDetailResult.m; sourceTree = "<group>"; };
+		8CA4532F1DE7E3BA00EA93DB /* BSCmtNetworkTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSCmtNetworkTool.h; sourceTree = "<group>"; };
+		8CA453301DE7E3BA00EA93DB /* BSCmtNetworkTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSCmtNetworkTool.m; sourceTree = "<group>"; };
+		8CA453331DE80C6100EA93DB /* BSCmtSectionHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSCmtSectionHeader.h; sourceTree = "<group>"; };
+		8CA453341DE80C6100EA93DB /* BSCmtSectionHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSCmtSectionHeader.m; sourceTree = "<group>"; };
+		8CA453371DE8126C00EA93DB /* BSCommentCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSCommentCell.h; sourceTree = "<group>"; };
+		8CA453381DE8126C00EA93DB /* BSCommentCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSCommentCell.m; sourceTree = "<group>"; };
 		8CA5E3E21DD07359001EDAF2 /* Budejie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Budejie.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8CA5E3E61DD07359001EDAF2 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		8CA5E3F11DD07359001EDAF2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -325,6 +343,15 @@
 			path = TopComment;
 			sourceTree = "<group>";
 		};
+		8C2225A21DE6E2AC00ABAD21 /* ComentDetailViewController */ = {
+			isa = PBXGroup;
+			children = (
+				8C2225A31DE6E2C100ABAD21 /* BSComentDetailViewController.h */,
+				8C2225A41DE6E2C100ABAD21 /* BSComentDetailViewController.m */,
+			);
+			path = ComentDetailViewController;
+			sourceTree = "<group>";
+		};
 		8C31EF921DD2FEBD00CA3CEA /* Attention */ = {
 			isa = PBXGroup;
 			children = (
@@ -455,6 +482,10 @@
 				8C2225991DE65EF000ABAD21 /* BSCommentModel.m */,
 				8C22259B1DE65F1800ABAD21 /* BSUserModel.h */,
 				8C22259C1DE65F1800ABAD21 /* BSUserModel.m */,
+				8CA453221DE7D5A300EA93DB /* BSCmtDetailParameter.h */,
+				8CA453231DE7D5A300EA93DB /* BSCmtDetailParameter.m */,
+				8CA453251DE7E0BF00EA93DB /* BSCmtDetailResult.h */,
+				8CA453261DE7E0BF00EA93DB /* BSCmtDetailResult.m */,
 			);
 			path = EssenceModel;
 			sourceTree = "<group>";
@@ -506,6 +537,33 @@
 				8C85E17C1DE3ED27007E53B4 /* BSShowBigPicViewController.m */,
 			);
 			path = ShowBigPicViewController;
+			sourceTree = "<group>";
+		};
+		8CA4532E1DE7E3B100EA93DB /* CmtNetworkTool */ = {
+			isa = PBXGroup;
+			children = (
+				8CA4532F1DE7E3BA00EA93DB /* BSCmtNetworkTool.h */,
+				8CA453301DE7E3BA00EA93DB /* BSCmtNetworkTool.m */,
+			);
+			path = CmtNetworkTool;
+			sourceTree = "<group>";
+		};
+		8CA453321DE80C5500EA93DB /* CmtSectionHeader */ = {
+			isa = PBXGroup;
+			children = (
+				8CA453331DE80C6100EA93DB /* BSCmtSectionHeader.h */,
+				8CA453341DE80C6100EA93DB /* BSCmtSectionHeader.m */,
+			);
+			path = CmtSectionHeader;
+			sourceTree = "<group>";
+		};
+		8CA453361DE8125600EA93DB /* CommentCell */ = {
+			isa = PBXGroup;
+			children = (
+				8CA453371DE8126C00EA93DB /* BSCommentCell.h */,
+				8CA453381DE8126C00EA93DB /* BSCommentCell.m */,
+			);
+			path = CommentCell;
 			sourceTree = "<group>";
 		};
 		8CA5E3D91DD07359001EDAF2 = {
@@ -811,6 +869,9 @@
 		8CA5E4841DD07F21001EDAF2 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				8CA453361DE8125600EA93DB /* CommentCell */,
+				8CA453321DE80C5500EA93DB /* CmtSectionHeader */,
+				8C2225A21DE6E2AC00ABAD21 /* ComentDetailViewController */,
 				8C2225941DE65C4300ABAD21 /* TopComment */,
 				8C22258C1DE5D40800ABAD21 /* Public */,
 				8C22258F1DE5D40800ABAD21 /* VideoView */,
@@ -910,6 +971,7 @@
 		8CD409A11DD5CC1E00FB43CD /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				8CA4532E1DE7E3B100EA93DB /* CmtNetworkTool */,
 				8CD409A21DD5CC1E00FB43CD /* TagNetworkTool */,
 			);
 			path = Tools;
@@ -1171,24 +1233,29 @@
 				8CBFA8C81DDB0472000C74CA /* BSTextField.m in Sources */,
 				8CA5E4A31DD094CA001EDAF2 /* BSTabBar.m in Sources */,
 				8CD4098F1DD567AF00FB43CD /* MBProgressHUD+Extension.m in Sources */,
+				8CA453241DE7D5A300EA93DB /* BSCmtDetailParameter.m in Sources */,
 				8C85E15F1DE15822007E53B4 /* BSTagViewController.m in Sources */,
 				8CA5E4601DD078A9001EDAF2 /* UIImage+Extension.m in Sources */,
 				8C31EFAC1DD320A300CA3CEA /* BSLeftTagNetworkTool.m in Sources */,
+				8CA453271DE7E0BF00EA93DB /* BSCmtDetailResult.m in Sources */,
 				8C85E1091DDDB079007E53B4 /* BSTagModel.m in Sources */,
 				8C31EFA61DD3197C00CA3CEA /* BSLeftTagModel.m in Sources */,
 				8CA5E45D1DD07865001EDAF2 /* UIColor+Extension.m in Sources */,
 				8C85E1191DDDB31C007E53B4 /* BSThemsModel.m in Sources */,
 				8C85E10A1DDDB079007E53B4 /* BSTagParameter.m in Sources */,
+				8CA453351DE80C6100EA93DB /* BSCmtSectionHeader.m in Sources */,
 				8C31EFB91DD4111900CA3CEA /* BSUserGroupResultModel.m in Sources */,
 				8C85E1561DE15822007E53B4 /* BSEssenceViewController.m in Sources */,
 				8C85E1231DDEFAFD007E53B4 /* BSBaseCell.m in Sources */,
 				8C22258A1DE59FD500ABAD21 /* NSString+Extension.m in Sources */,
 				8C31EFBF1DD413B100CA3CEA /* BSUserGroupNetworkTool.m in Sources */,
 				8C31EFC51DD41BC800CA3CEA /* UIImageView+Extension.m in Sources */,
+				8CA453311DE7E3BA00EA93DB /* BSCmtNetworkTool.m in Sources */,
 				8C22259D1DE65F1800ABAD21 /* BSUserModel.m in Sources */,
 				8C2225971DE65C4D00ABAD21 /* BSEssenceTopCommentView.m in Sources */,
 				8C85E1301DE153CF007E53B4 /* BSEssenceResult.m in Sources */,
 				8C85E1791DE3E71E007E53B4 /* BSProgressView.m in Sources */,
+				8CA453391DE8126C00EA93DB /* BSCommentCell.m in Sources */,
 				8C31EF9F1DD3026E00CA3CEA /* BSNetworkTool.m in Sources */,
 				8CA5E4A01DD09233001EDAF2 /* BSTabBarController.m in Sources */,
 				8C31EFBC1DD4113500CA3CEA /* BSUserGroupParameter.m in Sources */,
@@ -1196,6 +1263,7 @@
 				8CA5E4631DD078E0001EDAF2 /* UIView+Extension.m in Sources */,
 				8C85E1331DE15407007E53B4 /* BSEssenceListModel.m in Sources */,
 				8C2225901DE5D40800ABAD21 /* BSToolbarButton.m in Sources */,
+				8C2225A51DE6E2C100ABAD21 /* BSComentDetailViewController.m in Sources */,
 				8CA5E3E71DD07359001EDAF2 /* main.m in Sources */,
 				8C2225931DE5D43B00ABAD21 /* BSEssenceVideoView.m in Sources */,
 				8CA5E4281DD077A6001EDAF2 /* BSBaseViewController.m in Sources */,

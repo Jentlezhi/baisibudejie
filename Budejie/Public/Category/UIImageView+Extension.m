@@ -17,4 +17,12 @@
     return imgv;
 }
 
+- (void)animationWithImages:(NSArray<UIImage *>*)images duration:(NSTimeInterval)duration repeatCount:(NSInteger)repeatCount{
+//    [self rotationWithType:BSAnimationRotationTypeLeftRight animationDuration:<#(CFTimeInterval)#> repaatCount:<#(float)#>]
+    self.animationImages = images;
+    self.animationDuration = duration;
+    self.animationRepeatCount = repeatCount;
+    [self startAnimating];
+}
+
 @end

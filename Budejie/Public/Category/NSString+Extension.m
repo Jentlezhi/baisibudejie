@@ -10,8 +10,8 @@
 
 @implementation NSString (Extension)
 
-+ (CGSize)sizeForContent:(NSString *)content font:(UIFont *)font size:(CGSize)size{
-    return [content boundingRectWithSize:size options:NSStringDrawingUsesLineFragmentOrigin | NSStringDrawingUsesFontLeading attributes:@{NSFontAttributeName : font} context:nil].size;
+- (CGSize)sizeWithFont:(UIFont *)font maxSize:(CGSize)maxSize{
+    return [self boundingRectWithSize:maxSize options:NSStringDrawingUsesLineFragmentOrigin | NSStringDrawingUsesFontLeading attributes:@{NSFontAttributeName : font} context:nil].size;
 }
 
 @end

@@ -10,8 +10,5 @@
 
 @implementation NSObject (Extension)
 
-- (CGSize)sizeForString:(NSString *)string font:(UIFont *)font size:(CGSize)size{
-    return [string boundingRectWithSize:size options:NSStringDrawingUsesLineFragmentOrigin | NSStringDrawingUsesFontLeading attributes:@{NSFontAttributeName : font} context:nil].size;
-}
 
 @end

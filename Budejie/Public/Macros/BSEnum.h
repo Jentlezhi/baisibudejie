@@ -17,4 +17,10 @@ typedef enum {
     BSTopicTypeVideo = 41
 } BSTopicType;
 
+typedef enum {
+    BSRequestTypeRefresh = 0,
+    BSRequestTypeLoadMore
+} BSRequestType;
+
+
 #endif /* BSEnum_h */
