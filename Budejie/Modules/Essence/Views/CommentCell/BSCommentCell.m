@@ -92,7 +92,7 @@
     //点赞按钮
     UIButton *praiseBtn = [UIButton buttonWithNormalImage:[UIImage imageNamed:@"commentLikeButton"] highlightImage:[UIImage imageNamed:@"commentLikeButtonClick"]];
     [[praiseBtn rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(id x) {
-//        [self.headerImgv animationWithImages:self.clapImages duration:1.0f repeatCount:1];        
+        [self.headerImgv animationWithImages:self.clapImages duration:1.0f repeatCount:1];        
     }];
     [self.contentView addSubview:praiseBtn];
     [praiseBtn mas_makeConstraints:^(MASConstraintMaker *make) {

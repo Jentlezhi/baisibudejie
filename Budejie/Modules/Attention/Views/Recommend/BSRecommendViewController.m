@@ -239,5 +239,14 @@
     }
 }
 
+- (void)viewDidDisappear:(BOOL)animated{
+    [super viewDidDisappear:animated];
+    [self cancelRequest];
+}
+
+- (void)dealloc{
+    [self cancelRequest];
+}
+
 
 @end

@@ -111,6 +111,16 @@
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
 
+- (void)viewDidDisappear:(BOOL)animated{
+    [super viewDidDisappear:animated];
+    [self cancelRequest];
+}
+
+- (void)dealloc{
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+    [self cancelRequest];
+}
+
 
 
 @end

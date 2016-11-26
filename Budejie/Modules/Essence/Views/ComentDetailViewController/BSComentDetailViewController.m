@@ -15,7 +15,6 @@
 #import "BSCommentCell.h"
 #import "BSCommentModel.h"
 #import "BSShowBigPicViewController.h"
-
 #import "BSUserModel.h"
 
 @interface BSComentDetailViewController ()<UITableViewDelegate,UITableViewDataSource>
@@ -217,7 +216,7 @@
         cmtDetailParameter.lastid = commentModel.ID;
     }
     
-    [BSCmtNetworkTool cmtWithParameters:cmtDetailParameter success:^(BSCmtDetailResult *result) {
+   self.sessionDateTask = [BSCmtNetworkTool cmtWithParameters:cmtDetailParameter success:^(BSCmtDetailResult *result) {
         weakSelf.hotComments = result.hot;
         NSInteger lastCmtTotal = [result.total integerValue];
         if (requestType == BSRequestTypeRefresh) {
@@ -304,8 +303,14 @@
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
 
+- (void)viewDidDisappear:(BOOL)animated{
+    [super viewDidDisappear:animated];
+    [self cancelRequest];
+}
+
 - (void)dealloc{
     [[NSNotificationCenter defaultCenter] removeObserver:self];
+    [self cancelRequest];
 }
 
 @end

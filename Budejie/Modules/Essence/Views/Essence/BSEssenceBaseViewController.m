@@ -115,7 +115,7 @@
     }else{
         [self.essenceTableView.mj_header endRefreshing];
     }
-    [BSEssenceNetworkTool essenceWithParameters:essenceParameter success:^(BSEssenceResult *result) {
+    self.sessionDateTask = [BSEssenceNetworkTool essenceWithParameters:essenceParameter success:^(BSEssenceResult *result) {
         //发现两次请求不一样
         if (self.essenceParameter!= essenceParameter) return;
         self.maxtime = result.info.maxtime;
@@ -197,7 +197,9 @@
     [self.navigationController pushViewController:comentDetailVC animated:YES];
 }
 
-
+- (void)dealloc{
+    [self cancelRequest];
+}
 
 
 @end
