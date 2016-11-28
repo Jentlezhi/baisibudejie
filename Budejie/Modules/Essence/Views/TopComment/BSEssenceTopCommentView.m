@@ -16,6 +16,8 @@
 @property (weak, nonatomic) UILabel *topCmtLabel;
 /** 最热评论内容 */
 @property (weak, nonatomic) UILabel *topCmtContentLabel;
+/** 音频按钮 */
+@property(weak, nonatomic) UIButton *voicePlayBtn;
 
 @end
 
@@ -66,6 +68,17 @@
     [topCmtContentLabel sizeToFit];
     [self addSubview:topCmtContentLabel];
     _topCmtContentLabel = topCmtContentLabel;
+    
+    //音频播放按钮
+    UIButton *voicePlayBtn = [UIButton buttonWithBackgroundNormalImage:[UIImage imageNamed:@"play-voice-bg"] highlightImage:[UIImage imageNamed:@"play-voice-bg-select"]];
+    [voicePlayBtn setImage:[UIImage imageNamed:@"play-voice-stop"] forState:UIControlStateNormal];
+    [[voicePlayBtn rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(id x) {
+    }];
+    [voicePlayBtn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+    voicePlayBtn.titleLabel.font = [UIFont systemFontOfSize:13.f];
+    voicePlayBtn.titleEdgeInsets = UIEdgeInsetsMake(0, BSALayoutH(5), 0, 0);
+    [self addSubview:voicePlayBtn];
+    _voicePlayBtn = voicePlayBtn;
 }
 
 - (void)setEssenceListModel:(BSEssenceListModel *)essenceListModel{
@@ -78,19 +91,42 @@
     [attributedString addAttribute:NSParagraphStyleAttributeName value:paragraphStyle range:NSMakeRange(0, [topCmtContent length])];
     _topCmtContentLabel.attributedText = attributedString;
     
+    CGFloat commentW = [topCmtContent sizeWithFont:[UIFont systemFontOfSize:13.0f] maxSize:CGSizeMake(CGFLOAT_MAX, 28)].width;
+    if (commentW>BSEssenceCellContentW-2*BSEssenceCellMargin-BSALayoutH(124)) {
+        commentW = BSEssenceCellContentW-2*BSEssenceCellMargin-BSALayoutH(124);
+    }
+    
     //约束“最热评论”文字
     [_topCmtLabel mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.left.equalTo(self);
         make.size.equalTo(CGSizeMake(BSALayoutH(30*4), BSTopCmtTopMargin));
     }];
     
-    //约束评论内容
-    [_topCmtContentLabel mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.equalTo(_topCmtLabel.mas_bottom).offset(BSEssenceCellMargin);
-        make.left.equalTo(self).offset(BSTopCmtHMargin);
-        make.right.equalTo(self).offset(-BSTopCmtHMargin);
-        make.bottom.equalTo(self).offset(-BSTopCmtHMargin);
-    }];
+    if (essenceListModel.top_cmt.voiceuri.length) {
+        self.voicePlayBtn.hidden = NO;
+        [self.voicePlayBtn setTitle:[NSString stringWithFormat:@"%zd''", essenceListModel.top_cmt.voicetime] forState:UIControlStateNormal];
+        [_topCmtContentLabel mas_remakeConstraints:^(MASConstraintMaker *make) {
+            make.top.equalTo(_topCmtLabel.mas_bottom).offset(BSEssenceCellMargin);
+            make.left.equalTo(self).offset(BSTopCmtHMargin);
+            make.width.equalTo(commentW);
+            make.bottom.equalTo(self).offset(-3*BSTopCmtHMargin);
+        }];
+        
+        [_voicePlayBtn mas_remakeConstraints:^(MASConstraintMaker *make) {
+            make.size.equalTo(CGSizeMake(BSALayoutH(124), BSALayoutH(44)));
+            make.centerY.equalTo(_topCmtContentLabel);
+            make.left.equalTo(_topCmtContentLabel.mas_right).offset(BSEssenceCellMargin);
+        }];
+    } else {
+        self.voicePlayBtn.hidden = YES;
+        //约束评论内容
+        [_topCmtContentLabel mas_remakeConstraints:^(MASConstraintMaker *make) {
+            make.top.equalTo(_topCmtLabel.mas_bottom).offset(BSEssenceCellMargin);
+            make.left.equalTo(self).offset(BSTopCmtHMargin);
+            make.right.equalTo(self).offset(-BSTopCmtHMargin);
+            make.bottom.equalTo(self).offset(-BSTopCmtHMargin);
+        }];
+    }
 
 }
 

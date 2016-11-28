@@ -24,9 +24,11 @@
 @property(weak, nonatomic) UILabel *praiseNumLabel;
 /** 内容 */
 @property(weak, nonatomic) UILabel *contentLabel;
-
+/** 点赞按钮 */
+@property(weak, nonatomic) UIButton *praiseBtn;
 /** 鼓掌动画 */
 @property(strong, nonatomic) NSArray *clapImages;
+
 
 @end
 
@@ -95,6 +97,7 @@
         [self.headerImgv animationWithImages:self.clapImages duration:1.0f repeatCount:1];
     }];
     [self.contentView addSubview:praiseBtn];
+    _praiseBtn = praiseBtn;
     [praiseBtn mas_makeConstraints:^(MASConstraintMaker *make) {
         make.right.equalTo(self.contentView).offset(-BSEssenceCellMargin);
         make.centerY.equalTo(genderImgv);
@@ -137,9 +140,9 @@
     contentLabel.numberOfLines = 0;
     [self.contentView addSubview:contentLabel];
     _contentLabel = contentLabel;
-    [contentLabel mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.equalTo(praiseBtn.mas_bottom).offset(BSEssenceCellMargin);
-        make.left.equalTo(headerImgv.mas_right).offset(BSEssenceCellMargin);
+    [_contentLabel mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.equalTo(_praiseBtn.mas_bottom).offset(BSEssenceCellMargin);
+        make.left.equalTo(_headerImgv.mas_right).offset(BSEssenceCellMargin);
         make.right.equalTo(self.contentView).offset(-BSEssenceCellMargin);
         make.bottom.equalTo(self.contentView).offset(-BSCommentMarign);
         
@@ -148,14 +151,13 @@
     //音频播放按钮
     UIButton *voicePlayBtn = [UIButton buttonWithBackgroundNormalImage:[UIImage imageNamed:@"play-voice-bg"] highlightImage:[UIImage imageNamed:@"play-voice-bg-select"]];
     [voicePlayBtn setImage:[UIImage imageNamed:@"play-voice-stop"] forState:UIControlStateNormal];
+    [voicePlayBtn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+    voicePlayBtn.titleLabel.font = [UIFont systemFontOfSize:13.f];
+    voicePlayBtn.titleEdgeInsets = UIEdgeInsetsMake(0, BSALayoutH(5), 0, 0);
     [[voicePlayBtn rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(id x) {
     }];
     [self.contentView addSubview:voicePlayBtn];
     _voicePlayBtn = voicePlayBtn;
-    [voicePlayBtn mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.size.equalTo(CGSizeMake(BSALayoutH(124), BSALayoutH(44)));
-        make.top.left.equalTo(contentLabel);
-    }];
     
     //分割线
     UILabel *dividerLabel = [[UILabel alloc] init];
@@ -165,6 +167,7 @@
         make.left.bottom.right.equalTo(self.contentView);
         make.height.equalTo(BSDividerHeight);
     }];
+
 
 }
 
@@ -184,13 +187,30 @@
     self.contentLabel.text = commentModel.content;
     self.nicknameLabel.text = commentModel.user.username;
     self.praiseNumLabel.text = [NSString stringWithFormat:@"%zd", commentModel.like_count];
-    
+
     if (commentModel.voiceuri.length) {
         self.voicePlayBtn.hidden = NO;
         [self.voicePlayBtn setTitle:[NSString stringWithFormat:@"%zd''", commentModel.voicetime] forState:UIControlStateNormal];
+        [_voicePlayBtn mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.width.equalTo(BSALayoutH(124));
+            make.top.equalTo(_praiseBtn.mas_bottom).offset(BSEssenceCellMargin);
+            make.left.equalTo(_headerImgv.mas_right).offset(BSEssenceCellMargin);
+            make.bottom.equalTo(self.contentView).offset(-BSCommentMarign);
+        }];
     } else {
         self.voicePlayBtn.hidden = YES;
+
     }
+}
+
+#pragma mark - MenuController setting
+
+- (BOOL)canBecomeFirstResponder{
+    return YES;
+}
+
+- (BOOL)canPerformAction:(SEL)action withSender:(id)sender{
+    return NO;
 }
 /**
  * 跳转cell的frame

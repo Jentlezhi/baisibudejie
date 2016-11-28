@@ -29,6 +29,8 @@
 @property (nonatomic, weak) UIImageView *toolBar;
 /** 当前页 */
 @property (nonatomic, assign) NSInteger currentPage;
+/** 当前点击的cell的indexPath */
+@property (nonatomic, strong) NSIndexPath *clickIndexPath;
 
 @end
 
@@ -94,6 +96,9 @@
 
 - (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView{
     [self.view endEditing:YES];
+    UIMenuController *menu = [UIMenuController sharedMenuController]
+    ;
+    [menu setMenuVisible:NO animated:YES];
 }
 
 
@@ -128,12 +133,13 @@
     cell.seeBigPicBlock = ^(BSEssenceListModel *essenceListModel){
         BSShowBigPicViewController *showBigPicViewController = [BSShowBigPicViewController showBigPicViewController];
         showBigPicViewController.essenceListModel = essenceListModel;
-        [self presentViewController:showBigPicViewController animated:NO completion:nil];
+        //直接用self调用会循环引用
+        [[UIApplication sharedApplication].keyWindow.rootViewController presentViewController:showBigPicViewController animated:NO completion:nil];
     };
 
     [headerView addSubview:cell];
     self.comentDetailTableView.tableHeaderView = headerView;
-    
+
     //底部工具条
     UIImageView *toolBar = [[UIImageView alloc] init];
     toolBar.userInteractionEnabled = YES;
@@ -269,11 +275,7 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     
     BSCommentCell *cell = [BSCommentCell commentCellForTableView:tableView indexPath:indexPath];
-    if (indexPath.section == 0) {
-        cell.commentModel = self.hotComments.count ? self.hotComments[indexPath.row] : self.latestComments[indexPath.row];
-    }else{
-        cell.commentModel = self.latestComments[indexPath.row];
-    }
+    cell.commentModel = [self commentModelInIndexPath:indexPath];
     return cell;
 }
 
@@ -302,16 +304,58 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    self.clickIndexPath = indexPath;
+    BSCommentCell *cell = [tableView cellForRowAtIndexPath:indexPath];
+    UIMenuController *menu = [UIMenuController sharedMenuController]
+    ;
+    if (menu.isMenuVisible) {
+        [menu setMenuVisible:NO animated:YES];
+    }else{
+        [cell becomeFirstResponder];
+        UIMenuItem *ding = [[UIMenuItem alloc] initWithTitle:@"顶" action:@selector(ding:)];
+        UIMenuItem *replay = [[UIMenuItem alloc] initWithTitle:@"回复" action:@selector(replay:)];
+        UIMenuItem *report = [[UIMenuItem alloc] initWithTitle:@"举报" action:@selector(report:)];
+        menu.menuItems = @[ding,replay,report];
+        UILabel *content = [cell valueForKeyPath:@"contentLabel"];
+        [menu setTargetRect:CGRectMake(0, 0, content.width*0.5, content.height) inView:content];
+        [menu setMenuVisible:YES animated:YES];
+    }
+}
+
+- (void)ding:(UIMenuItem*)menu{
+    BSCommentModel *commentModel = [self commentModelInIndexPath:self.clickIndexPath];
+    BSLog(@"顶->%@",commentModel.user.username);
+}
+- (void)replay:(UIMenuItem*)menu{
+    BSCommentModel *commentModel = [self commentModelInIndexPath:self.clickIndexPath];
+    BSLog(@"回复->%@",commentModel.user.username);
+}
+- (void)report:(UIMenuItem*)menu{
+    BSCommentModel *commentModel = [self commentModelInIndexPath:self.clickIndexPath];
+    BSLog(@"举报->%@",commentModel.user.username);
+}
+
+- (BSCommentModel *)commentModelInIndexPath:(NSIndexPath *)indexPath{
+    BSCommentModel *commentModel = [[BSCommentModel alloc] init];;
+    if (indexPath.section == 0) {
+        commentModel = self.hotComments.count ? self.hotComments[indexPath.row] : self.latestComments[indexPath.row];
+    }else{
+        commentModel = self.latestComments[indexPath.row];
+    }
+    return commentModel;
 }
 
 - (void)viewDidDisappear:(BOOL)animated{
     [super viewDidDisappear:animated];
-    [self cancelRequest];
+//    self.view = nil;
 }
-
 - (void)dealloc{
+    BSLogFunc;
     [[NSNotificationCenter defaultCenter] removeObserver:self];
     [self cancelRequest];
 }
+
+
+
 
 @end

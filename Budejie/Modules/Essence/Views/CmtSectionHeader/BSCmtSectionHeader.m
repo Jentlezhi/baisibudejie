@@ -39,7 +39,7 @@
 }
 
 + (instancetype)cmtSectionHeaderWithTableView:(UITableView *)tableView{
-    static NSString *ID = @"cectionHeader";
+    static NSString *ID = @"cectionHeaderID";
     BSCmtSectionHeader *header = [tableView dequeueReusableHeaderFooterViewWithIdentifier:ID];
     if (header == nil) {
         header = [[BSCmtSectionHeader alloc] initWithReuseIdentifier:ID];

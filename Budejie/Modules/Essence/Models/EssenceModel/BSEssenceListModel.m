@@ -96,13 +96,16 @@
 //        BSCommentModel *commentModel = [self.top_cmt firstObject];
         if (self.top_cmt) {//有最热评论
             NSString *topCmtContent = [NSString stringWithFormat:@"%@ : %@",self.top_cmt.user.username,self.top_cmt.content];
-            CGFloat commentH = [topCmtContent sizeWithFont:[UIFont systemFontOfSize:14.0f] maxSize:CGSizeMake(BSEssenceCellContentW+2*BSEssenceCellMargin, CGFLOAT_MAX)].height;
+            CGFloat commentH = [topCmtContent sizeWithFont:[UIFont systemFontOfSize:13.0f] maxSize:CGSizeMake(BSEssenceCellContentW-2*BSEssenceCellMargin, CGFLOAT_MAX)].height;
             topCmtH = BSTopCmtTopMargin + 2*BSEssenceCellMargin + commentH;
             CGFloat topCmtX = 0;
             CGFloat topCmtY = BSEssenceCellTextY + textH + pictureH + voiceH;
             CGFloat topCmtW = BSEssenceCellContentW;
             _topCmtF = CGRectMake(topCmtX, topCmtY, topCmtW, topCmtH);
             topCmtH += BSEssenceCellMargin;
+            if (self.top_cmt.voiceuri.length) {
+                topCmtH += 2*BSEssenceCellMargin;
+            }
         }
         _cellHeight += (BSEssenceCellTextY + textH + BSEssenceToolBarH + 3*BSEssenceCellMargin + pictureH + voiceH + topCmtH + jokeMargin);
     }
