@@ -38,4 +38,14 @@
  */
 + (instancetype)image:(UIImage *)image withTintColor:(UIColor *)color;
 
+/**
+ *  圆形带有环图片
+ *
+ *  @param borderWidth 圆环宽度
+ *  @param borderColor 圆环颜色
+ *
+ *  @return 渲染后图片
+ */
+- (instancetype)circleImageWithBorderWidth:(CGFloat)borderWidth borderColor:(UIColor *)borderColor;
+
 @end

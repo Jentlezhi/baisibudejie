@@ -142,8 +142,8 @@
     //用户头像
     CGFloat userHeaderImgvWH = BSALayoutH(70);
     UIImageView *userHeaderImgv = [[UIImageView alloc] init];
-    userHeaderImgv.layer.cornerRadius = userHeaderImgvWH*0.5;
-    userHeaderImgv.layer.masksToBounds = YES;
+//    userHeaderImgv.layer.cornerRadius = userHeaderImgvWH*0.5;
+//    userHeaderImgv.layer.masksToBounds = YES;
     [self.contentView addSubview:userHeaderImgv];
     _userHeaderImgv = userHeaderImgv;
     [userHeaderImgv mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -321,7 +321,9 @@
     _essenceListModel = essenceListModel;
 
     //用户头像
-    [_userHeaderImgv sd_setImageWithURL:[NSURL URLWithString:essenceListModel.profile_image]placeholderImage:BSUserHeaderPlaceholder];
+    [_userHeaderImgv sd_setImageWithURL:[NSURL URLWithString:essenceListModel.profile_image] placeholderImage:BSUserHeaderPlaceholder completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
+        _userHeaderImgv.image = [image circleImageWithBorderWidth:BSALayoutH(2.f) borderColor:BSGlobalColor];
+    }];
     _addv.hidden = !essenceListModel.isSina_v;
     _nikenameLabel.text = essenceListModel.name;
     _sendTimeLabel.text = essenceListModel.create_time;

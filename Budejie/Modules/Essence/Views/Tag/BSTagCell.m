@@ -47,8 +47,8 @@
     CGFloat userHeaderImgvWH = BSALayoutH(90);
     UIImageView *userHeaderImgv = [[UIImageView alloc] init];
     userHeaderImgv = userHeaderImgv;
-    userHeaderImgv.layer.cornerRadius = userHeaderImgvWH*0.5;
-    userHeaderImgv.layer.masksToBounds = YES;
+//    userHeaderImgv.layer.cornerRadius = userHeaderImgvWH*0.5;
+//    userHeaderImgv.layer.masksToBounds = YES;
     [self.contentView addSubview:userHeaderImgv];
     _userHeaderImgv = userHeaderImgv;
     [userHeaderImgv mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -126,7 +126,9 @@
 - (void)setTagModel:(BSTagModel *)tagModel{
     _tagModel = tagModel;
     NSString *userHeader = [tagModel.image_list stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
-    [self.userHeaderImgv sd_setImageWithURL:[NSURL URLWithString:userHeader] placeholderImage:BSUserHeaderPlaceholder];
+    [_userHeaderImgv sd_setImageWithURL:[NSURL URLWithString:userHeader] placeholderImage:BSUserHeaderPlaceholder completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
+        _userHeaderImgv.image = [image circleImageWithBorderWidth:BSALayoutH(2.f) borderColor:BSGlobalColor];
+    }];
     self.screenNameLabel.text = tagModel.theme_name?tagModel.theme_name:@"未设置";
     NSString *subNumber = nil;
     if ([tagModel.sub_number integerValue] < 10000) {

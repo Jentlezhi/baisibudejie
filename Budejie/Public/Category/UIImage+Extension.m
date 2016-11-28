@@ -41,6 +41,23 @@
     return tintedImage;
 }
 
+- (instancetype)circleImageWithBorderWidth:(CGFloat)borderWidth borderColor:(UIColor *)borderColor{
+    CGFloat imageWH = self.size.width;
+    CGFloat borderWH = borderWidth;
+    CGFloat ovalWH = imageWH + 2 * borderWH;
+    UIGraphicsBeginImageContextWithOptions(CGSizeMake(ovalWH, ovalWH), NO, 0.f);
+    UIBezierPath *path = [UIBezierPath bezierPathWithOvalInRect:CGRectMake(0, 0, ovalWH, ovalWH)];
+    [borderColor set];
+    [path fill];
+
+    UIBezierPath *clipPath = [UIBezierPath bezierPathWithOvalInRect:CGRectMake(borderWH, borderWH, imageWH, imageWH)];
+    [clipPath addClip];
+    [self drawAtPoint:CGPointMake(borderWH, borderWH)];
+    UIImage *clipImage = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    return clipImage;
+}
+
 
 
 

@@ -45,9 +45,8 @@
     //用户头像
     CGFloat userHeaderImgvWH = BSALayoutH(70);
     UIImageView *userHeaderImgv = [[UIImageView alloc] init];
-    userHeaderImgv = userHeaderImgv;
-    userHeaderImgv.layer.cornerRadius = userHeaderImgvWH*0.5;
-    userHeaderImgv.layer.masksToBounds = YES;
+//    userHeaderImgv.layer.cornerRadius = userHeaderImgvWH*0.5;
+//    userHeaderImgv.layer.masksToBounds = YES;
     [self.contentView addSubview:userHeaderImgv];
     _userHeaderImgv = userHeaderImgv;
     [userHeaderImgv mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -125,7 +124,9 @@
 - (void)setUserGroupModel:(BSUserGroupModel *)userGroupModel{
     _userGroupModel = userGroupModel;
     NSString *userHeader = [userGroupModel.header stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
-    [self.userHeaderImgv sd_setImageWithURL:[NSURL URLWithString:userHeader] placeholderImage:BSUserHeaderPlaceholder];
+    [_userHeaderImgv sd_setImageWithURL:[NSURL URLWithString:userHeader] placeholderImage:BSUserHeaderPlaceholder completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
+        _userHeaderImgv.image = [image circleImageWithBorderWidth:BSALayoutH(2.f) borderColor:BSGlobalColor];
+    }];
     self.screenNameLabel.text = userGroupModel.screen_name?userGroupModel.screen_name:@"未设置";
     self.fansCountLabel.text = [userGroupModel.fans_count stringByAppendingString:@"人关注"];
 }

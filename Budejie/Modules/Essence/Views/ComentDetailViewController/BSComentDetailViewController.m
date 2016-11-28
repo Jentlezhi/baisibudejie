@@ -324,15 +324,15 @@
 
 - (void)ding:(UIMenuItem*)menu{
     BSCommentModel *commentModel = [self commentModelInIndexPath:self.clickIndexPath];
-    BSLog(@"顶->%@",commentModel.user.username);
+    BSLog(@"顶->%@",commentModel.content);
 }
 - (void)replay:(UIMenuItem*)menu{
     BSCommentModel *commentModel = [self commentModelInIndexPath:self.clickIndexPath];
-    BSLog(@"回复->%@",commentModel.user.username);
+    BSLog(@"回复->%@",commentModel.content);
 }
 - (void)report:(UIMenuItem*)menu{
     BSCommentModel *commentModel = [self commentModelInIndexPath:self.clickIndexPath];
-    BSLog(@"举报->%@",commentModel.user.username);
+    BSLog(@"举报->%@",commentModel.content);
 }
 
 - (BSCommentModel *)commentModelInIndexPath:(NSIndexPath *)indexPath{

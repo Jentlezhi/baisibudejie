@@ -73,8 +73,8 @@
 - (void)initCommentCellComponents{
     //用户头像
     UIImageView *headerImgv = [[UIImageView alloc] init];
-    headerImgv.layer.cornerRadius = BSCommentHeaderWH*0.5;
-    headerImgv.layer.masksToBounds = YES;
+//    headerImgv.layer.cornerRadius = BSCommentHeaderWH*0.5;
+//    headerImgv.layer.masksToBounds = YES;
     [self.contentView addSubview:headerImgv];
     _headerImgv = headerImgv;
     [headerImgv mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -182,7 +182,9 @@
 
 - (void)setCommentModel:(BSCommentModel *)commentModel{
     _commentModel = commentModel;
-    [_headerImgv sd_setImageWithURL:[NSURL URLWithString:commentModel.user.profile_image] placeholderImage:BSUserHeaderPlaceholder];
+    [_headerImgv sd_setImageWithURL:[NSURL URLWithString:commentModel.user.profile_image] placeholderImage:BSUserHeaderPlaceholder completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
+        _headerImgv.image = [image circleImageWithBorderWidth:BSALayoutH(2.f) borderColor:BSGlobalColor];
+    }];
     _genderImgv.image = [commentModel.user.sex isEqualToString:@"m"] ? [UIImage imageNamed:@"Profile_manIcon"] : [UIImage imageNamed:@"Profile_womanIcon"];
     self.contentLabel.text = commentModel.content;
     self.nicknameLabel.text = commentModel.user.username;
