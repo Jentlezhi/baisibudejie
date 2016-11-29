@@ -6,8 +6,8 @@
 //  Copyright © 2016年 Jentle. All rights reserved.
 //
 
-#import "BSBaseViewController.h"
+#import "BSEssenceViewController.h"
 
-@interface BSNewestViewController : BSBaseViewController
+@interface BSNewestViewController : BSEssenceViewController
 
 @end

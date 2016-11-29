@@ -13,6 +13,7 @@
 #import "BSBaseCell.h"
 #import "BSShowBigPicViewController.h"
 #import "BSComentDetailViewController.h"
+#import "BSNewestViewController.h"
 
 @interface BSEssenceBaseViewController ()<UITableViewDataSource,UITableViewDelegate>
 /** 表格视图 */
@@ -27,7 +28,8 @@
 @property(strong,nonatomic) BSEssenceParameter *essenceParameter;
 /** 上次选中的索引 */
 @property(assign, nonatomic) NSInteger lastSelectedIndex;
-
+/** 参数a */
+@property(copy,nonatomic)NSString *a;
 @end
 
 @implementation BSEssenceBaseViewController
@@ -114,9 +116,12 @@
     
 }
 
+- (NSString *)a{
+    return [self.parentViewController isKindOfClass:[BSNewestViewController class]]?@"newlist":@"list";
+}
 - (void)requestJokeListWithPage:(NSInteger)page{
     BSEssenceParameter *essenceParameter = [BSEssenceParameter essenceParameter];
-    essenceParameter.a = @"list";
+    essenceParameter.a = self.a;
     essenceParameter.c = @"data";
     essenceParameter.type = self.type;
     essenceParameter.page = page;
