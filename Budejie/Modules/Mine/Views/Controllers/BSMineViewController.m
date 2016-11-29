@@ -12,7 +12,7 @@
 #import "BSMineFooterView.h"
 #import "BSLoginRegisterViewController.h"
 
-@interface BSMineViewController()<UITableViewDelegate,UITableViewDataSource>
+@interface BSMineViewController()<UITableViewDelegate,UITableViewDataSource,UIScrollViewDelegate>
 
 /** 列表 */
 @property(strong, nonatomic) UITableView *mineTableView;
@@ -172,6 +172,9 @@
     [self cancelRequest];
 }
 
-
+#pragma mark - <UITableViewDataSource>
+- (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView{
+    
+}
 
 @end

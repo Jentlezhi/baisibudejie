@@ -138,6 +138,27 @@
     goBackForwardMargin.width = BSALayoutH(120);
     
     toolbar.items = @[goBack,goBackForwardMargin,goForward,forwardRefreshMargin,refresh];
+    
+    //隐藏工具栏按钮
+    UIButton *hiddenToolBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+    [hiddenToolBtn setBackgroundImage:[UIImage imageNamed:@"look_"] forState:UIControlStateNormal];
+    [[hiddenToolBtn rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(id x) {
+        if (toolbar.hidden) {
+            toolbar.hidden = NO;
+            [hiddenToolBtn setBackgroundImage:[UIImage imageNamed:@"look_"] forState:UIControlStateNormal];
+            self.webView.scrollView.contentInset = UIEdgeInsetsMake(BSViewOriginY, 0, BSTabBarHeight, 0);
+        }else{
+            toolbar.hidden = YES;
+            [hiddenToolBtn setBackgroundImage:[UIImage imageNamed:@"look_h_"] forState:UIControlStateNormal];
+            self.webView.scrollView.contentInset = UIEdgeInsetsMake(BSViewOriginY, 0, 0, 0);
+        }
+    }];
+    [self.view addSubview:hiddenToolBtn];
+    [hiddenToolBtn mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.right.equalTo(self.view).offset(-BSEssenceCellMargin);
+        make.bottom.equalTo(self.view).offset(-BSTabBarHeight-BSEssenceCellMargin);
+        make.size.equalTo(CGSizeMake(26, 26));
+    }];
    
 }
 
