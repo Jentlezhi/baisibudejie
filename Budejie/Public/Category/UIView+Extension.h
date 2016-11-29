@@ -26,6 +26,8 @@ typedef enum {
 
 - (void)rotationWithType:(BSAnimationRotationType)rotationType animationDuration:(CFTimeInterval)duration circle:(CGFloat)circle repaatCount:(float)repeatCount completion:(void (^ __nullable)())completion;
 
-- (void)animationWithImages:(NSArray<UIImage *>*)images duration:(NSTimeInterval)duration repeatCount:(NSInteger)repeatCount;
+- (void)animationWithImages:(NSArray *)images duration:(NSTimeInterval)duration repeatCount:(NSInteger)repeatCount;
+
+- (BOOL)isVisibleOnKeyWindow;
 
 @end

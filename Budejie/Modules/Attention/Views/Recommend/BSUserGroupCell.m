@@ -125,7 +125,7 @@
     _userGroupModel = userGroupModel;
     NSString *userHeader = [userGroupModel.header stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
     [_userHeaderImgv sd_setImageWithURL:[NSURL URLWithString:userHeader] placeholderImage:BSUserHeaderPlaceholder completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
-        _userHeaderImgv.image = [image circleImageWithBorderWidth:BSALayoutH(2.f) borderColor:BSGlobalColor];
+        _userHeaderImgv.image = image?[image circleImageWithBorderWidth:BSALayoutH(2.f) borderColor:BSGlobalColor]:BSUserHeaderPlaceholder;
     }];
     self.screenNameLabel.text = userGroupModel.screen_name?userGroupModel.screen_name:@"未设置";
     self.fansCountLabel.text = [userGroupModel.fans_count stringByAppendingString:@"人关注"];

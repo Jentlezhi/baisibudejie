@@ -40,6 +40,8 @@
 #define BSALayoutH(x)    ((x) * kScreenWidth/750.0)
 #define BSALayoutV(y)    ((y) * kScreenHeight/1334.0)
 
+//点击tabBar
+#define BSTabBarDidSelectNotification @"BSTabBarDidSelectNotification"
 
 
 #endif /* SystemConfig_h */

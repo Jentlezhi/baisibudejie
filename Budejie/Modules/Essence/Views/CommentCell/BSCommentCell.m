@@ -183,7 +183,7 @@
 - (void)setCommentModel:(BSCommentModel *)commentModel{
     _commentModel = commentModel;
     [_headerImgv sd_setImageWithURL:[NSURL URLWithString:commentModel.user.profile_image] placeholderImage:BSUserHeaderPlaceholder completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
-        _headerImgv.image = [image circleImageWithBorderWidth:BSALayoutH(2.f) borderColor:BSGlobalColor];
+        _headerImgv.image = image?[image circleImageWithBorderWidth:BSALayoutH(2.f) borderColor:BSGlobalColor]:BSUserHeaderPlaceholder;;
     }];
     _genderImgv.image = [commentModel.user.sex isEqualToString:@"m"] ? [UIImage imageNamed:@"Profile_manIcon"] : [UIImage imageNamed:@"Profile_womanIcon"];
     self.contentLabel.text = commentModel.content;

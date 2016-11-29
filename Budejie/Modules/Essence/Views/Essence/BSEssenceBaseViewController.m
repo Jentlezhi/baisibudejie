@@ -16,15 +16,17 @@
 
 @interface BSEssenceBaseViewController ()<UITableViewDataSource,UITableViewDelegate>
 /** 表格视图 */
-@property(strong,nonatomic)UITableView *essenceTableView;
+@property(strong,nonatomic) UITableView *essenceTableView;
 /** 段子数据 */
-@property(strong,nonatomic)NSMutableArray *essenceData;
+@property(strong,nonatomic) NSMutableArray *essenceData;
 /** 当前页 */
-@property(assign,nonatomic)NSInteger curentPage;
+@property(assign,nonatomic) NSInteger curentPage;
 /** 每次加载下一页的时候，需要传入上一页返回参数中对应的此内容 */
 @property(copy,nonatomic)NSString *maxtime;
 /** 请求参数 */
-@property(strong,nonatomic)BSEssenceParameter *essenceParameter;
+@property(strong,nonatomic) BSEssenceParameter *essenceParameter;
+/** 上次选中的索引 */
+@property(assign, nonatomic) NSInteger lastSelectedIndex;
 
 @end
 
@@ -64,8 +66,19 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self essenceBasicConfig];
     [self essenceInitComponents];
     [self refreshEssenceList];
+}
+
+- (void)essenceBasicConfig{
+    //监听通知
+    [[[NSNotificationCenter defaultCenter] rac_addObserverForName:BSTabBarDidSelectNotification object:nil] subscribeNext:^(id x) {
+        if (self.lastSelectedIndex == self.tabBarController.selectedIndex && [self.view isVisibleOnKeyWindow]) {
+            [self.essenceTableView.mj_header beginRefreshing];
+        }
+        self.lastSelectedIndex = self.tabBarController.selectedIndex;
+    }];
 }
 /**
  *  初始化子控件

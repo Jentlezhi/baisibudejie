@@ -322,7 +322,7 @@
 
     //用户头像
     [_userHeaderImgv sd_setImageWithURL:[NSURL URLWithString:essenceListModel.profile_image] placeholderImage:BSUserHeaderPlaceholder completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
-        _userHeaderImgv.image = [image circleImageWithBorderWidth:BSALayoutH(2.f) borderColor:BSGlobalColor];
+        _userHeaderImgv.image = image?[image circleImageWithBorderWidth:BSALayoutH(2.f) borderColor:BSGlobalColor]:BSUserHeaderPlaceholder;
     }];
     _addv.hidden = !essenceListModel.isSina_v;
     _nikenameLabel.text = essenceListModel.name;

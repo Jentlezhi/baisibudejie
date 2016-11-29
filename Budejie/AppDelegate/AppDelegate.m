@@ -10,7 +10,7 @@
 #import "BSTabBarController.h"
 #import "BSPushGuidView.h"
 
-@interface AppDelegate ()
+@interface AppDelegate ()<UITabBarControllerDelegate>
 
 @end
 
@@ -32,7 +32,12 @@
  */
 - (void)setRootViewController{
     BSTabBarController *root = [[BSTabBarController alloc] init];
+    root.delegate = self;
     self.window.rootViewController = root;
+}
+
+- (void)tabBarController:(UITabBarController *)tabBarController didSelectViewController:(UIViewController *)viewController{
+    [[NSNotificationCenter defaultCenter] postNotificationName:BSTabBarDidSelectNotification object:nil userInfo:nil];
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {

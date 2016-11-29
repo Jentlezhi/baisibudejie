@@ -10,4 +10,5 @@
 
 @interface BSEssenceViewController : BSBaseViewController
 
+
 @end

@@ -127,7 +127,7 @@
     _tagModel = tagModel;
     NSString *userHeader = [tagModel.image_list stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
     [_userHeaderImgv sd_setImageWithURL:[NSURL URLWithString:userHeader] placeholderImage:BSUserHeaderPlaceholder completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
-        _userHeaderImgv.image = [image circleImageWithBorderWidth:BSALayoutH(2.f) borderColor:BSGlobalColor];
+        _userHeaderImgv.image = image?[image circleImageWithBorderWidth:BSALayoutH(2.f) borderColor:BSGlobalColor]:BSUserHeaderPlaceholder;
     }];
     self.screenNameLabel.text = tagModel.theme_name?tagModel.theme_name:@"未设置";
     NSString *subNumber = nil;

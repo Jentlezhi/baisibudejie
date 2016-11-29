@@ -154,7 +154,7 @@ static NSString *animationFnishKey = @"animationFnish";
     !self.animationFnish?:self.self.animationFnish();
 }
 
-- (void)animationWithImages:(NSArray<UIImage *>*)images duration:(NSTimeInterval)duration repeatCount:(NSInteger)repeatCount{
+- (void)animationWithImages:(NSArray *)images duration:(NSTimeInterval)duration repeatCount:(NSInteger)repeatCount{
     NSMutableArray *cgImages = [NSMutableArray array];
     for (UIImage *item in images) {
         CGImageRef cgImage = item.CGImage;
@@ -170,6 +170,14 @@ static NSString *animationFnishKey = @"animationFnish";
     imageAnimation.fillMode = kCAFillModeForwards;
     [self.layer addAnimation:imageAnimation forKey:nil];
 
+}
+
+- (BOOL)isVisibleOnKeyWindow{
+    UIWindow *keyWindow = [UIApplication sharedApplication].keyWindow;
+    CGRect newFrame = [keyWindow convertRect:self.frame fromView:self.superview];
+    CGRect winBounds = keyWindow.bounds;
+    BOOL intersects = CGRectIntersectsRect(newFrame, winBounds);
+    return !self.isHidden && self.alpha > 0.01 && self.window == keyWindow && intersects;
 }
 
 

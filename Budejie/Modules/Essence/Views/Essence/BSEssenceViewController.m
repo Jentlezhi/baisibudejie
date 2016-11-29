@@ -24,7 +24,8 @@
 /** 当前选中的按钮 */
 @property (nonatomic, weak) UIButton *selectedButton;
 /** 加载类型 */
-@property(assign,nonatomic)BSTopicType type;
+@property(assign, nonatomic) BSTopicType type;
+
 
 @end
 
@@ -228,6 +229,8 @@
     NSInteger index = self.contentScrollView.contentOffset.x / kScreenWidth;
     [self titleScrollViewClick:self.titleScrollView.subviews[index+1]];
 }
+
+
 
 
 @end

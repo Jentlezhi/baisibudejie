@@ -20,6 +20,6 @@
 #define BSEssenceCellContentW (kScreenWidth - 4*BSEssenceCellMargin)
 #define BSEssenceCellPicBreakH   BSALayoutH(1000)
 #define BSEssenceCellPicMaxH     BSALayoutH(500)
-#define BSUserHeaderPlaceholder [UIImage imageWithColor:BSGlobalColor]
+#define BSUserHeaderPlaceholder [[UIImage imageNamed:@"defaultUserIcon"] circleImageWithBorderWidth:BSALayoutH(2.f) borderColor:BSGlobalColor]
 
 #endif /* BSSystemConstant_h */
