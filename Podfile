@@ -12,5 +12,6 @@ target 'Budejie' do
     pod 'ReactiveCocoa','~> 2.5'
     pod 'M13ProgressSuite','~> 1.2.7'
     pod 'pop','~> 1.0.9'
+    pod 'NJKWebViewProgress','~>0.2.3'
 
 end

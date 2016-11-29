@@ -51,6 +51,14 @@
 		8C85E16E1DE15EE7007E53B4 /* BSEssenceBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C85E16D1DE15EE7007E53B4 /* BSEssenceBaseViewController.m */; };
 		8C85E1791DE3E71E007E53B4 /* BSProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C85E1781DE3E71E007E53B4 /* BSProgressView.m */; };
 		8C85E17D1DE3ED27007E53B4 /* BSShowBigPicViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C85E17C1DE3ED27007E53B4 /* BSShowBigPicViewController.m */; };
+		8C8E5A8B1DED2A7C007C370F /* BSMineCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C8E5A8A1DED2A7C007C370F /* BSMineCell.m */; };
+		8C8E5A8F1DED31A8007C370F /* BSMineFooterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C8E5A8E1DED31A8007C370F /* BSMineFooterView.m */; };
+		8C8E5A921DED3406007C370F /* BSMineParemeters.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C8E5A911DED3406007C370F /* BSMineParemeters.m */; };
+		8C8E5A951DED346B007C370F /* BSMineItemResult.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C8E5A941DED346B007C370F /* BSMineItemResult.m */; };
+		8C8E5A981DED3FDD007C370F /* BSMineItemModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C8E5A971DED3FDD007C370F /* BSMineItemModel.m */; };
+		8C8E5A9D1DED40C0007C370F /* BSMineItemNetworkTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C8E5A9C1DED40C0007C370F /* BSMineItemNetworkTool.m */; };
+		8C8E5AA11DED5A03007C370F /* BSSquareButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C8E5AA01DED5A03007C370F /* BSSquareButton.m */; };
+		8C8E5AA41DED6724007C370F /* BSWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C8E5AA31DED6724007C370F /* BSWebViewController.m */; };
 		8CA453241DE7D5A300EA93DB /* BSCmtDetailParameter.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CA453231DE7D5A300EA93DB /* BSCmtDetailParameter.m */; };
 		8CA453271DE7E0BF00EA93DB /* BSCmtDetailResult.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CA453261DE7E0BF00EA93DB /* BSCmtDetailResult.m */; };
 		8CA453311DE7E3BA00EA93DB /* BSCmtNetworkTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CA453301DE7E3BA00EA93DB /* BSCmtNetworkTool.m */; };
@@ -191,6 +199,22 @@
 		8C85E1781DE3E71E007E53B4 /* BSProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSProgressView.m; sourceTree = "<group>"; };
 		8C85E17B1DE3ED27007E53B4 /* BSShowBigPicViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSShowBigPicViewController.h; sourceTree = "<group>"; };
 		8C85E17C1DE3ED27007E53B4 /* BSShowBigPicViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSShowBigPicViewController.m; sourceTree = "<group>"; };
+		8C8E5A891DED2A7C007C370F /* BSMineCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSMineCell.h; sourceTree = "<group>"; };
+		8C8E5A8A1DED2A7C007C370F /* BSMineCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSMineCell.m; sourceTree = "<group>"; };
+		8C8E5A8D1DED31A8007C370F /* BSMineFooterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSMineFooterView.h; sourceTree = "<group>"; };
+		8C8E5A8E1DED31A8007C370F /* BSMineFooterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSMineFooterView.m; sourceTree = "<group>"; };
+		8C8E5A901DED3406007C370F /* BSMineParemeters.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSMineParemeters.h; sourceTree = "<group>"; };
+		8C8E5A911DED3406007C370F /* BSMineParemeters.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSMineParemeters.m; sourceTree = "<group>"; };
+		8C8E5A931DED346B007C370F /* BSMineItemResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSMineItemResult.h; sourceTree = "<group>"; };
+		8C8E5A941DED346B007C370F /* BSMineItemResult.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSMineItemResult.m; sourceTree = "<group>"; };
+		8C8E5A961DED3FDD007C370F /* BSMineItemModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSMineItemModel.h; sourceTree = "<group>"; };
+		8C8E5A971DED3FDD007C370F /* BSMineItemModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSMineItemModel.m; sourceTree = "<group>"; };
+		8C8E5A9B1DED40C0007C370F /* BSMineItemNetworkTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSMineItemNetworkTool.h; sourceTree = "<group>"; };
+		8C8E5A9C1DED40C0007C370F /* BSMineItemNetworkTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSMineItemNetworkTool.m; sourceTree = "<group>"; };
+		8C8E5A9F1DED5A03007C370F /* BSSquareButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSSquareButton.h; sourceTree = "<group>"; };
+		8C8E5AA01DED5A03007C370F /* BSSquareButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSSquareButton.m; sourceTree = "<group>"; };
+		8C8E5AA21DED6724007C370F /* BSWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSWebViewController.h; sourceTree = "<group>"; };
+		8C8E5AA31DED6724007C370F /* BSWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSWebViewController.m; sourceTree = "<group>"; };
 		8CA453221DE7D5A300EA93DB /* BSCmtDetailParameter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSCmtDetailParameter.h; sourceTree = "<group>"; };
 		8CA453231DE7D5A300EA93DB /* BSCmtDetailParameter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSCmtDetailParameter.m; sourceTree = "<group>"; };
 		8CA453251DE7E0BF00EA93DB /* BSCmtDetailResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSCmtDetailResult.h; sourceTree = "<group>"; };
@@ -537,6 +561,50 @@
 				8C85E17C1DE3ED27007E53B4 /* BSShowBigPicViewController.m */,
 			);
 			path = ShowBigPicViewController;
+			sourceTree = "<group>";
+		};
+		8C8E5A881DED2A49007C370F /* MineCell */ = {
+			isa = PBXGroup;
+			children = (
+				8C8E5A891DED2A7C007C370F /* BSMineCell.h */,
+				8C8E5A8A1DED2A7C007C370F /* BSMineCell.m */,
+			);
+			path = MineCell;
+			sourceTree = "<group>";
+		};
+		8C8E5A8C1DED3196007C370F /* FooterView */ = {
+			isa = PBXGroup;
+			children = (
+				8C8E5A8D1DED31A8007C370F /* BSMineFooterView.h */,
+				8C8E5A8E1DED31A8007C370F /* BSMineFooterView.m */,
+			);
+			path = FooterView;
+			sourceTree = "<group>";
+		};
+		8C8E5A991DED408C007C370F /* Server */ = {
+			isa = PBXGroup;
+			children = (
+				8C8E5A9A1DED40B5007C370F /* MineItemNetworkTool */,
+			);
+			path = Server;
+			sourceTree = "<group>";
+		};
+		8C8E5A9A1DED40B5007C370F /* MineItemNetworkTool */ = {
+			isa = PBXGroup;
+			children = (
+				8C8E5A9B1DED40C0007C370F /* BSMineItemNetworkTool.h */,
+				8C8E5A9C1DED40C0007C370F /* BSMineItemNetworkTool.m */,
+			);
+			path = MineItemNetworkTool;
+			sourceTree = "<group>";
+		};
+		8C8E5A9E1DED59F5007C370F /* SquareButton */ = {
+			isa = PBXGroup;
+			children = (
+				8C8E5A9F1DED5A03007C370F /* BSSquareButton.h */,
+				8C8E5AA01DED5A03007C370F /* BSSquareButton.m */,
+			);
+			path = SquareButton;
 			sourceTree = "<group>";
 		};
 		8CA4532E1DE7E3B100EA93DB /* CmtNetworkTool */ = {
@@ -887,6 +955,7 @@
 		8CA5E4851DD07F21001EDAF2 /* Mine */ = {
 			isa = PBXGroup;
 			children = (
+				8C8E5A991DED408C007C370F /* Server */,
 				8CA5E4861DD07F21001EDAF2 /* Models */,
 				8CA5E4871DD07F21001EDAF2 /* ViewModels */,
 				8CA5E4881DD07F21001EDAF2 /* Views */,
@@ -897,6 +966,12 @@
 		8CA5E4861DD07F21001EDAF2 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				8C8E5A901DED3406007C370F /* BSMineParemeters.h */,
+				8C8E5A911DED3406007C370F /* BSMineParemeters.m */,
+				8C8E5A931DED346B007C370F /* BSMineItemResult.h */,
+				8C8E5A941DED346B007C370F /* BSMineItemResult.m */,
+				8C8E5A961DED3FDD007C370F /* BSMineItemModel.h */,
+				8C8E5A971DED3FDD007C370F /* BSMineItemModel.m */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -911,6 +986,9 @@
 		8CA5E4881DD07F21001EDAF2 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				8C8E5A9E1DED59F5007C370F /* SquareButton */,
+				8C8E5A8C1DED3196007C370F /* FooterView */,
+				8C8E5A881DED2A49007C370F /* MineCell */,
 				8CEDC0B31DDAF1EB00EE6F56 /* Controllers */,
 				8CEDC0B91DDAF1EB00EE6F56 /* Others */,
 			);
@@ -994,6 +1072,8 @@
 				8CC48E021DDAF3FD007E881B /* BSLoginRegisterViewController.h */,
 				8CC48E031DDAF3FD007E881B /* BSLoginRegisterViewController.m */,
 				8CC48E041DDAF3FD007E881B /* BSLoginRegisterViewController.xib */,
+				8C8E5AA21DED6724007C370F /* BSWebViewController.h */,
+				8C8E5AA31DED6724007C370F /* BSWebViewController.m */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -1215,6 +1295,7 @@
 				8C31EF991DD2FEDE00CA3CEA /* BSRecommendViewController.m in Sources */,
 				8C22259A1DE65EF000ABAD21 /* BSCommentModel.m in Sources */,
 				8C2225A11DE6C78600ABAD21 /* NSMutableAttributedString+Extension.m in Sources */,
+				8C8E5A921DED3406007C370F /* BSMineParemeters.m in Sources */,
 				8CA5E4241DD0754D001EDAF2 /* AppDelegate.m in Sources */,
 				8CBFA8CE1DDBE092000C74CA /* BSPushGuidView.m in Sources */,
 				8C85E1371DE15618007E53B4 /* BSEssenceNetworkTool.m in Sources */,
@@ -1230,16 +1311,21 @@
 				8CD409A51DD5CC2D00FB43CD /* BSTagNetworkTool.m in Sources */,
 				8CC48E051DDAF3FD007E881B /* BSLoginRegisterViewController.m in Sources */,
 				8C31EFC21DD4160500CA3CEA /* BSUserGroupCell.m in Sources */,
+				8C8E5A8F1DED31A8007C370F /* BSMineFooterView.m in Sources */,
 				8CBFA8C81DDB0472000C74CA /* BSTextField.m in Sources */,
 				8CA5E4A31DD094CA001EDAF2 /* BSTabBar.m in Sources */,
 				8CD4098F1DD567AF00FB43CD /* MBProgressHUD+Extension.m in Sources */,
 				8CA453241DE7D5A300EA93DB /* BSCmtDetailParameter.m in Sources */,
+				8C8E5A981DED3FDD007C370F /* BSMineItemModel.m in Sources */,
 				8C85E15F1DE15822007E53B4 /* BSTagViewController.m in Sources */,
 				8CA5E4601DD078A9001EDAF2 /* UIImage+Extension.m in Sources */,
 				8C31EFAC1DD320A300CA3CEA /* BSLeftTagNetworkTool.m in Sources */,
+				8C8E5A9D1DED40C0007C370F /* BSMineItemNetworkTool.m in Sources */,
+				8C8E5AA11DED5A03007C370F /* BSSquareButton.m in Sources */,
 				8CA453271DE7E0BF00EA93DB /* BSCmtDetailResult.m in Sources */,
 				8C85E1091DDDB079007E53B4 /* BSTagModel.m in Sources */,
 				8C31EFA61DD3197C00CA3CEA /* BSLeftTagModel.m in Sources */,
+				8C8E5A951DED346B007C370F /* BSMineItemResult.m in Sources */,
 				8CA5E45D1DD07865001EDAF2 /* UIColor+Extension.m in Sources */,
 				8C85E1191DDDB31C007E53B4 /* BSThemsModel.m in Sources */,
 				8C85E10A1DDDB079007E53B4 /* BSTagParameter.m in Sources */,
@@ -1247,8 +1333,10 @@
 				8C31EFB91DD4111900CA3CEA /* BSUserGroupResultModel.m in Sources */,
 				8C85E1561DE15822007E53B4 /* BSEssenceViewController.m in Sources */,
 				8C85E1231DDEFAFD007E53B4 /* BSBaseCell.m in Sources */,
+				8C8E5A8B1DED2A7C007C370F /* BSMineCell.m in Sources */,
 				8C22258A1DE59FD500ABAD21 /* NSString+Extension.m in Sources */,
 				8C31EFBF1DD413B100CA3CEA /* BSUserGroupNetworkTool.m in Sources */,
+				8C8E5AA41DED6724007C370F /* BSWebViewController.m in Sources */,
 				8C31EFC51DD41BC800CA3CEA /* UIImageView+Extension.m in Sources */,
 				8CA453311DE7E3BA00EA93DB /* BSCmtNetworkTool.m in Sources */,
 				8C22259D1DE65F1800ABAD21 /* BSUserModel.m in Sources */,
