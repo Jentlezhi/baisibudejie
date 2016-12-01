@@ -22,4 +22,6 @@
 #define BSEssenceCellPicMaxH     BSALayoutH(500)
 #define BSUserHeaderPlaceholder [[UIImage imageNamed:@"defaultUserIcon"] circleImageWithBorderWidth:BSALayoutH(2.f) borderColor:BSGlobalColor]
 
+#define BSTagFontSize 15.f
+
 #endif /* BSSystemConstant_h */

@@ -10,7 +10,8 @@
 #import "BSTitlteLeftButton.h"
 #import "BSTagTextField.h"
 
-#define BSTagW 22.f
+#define BSTagH 22.f
+NSInteger const BSTagMax = 5;
 
 @interface BSAddTagViewController ()<UITextFieldDelegate>
 /** 内容容器 */
@@ -19,8 +20,10 @@
 @property (weak, nonatomic) BSTagTextField *textF;
 /** 标签提示 */
 @property (weak, nonatomic) UIButton *tagTipBtn;
-/** 所有标签 */
+/** 所有标签按钮 */
 @property (strong, nonatomic) NSMutableArray *allTags;
+/** 所有标签 */
+@property (strong, nonatomic) NSMutableArray *allTagsTitle;
 
 
 @end
@@ -51,6 +54,13 @@
     return _allTags;
 }
 
+- (NSMutableArray *)allTagsTitle{
+    if (!_allTagsTitle) {
+        _allTagsTitle = [NSMutableArray array];
+    }
+    return _allTagsTitle;
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self addTagBasicConfig];
@@ -75,6 +85,16 @@
     [finishButton setTitle:@"完成" forState:UIControlStateNormal];
     [finishButton setTitleColor:BSGrayColor(80) forState:UIControlStateNormal];
     [finishButton setTitleColor:BSRedColor forState:UIControlStateHighlighted];
+    [[finishButton rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(id x) {
+//        for (BSTitlteLeftButton *tag in self.allTags) {
+//            NSString *tagTitle = [tag titleForState:UIControlStateNormal];
+//            [self.allTagsTitle addObject:tagTitle];
+//            
+//        }
+        self.allTagsTitle = [self.allTags valueForKeyPath:@"currentTitle"];
+        !self.finishEditTag?:self.finishEditTag(self.allTagsTitle);
+        [self.navigationController popViewControllerAnimated:YES];
+    }];
     [self.navigationBar addSubview:finishButton];
     [finishButton mas_makeConstraints:^(MASConstraintMaker *make) {
         make.centerY.equalTo(self.navigationBar);
@@ -101,7 +121,7 @@
     textF.tintColor = BSRedColor;
     textF.placeholder = @"多个标签用逗号或者换行隔开";
     textF.width = kScreenWidth - 2*BSMarigin;
-    textF.height = BSTagW;
+    textF.height = BSTagH;
     [textF addTarget:self action:@selector(textChange) forControlEvents:UIControlEventEditingChanged];
     textF.backwardClick = ^{
         BSTitlteLeftButton *tag = [self.allTags lastObject];
@@ -124,37 +144,47 @@
     [[self.tagTipBtn rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(UIButton *tagTipBtn) {
         [self addTagClick];
     }];
+    
+    //上一页tag的添加
+    for (NSString *tag in self.tagTitles) {
+        self.textF.text = tag;
+        [self addTagClick];
+    }
 }
 
 - (void)addTagClick{
-    CGFloat tagH = BSTagW;
-    CGFloat tagFontSize = 15.f;
-    //清空textF的文字
-    self.textF.text = nil;
-    self.tagTipBtn.hidden = YES;
-    BSTitlteLeftButton *tag = [BSTitlteLeftButton buttonWithType:UIButtonTypeCustom];
-    [tag setImage:[UIImage imageNamed:@"chose_tag_close_icon"] forState:UIControlStateNormal];
-    NSString *tagTitle = [self.tagTipBtn.currentTitle substringFromIndex:5];
-    [self.tagTipBtn setTitle:nil forState:UIControlStateNormal];
-    if (!tagTitle.length)return;
-    CGFloat tagW = [tagTitle sizeWithFont:self.textF.font maxSize:CGSizeMake(CGFLOAT_MAX, tagFontSize)].width + tag.currentImage.size.width + BSMarigin*3/4;
-    if (tagW>=kScreenWidth-2*BSMarigin) {
-        tagW = kScreenWidth-2*BSMarigin;
+    //限制添加tag个数
+    if (self.allTags.count >= BSTagMax) {
+        [MBProgressHUD showWarringWithMessage:[NSString stringWithFormat:@"最多可添加%ld个标签",(long)BSTagMax]];
+    }else{
+        CGFloat tagH = BSTagH;
+        self.tagTipBtn.hidden = YES;
+        BSTitlteLeftButton *tag = [BSTitlteLeftButton buttonWithType:UIButtonTypeCustom];
+        [tag setImage:[UIImage imageNamed:@"chose_tag_close_icon"] forState:UIControlStateNormal];
+        NSString *tagTitle = self.textF.text;
+        //清空textF的文字
+        self.textF.text = nil;
+        [self.tagTipBtn setTitle:nil forState:UIControlStateNormal];
+        if (!tagTitle.length)return;
+        CGFloat tagW = [tagTitle sizeWithFont:self.textF.font maxSize:CGSizeMake(CGFLOAT_MAX, BSTagFontSize)].width + tag.currentImage.size.width + BSMarigin*3/4;
+        if (tagW>=kScreenWidth-2*BSMarigin) {
+            tagW = kScreenWidth-2*BSMarigin;
+        }
+        tag.layer.cornerRadius = 1.5f;
+        tag.layer.masksToBounds = YES;
+        tag.titleLabel.font = [UIFont systemFontOfSize:BSTagFontSize];
+        tag.frame = CGRectMake(0, 0, tagW, tagH);
+        tag.backgroundColor = BSRGBColor(74, 139, 209);
+        [tag setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+        [tag setTitle:tagTitle forState:UIControlStateNormal];
+        [[tag rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(BSTitlteLeftButton *tag) {
+            [self removeTag:tag];
+        }];
+        [self.allTags addObject:tag];
+        [self.contentView addSubview:tag];
+        [self updateTagFrameWithDuratiton:0.f];
+        [self updateTextFieldFrameWithDuratiton:0.f];
     }
-    tag.layer.cornerRadius = 1.5f;
-    tag.layer.masksToBounds = YES;
-    tag.titleLabel.font = [UIFont systemFontOfSize:tagFontSize];
-    tag.frame = CGRectMake(0, 0, tagW, tagH);
-    tag.backgroundColor = BSRGBColor(74, 139, 209);
-    [tag setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
-    [tag setTitle:tagTitle forState:UIControlStateNormal];
-    [[tag rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(BSTitlteLeftButton *tag) {
-        [self removeTag:tag];
-    }];
-    [self.allTags addObject:tag];
-    [self.contentView addSubview:tag];
-    [self updateTagFrameWithDuratiton:0.f];
-    [self updateTextFieldFrameWithDuratiton:0.f];
 }
 
 - (void)removeTag:(BSTitlteLeftButton *)tag{
@@ -175,7 +205,7 @@
             }else{
                 BSTitlteLeftButton *beforeTag = self.allTags[index-1];
                 CGFloat leftWidth = CGRectGetMaxX(beforeTag.frame) + BSMarigin;
-                CGFloat rightWidth = self.contentView.width - leftWidth;
+                CGFloat rightWidth = kScreenWidth - 2*BSMarigin - leftWidth;
                 if (rightWidth>= tag.width) {
                     tag.y = beforeTag.y;
                     tag.x = leftWidth;

@@ -10,4 +10,6 @@
 
 @interface BSInputToolbar : UIView
 
+@property (assign, nonatomic) CGFloat barHeight;
+
 @end

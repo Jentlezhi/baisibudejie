@@ -109,7 +109,7 @@
 - (void)configInputToolbar{
     BSInputToolbar *toolbar = [[BSInputToolbar alloc] init];
     CGFloat toolbarW = kScreenWidth;
-    CGFloat toolbarH = BSALayoutV(200);
+    CGFloat toolbarH = toolbar.barHeight;
     CGFloat toolbarX = 0;
     CGFloat toolbarY = kScreenHeight - toolbarH;
     toolbar.frame = CGRectMake(toolbarX, toolbarY, toolbarW, toolbarH);

@@ -10,4 +10,7 @@
 
 @interface BSAddTagViewController : BSBaseViewController
 
+@property (strong, nonatomic) NSArray *tagTitles;
+@property (copy, nonatomic) void(^finishEditTag)(NSArray *);
+
 @end
