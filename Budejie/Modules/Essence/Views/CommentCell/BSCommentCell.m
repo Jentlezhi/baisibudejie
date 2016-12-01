@@ -40,7 +40,7 @@
         NSMutableArray *tempMArray = [NSMutableArray array];
         for (NSInteger index = 0; index < 3; index++) {
             NSString *imageName = [NSString stringWithFormat:@"post_thanks_%ld.jpg",index+1];
-            UIImage *image = [UIImage imageNamed:imageName];
+            UIImage *image = [[UIImage imageNamed:imageName] circleImageWithBorderWidth:2.f borderColor:BSGlobalColor];
             [tempMArray addObject:image];
         }
         _clapImages = tempMArray;
@@ -183,7 +183,7 @@
 - (void)setCommentModel:(BSCommentModel *)commentModel{
     _commentModel = commentModel;
     [_headerImgv sd_setImageWithURL:[NSURL URLWithString:commentModel.user.profile_image] placeholderImage:BSUserHeaderPlaceholder completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
-        _headerImgv.image = image?[image circleImageWithBorderWidth:BSALayoutH(2.f) borderColor:BSGlobalColor]:BSUserHeaderPlaceholder;;
+        _headerImgv.image = image?[image circleImageWithBorderWidth:BSALayoutH(2.f) borderColor:BSGlobalColor]:BSUserHeaderPlaceholder;
     }];
     _genderImgv.image = [commentModel.user.sex isEqualToString:@"m"] ? [UIImage imageNamed:@"Profile_manIcon"] : [UIImage imageNamed:@"Profile_womanIcon"];
     self.contentLabel.text = commentModel.content;

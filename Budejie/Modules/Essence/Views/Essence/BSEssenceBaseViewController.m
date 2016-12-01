@@ -181,7 +181,10 @@
         BSLog(@"转发->%@",essenceListModel.name);
     };
     baseCell.commentBtnClick = ^(BSEssenceListModel *essenceListModel){
-        BSLog(@"评论->%@",essenceListModel.name);
+        BSComentDetailViewController *comentDetailVC = [[BSComentDetailViewController alloc] init];
+        comentDetailVC.essenceListModel = self.essenceData[indexPath.row];
+        comentDetailVC.seeComment = YES;
+        [self.navigationController pushViewController:comentDetailVC animated:YES];
     };
     //查看大图
     baseCell.seeBigPicBlock = ^(BSEssenceListModel *essenceListModel){

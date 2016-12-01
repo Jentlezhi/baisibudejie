@@ -14,5 +14,7 @@
 
 /** 数据模型 */
 @property(strong, nonatomic) BSEssenceListModel *essenceListModel;
+/** 查看评论 */
+@property(assign, nonatomic, getter=isSeeComment) BOOL seeComment;
 
 @end

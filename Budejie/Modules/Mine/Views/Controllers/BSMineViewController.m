@@ -171,10 +171,4 @@
 - (void)dealloc{
     [self cancelRequest];
 }
-
-#pragma mark - <UITableViewDataSource>
-- (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView{
-    
-}
-
 @end

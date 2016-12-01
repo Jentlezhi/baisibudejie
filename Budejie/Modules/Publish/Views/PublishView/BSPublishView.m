@@ -9,6 +9,8 @@
 #import "BSPublishView.h"
 #import "BSVerticalButton.h"
 #import <POP.h>
+#import "BSPublishWordsViewController.h"
+#import "BSNavigationController.h"
 
 #define BSSpringBounciness  5.0f
 #define BSSpringSpeed  20.0f
@@ -126,7 +128,21 @@ BSPublishView *publishView_;
         [[btn rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(BSVerticalButton *btn) {
             NSInteger index = btn.tag - BSTitleBtnBeginTag;
             [self cancelWithCompletionBlock:^{
-               BSLog(@"点击了[%@]按钮",self.titles[index]);
+                if (index == 0) {//发视频
+                    
+                }else if (index == 1){//发图片
+                    
+                }else if (index == 2){//发段子
+                    BSPublishWordsViewController *publishWordsVC = [[BSPublishWordsViewController alloc] init];
+                    BSNavigationController *publishWordsNav = [[BSNavigationController alloc] initWithRootViewController:publishWordsVC];
+                    [BSRootViewController presentViewController:publishWordsNav animated:YES completion:nil];
+                }else if (index == 3){//发声音
+                    
+                }else if (index == 4){//审帖
+                    
+                }else if (index == 5){//离线下载
+                    
+                }
             }];
         }];
         [self.window addSubview:btn];

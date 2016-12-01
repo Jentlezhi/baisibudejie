@@ -287,9 +287,17 @@
  */
 - (void)createNavBarWithLeftButton:(UIButton *)leftButton titleView:(UIView *)titleView andRightButton:(UIButton *)rightButton{
     if (leftButton) {
+        CGFloat leftButtonW = 0;
+        CGFloat leftButtonH = 0;
         //左按钮frame
-        CGFloat leftButtonW = leftButton.currentBackgroundImage.size.width;
-        CGFloat leftButtonH = leftButton.currentBackgroundImage.size.height;
+        if (leftButton.currentBackgroundImage) {
+            leftButtonW = leftButton.currentBackgroundImage.size.width;
+            leftButtonH = leftButton.currentBackgroundImage.size.height;
+        }else{
+            leftButtonW = leftButton.width;
+            leftButtonH = leftButton.height;
+        }
+        
         CGFloat leftButtonX = BSMarigin;
         CGFloat leftButtonY = (self.navigationBar.height - leftButtonH)*0.5;
         leftButton.frame = CGRectMake(leftButtonX , leftButtonY, leftButtonW, leftButtonH);
@@ -311,6 +319,7 @@
         }else if ([titleView isKindOfClass:[UILabel class]]){
             UILabel *titleButton = (UILabel *)titleView;
             titleButton.font = BSNavTitleFont;
+            titleButton.textColor = BSRGBColor(1, 1, 1);
             titleButton.userInteractionEnabled = YES;
             titleButtonW = [titleButton.text sizeWithFont:titleButton.font maxSize:CGSizeMake(CGFLOAT_MAX, titleButtonH)].width;
             titleButtonH = titleButton.font.pointSize;
@@ -332,8 +341,16 @@
     
     if (rightButton) {
         //右按钮frame
-        CGFloat rightButtonW = rightButton.currentBackgroundImage.size.width;
-        CGFloat rightButtonH = rightButton.currentBackgroundImage.size.height;
+        CGFloat rightButtonW = 0.f;
+        CGFloat rightButtonH = 0.f;
+        if (rightButton.currentBackgroundImage) {
+            rightButtonW = rightButton.currentBackgroundImage.size.width;
+            rightButtonH = rightButton.currentBackgroundImage.size.height;
+        }else{
+            rightButtonW = rightButton.width;
+            rightButtonH = rightButton.height;
+        }
+
         CGFloat rightButtonX = self.navigationBar.width-rightButtonW-BSMarigin;
         CGFloat rightButtonY = (self.navigationBar.height - rightButtonH)*0.5;
         rightButton.frame = CGRectMake(rightButtonX , rightButtonY, rightButtonW, rightButtonH);

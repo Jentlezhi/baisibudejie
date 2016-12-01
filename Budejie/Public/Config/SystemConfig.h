@@ -43,5 +43,10 @@
 //点击tabBar
 #define BSTabBarDidSelectNotification @"BSTabBarDidSelectNotification"
 
+//根视图控制器
+#define BSRootViewController  [UIApplication sharedApplication].keyWindow.rootViewController
+
+//通知中心
+#define BSNotificationCenter  [NSNotificationCenter defaultCenter]
 
 #endif /* SystemConfig_h */

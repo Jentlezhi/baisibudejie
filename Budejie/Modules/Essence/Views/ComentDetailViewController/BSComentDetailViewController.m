@@ -31,6 +31,8 @@
 @property (nonatomic, assign) NSInteger currentPage;
 /** 当前点击的cell的indexPath */
 @property (nonatomic, strong) NSIndexPath *clickIndexPath;
+/** header高度 */
+@property (nonatomic, assign) CGFloat headerHeight;
 
 @end
 
@@ -83,6 +85,7 @@
 
 - (void)keyboardWillChangeFrame:(NSNotification *)note{
     CGRect frame = [note.userInfo[UIKeyboardFrameEndUserInfoKey] CGRectValue];
+    frame.origin.y == kScreenHeight?:[self commentScrollToTop];
     [_toolBar mas_remakeConstraints:^(MASConstraintMaker *make) {
         make.left.right.equalTo(self.view);
         make.bottom.equalTo(self.view).offset(frame.origin.y-kScreenHeight);
@@ -99,6 +102,8 @@
     UIMenuController *menu = [UIMenuController sharedMenuController]
     ;
     [menu setMenuVisible:NO animated:YES];
+    self.seeComment = NO;
+    [self.comentDetailTableView.mj_footer setHidden:NO];
 }
 
 
@@ -119,7 +124,8 @@
     headerView.clipsToBounds = YES;
     headerView.backgroundColor = [UIColor clearColor];
     CGFloat hotCmtH = self.essenceListModel.topCmtF.size.height;
-    headerView.height = self.essenceListModel.cellHeight - hotCmtH;
+    self.headerHeight = self.essenceListModel.cellHeight - hotCmtH;
+    headerView.height = self.headerHeight;
     
     BSBaseCell *cell = [[BSBaseCell alloc] init];
     
@@ -203,8 +209,12 @@
         weakSelf.currentPage = 1;
         [weakSelf requestCmtListWithType:BSRequestTypeRefresh];
     }];
+    if (!self.isSeeComment) {
+        [self.comentDetailTableView.mj_header beginRefreshing];
+    }else{
+        [weakSelf requestCmtListWithType:BSRequestTypeRefresh];
+    }
     
-    [self.comentDetailTableView.mj_header beginRefreshing];
 }
 
 - (void)requestCmtListWithType:(BSRequestType)requestType{
@@ -241,14 +251,14 @@
         }else{
             [self.comentDetailTableView.mj_footer endRefreshing];
         }
-        
         [weakSelf.comentDetailTableView reloadData];
+       
+       !self.isSeeComment?:[self commentScrollToTop];
 
     } failure:^(NSError *error) {
         weakSelf.currentPage--;
         [weakSelf.comentDetailTableView.mj_header endRefreshing];
         [weakSelf.comentDetailTableView.mj_footer endRefreshing];
-        BSLog(@"%@",error);
         [MBProgressHUD showErrorWithMessage:@"数据加载失败"];
     }];
 }
@@ -355,7 +365,10 @@
     [self cancelRequest];
 }
 
-
+- (void)commentScrollToTop{
+    [self.comentDetailTableView setContentOffset:CGPointMake(0, self.headerHeight - BSViewOriginY) animated:YES];
+    [self.comentDetailTableView.mj_footer setHidden:YES];
+}
 
 
 @end

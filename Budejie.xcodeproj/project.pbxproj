@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		8C2225401DE4F71F00ABAD21 /* BSPublishView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C22253F1DE4F71F00ABAD21 /* BSPublishView.m */; };
 		8C2225821DE593B000ABAD21 /* BSEssencePictureView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C2225811DE593B000ABAD21 /* BSEssencePictureView.m */; };
 		8C2225871DE597FC00ABAD21 /* BSEssenceVoiceView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C2225861DE597FC00ABAD21 /* BSEssenceVoiceView.m */; };
 		8C22258A1DE59FD500ABAD21 /* NSString+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C2225891DE59FD500ABAD21 /* NSString+Extension.m */; };
@@ -59,6 +58,13 @@
 		8C8E5A9D1DED40C0007C370F /* BSMineItemNetworkTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C8E5A9C1DED40C0007C370F /* BSMineItemNetworkTool.m */; };
 		8C8E5AA11DED5A03007C370F /* BSSquareButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C8E5AA01DED5A03007C370F /* BSSquareButton.m */; };
 		8C8E5AA41DED6724007C370F /* BSWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C8E5AA31DED6724007C370F /* BSWebViewController.m */; };
+		8C8E5AAD1DED8DF7007C370F /* BSPublishWordsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C8E5AAC1DED8DF7007C370F /* BSPublishWordsViewController.m */; };
+		8C8E5AB21DEE268A007C370F /* BSPublishView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C8E5AB11DEE268A007C370F /* BSPublishView.m */; };
+		8C8E5AB51DEE26B2007C370F /* BSPlaceHolderTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C8E5AB41DEE26B2007C370F /* BSPlaceHolderTextView.m */; };
+		8C8E5AB91DEE72FC007C370F /* BSInputToolbar.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C8E5AB81DEE72FC007C370F /* BSInputToolbar.m */; };
+		8C8E5ABC1DEEA841007C370F /* BSAddTagViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C8E5ABB1DEEA841007C370F /* BSAddTagViewController.m */; };
+		8C8E5B0B1DEF7E96007C370F /* BSTitlteLeftButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C8E5B0A1DEF7E96007C370F /* BSTitlteLeftButton.m */; };
+		8C8E5B541DEFC88C007C370F /* BSTagTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C8E5B531DEFC88C007C370F /* BSTagTextField.m */; };
 		8CA453241DE7D5A300EA93DB /* BSCmtDetailParameter.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CA453231DE7D5A300EA93DB /* BSCmtDetailParameter.m */; };
 		8CA453271DE7E0BF00EA93DB /* BSCmtDetailResult.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CA453261DE7E0BF00EA93DB /* BSCmtDetailResult.m */; };
 		8CA453311DE7E3BA00EA93DB /* BSCmtNetworkTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CA453301DE7E3BA00EA93DB /* BSCmtNetworkTool.m */; };
@@ -110,8 +116,6 @@
 /* Begin PBXFileReference section */
 		076394FE801596C521CA8176 /* Pods-Budejie.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Budejie.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Budejie/Pods-Budejie.debug.xcconfig"; sourceTree = "<group>"; };
 		2B7AF547169C538B5543672E /* libPods-Budejie.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Budejie.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		8C22253E1DE4F71F00ABAD21 /* BSPublishView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSPublishView.h; sourceTree = "<group>"; };
-		8C22253F1DE4F71F00ABAD21 /* BSPublishView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSPublishView.m; sourceTree = "<group>"; };
 		8C2225811DE593B000ABAD21 /* BSEssencePictureView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSEssencePictureView.m; sourceTree = "<group>"; };
 		8C2225831DE593CA00ABAD21 /* BSEssencePictureView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSEssencePictureView.h; sourceTree = "<group>"; };
 		8C2225851DE597FC00ABAD21 /* BSEssenceVoiceView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSEssenceVoiceView.h; sourceTree = "<group>"; };
@@ -215,6 +219,20 @@
 		8C8E5AA01DED5A03007C370F /* BSSquareButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSSquareButton.m; sourceTree = "<group>"; };
 		8C8E5AA21DED6724007C370F /* BSWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSWebViewController.h; sourceTree = "<group>"; };
 		8C8E5AA31DED6724007C370F /* BSWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSWebViewController.m; sourceTree = "<group>"; };
+		8C8E5AAB1DED8DF7007C370F /* BSPublishWordsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSPublishWordsViewController.h; sourceTree = "<group>"; };
+		8C8E5AAC1DED8DF7007C370F /* BSPublishWordsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSPublishWordsViewController.m; sourceTree = "<group>"; };
+		8C8E5AB01DEE268A007C370F /* BSPublishView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSPublishView.h; sourceTree = "<group>"; };
+		8C8E5AB11DEE268A007C370F /* BSPublishView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSPublishView.m; sourceTree = "<group>"; };
+		8C8E5AB31DEE26B2007C370F /* BSPlaceHolderTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSPlaceHolderTextView.h; sourceTree = "<group>"; };
+		8C8E5AB41DEE26B2007C370F /* BSPlaceHolderTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSPlaceHolderTextView.m; sourceTree = "<group>"; };
+		8C8E5AB71DEE72FC007C370F /* BSInputToolbar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSInputToolbar.h; sourceTree = "<group>"; };
+		8C8E5AB81DEE72FC007C370F /* BSInputToolbar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSInputToolbar.m; sourceTree = "<group>"; };
+		8C8E5ABA1DEEA841007C370F /* BSAddTagViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSAddTagViewController.h; sourceTree = "<group>"; };
+		8C8E5ABB1DEEA841007C370F /* BSAddTagViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSAddTagViewController.m; sourceTree = "<group>"; };
+		8C8E5B091DEF7E96007C370F /* BSTitlteLeftButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSTitlteLeftButton.h; sourceTree = "<group>"; };
+		8C8E5B0A1DEF7E96007C370F /* BSTitlteLeftButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSTitlteLeftButton.m; sourceTree = "<group>"; };
+		8C8E5B521DEFC88C007C370F /* BSTagTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSTagTextField.h; sourceTree = "<group>"; };
+		8C8E5B531DEFC88C007C370F /* BSTagTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSTagTextField.m; sourceTree = "<group>"; };
 		8CA453221DE7D5A300EA93DB /* BSCmtDetailParameter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSCmtDetailParameter.h; sourceTree = "<group>"; };
 		8CA453231DE7D5A300EA93DB /* BSCmtDetailParameter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSCmtDetailParameter.m; sourceTree = "<group>"; };
 		8CA453251DE7E0BF00EA93DB /* BSCmtDetailResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSCmtDetailResult.h; sourceTree = "<group>"; };
@@ -316,8 +334,9 @@
 		8C2225371DE4478F00ABAD21 /* Publish */ = {
 			isa = PBXGroup;
 			children = (
-				8C22253E1DE4F71F00ABAD21 /* BSPublishView.h */,
-				8C22253F1DE4F71F00ABAD21 /* BSPublishView.m */,
+				8C8E5AA51DED8DD7007C370F /* Controllers */,
+				8C8E5AA61DED8DD7007C370F /* Models */,
+				8C8E5AA71DED8DD7007C370F /* Views */,
 			);
 			path = Publish;
 			sourceTree = "<group>";
@@ -605,6 +624,80 @@
 				8C8E5AA01DED5A03007C370F /* BSSquareButton.m */,
 			);
 			path = SquareButton;
+			sourceTree = "<group>";
+		};
+		8C8E5AA51DED8DD7007C370F /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				8C8E5AAB1DED8DF7007C370F /* BSPublishWordsViewController.h */,
+				8C8E5AAC1DED8DF7007C370F /* BSPublishWordsViewController.m */,
+				8C8E5ABA1DEEA841007C370F /* BSAddTagViewController.h */,
+				8C8E5ABB1DEEA841007C370F /* BSAddTagViewController.m */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		8C8E5AA61DED8DD7007C370F /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		8C8E5AA71DED8DD7007C370F /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				8C8E5B081DEF7E80007C370F /* TitlteLeftButton */,
+				8C8E5AB61DEE7263007C370F /* InputToolbar */,
+				8C8E5AAE1DEE268A007C370F /* PlaceHolderTextView */,
+				8C8E5AAF1DEE268A007C370F /* PublishView */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		8C8E5AAE1DEE268A007C370F /* PlaceHolderTextView */ = {
+			isa = PBXGroup;
+			children = (
+				8C8E5AB31DEE26B2007C370F /* BSPlaceHolderTextView.h */,
+				8C8E5AB41DEE26B2007C370F /* BSPlaceHolderTextView.m */,
+			);
+			path = PlaceHolderTextView;
+			sourceTree = "<group>";
+		};
+		8C8E5AAF1DEE268A007C370F /* PublishView */ = {
+			isa = PBXGroup;
+			children = (
+				8C8E5AB01DEE268A007C370F /* BSPublishView.h */,
+				8C8E5AB11DEE268A007C370F /* BSPublishView.m */,
+			);
+			path = PublishView;
+			sourceTree = "<group>";
+		};
+		8C8E5AB61DEE7263007C370F /* InputToolbar */ = {
+			isa = PBXGroup;
+			children = (
+				8C8E5AB71DEE72FC007C370F /* BSInputToolbar.h */,
+				8C8E5AB81DEE72FC007C370F /* BSInputToolbar.m */,
+			);
+			path = InputToolbar;
+			sourceTree = "<group>";
+		};
+		8C8E5B081DEF7E80007C370F /* TitlteLeftButton */ = {
+			isa = PBXGroup;
+			children = (
+				8C8E5B091DEF7E96007C370F /* BSTitlteLeftButton.h */,
+				8C8E5B0A1DEF7E96007C370F /* BSTitlteLeftButton.m */,
+			);
+			path = TitlteLeftButton;
+			sourceTree = "<group>";
+		};
+		8C8E5B4E1DEFC664007C370F /* TextField */ = {
+			isa = PBXGroup;
+			children = (
+				8C8E5B521DEFC88C007C370F /* BSTagTextField.h */,
+				8C8E5B531DEFC88C007C370F /* BSTagTextField.m */,
+			);
+			path = TextField;
 			sourceTree = "<group>";
 		};
 		8CA4532E1DE7E3B100EA93DB /* CmtNetworkTool */ = {
@@ -937,6 +1030,7 @@
 		8CA5E4841DD07F21001EDAF2 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				8C8E5B4E1DEFC664007C370F /* TextField */,
 				8CA453361DE8125600EA93DB /* CommentCell */,
 				8CA453321DE80C5500EA93DB /* CmtSectionHeader */,
 				8C2225A21DE6E2AC00ABAD21 /* ComentDetailViewController */,
@@ -1289,6 +1383,7 @@
 				8CA5E4781DD07C24001EDAF2 /* BSNavigationController.m in Sources */,
 				8C85E16E1DE15EE7007E53B4 /* BSEssenceBaseViewController.m in Sources */,
 				8C5CB2AF1DD1C9EE008AB412 /* UIButton+Extension.m in Sources */,
+				8C8E5AAD1DED8DF7007C370F /* BSPublishWordsViewController.m in Sources */,
 				8C31EFAF1DD320F400CA3CEA /* BSLeftTagParameter.m in Sources */,
 				8CA5E49B1DD07FDF001EDAF2 /* BSNewestViewController.m in Sources */,
 				8C31EFB21DD32FB000CA3CEA /* BSLeftTagCell.m in Sources */,
@@ -1298,15 +1393,16 @@
 				8C8E5A921DED3406007C370F /* BSMineParemeters.m in Sources */,
 				8CA5E4241DD0754D001EDAF2 /* AppDelegate.m in Sources */,
 				8CBFA8CE1DDBE092000C74CA /* BSPushGuidView.m in Sources */,
+				8C8E5ABC1DEEA841007C370F /* BSAddTagViewController.m in Sources */,
 				8C85E1371DE15618007E53B4 /* BSEssenceNetworkTool.m in Sources */,
 				8C2225871DE597FC00ABAD21 /* BSEssenceVoiceView.m in Sources */,
 				8C85E15E1DE15822007E53B4 /* BSTagCell.m in Sources */,
-				8C2225401DE4F71F00ABAD21 /* BSPublishView.m in Sources */,
 				8C85E17D1DE3ED27007E53B4 /* BSShowBigPicViewController.m in Sources */,
 				8C85E12D1DE1537A007E53B4 /* BSEssenceParameter.m in Sources */,
 				8CEDC0BE1DDAF1EB00EE6F56 /* BSMineViewController.m in Sources */,
 				8CBFA8CB1DDB0A3D000C74CA /* BSVerticalButton.m in Sources */,
 				8C2225821DE593B000ABAD21 /* BSEssencePictureView.m in Sources */,
+				8C8E5AB91DEE72FC007C370F /* BSInputToolbar.m in Sources */,
 				8C85E1161DDDB2CF007E53B4 /* BSInfoModel.m in Sources */,
 				8CD409A51DD5CC2D00FB43CD /* BSTagNetworkTool.m in Sources */,
 				8CC48E051DDAF3FD007E881B /* BSLoginRegisterViewController.m in Sources */,
@@ -1317,6 +1413,7 @@
 				8CD4098F1DD567AF00FB43CD /* MBProgressHUD+Extension.m in Sources */,
 				8CA453241DE7D5A300EA93DB /* BSCmtDetailParameter.m in Sources */,
 				8C8E5A981DED3FDD007C370F /* BSMineItemModel.m in Sources */,
+				8C8E5AB21DEE268A007C370F /* BSPublishView.m in Sources */,
 				8C85E15F1DE15822007E53B4 /* BSTagViewController.m in Sources */,
 				8CA5E4601DD078A9001EDAF2 /* UIImage+Extension.m in Sources */,
 				8C31EFAC1DD320A300CA3CEA /* BSLeftTagNetworkTool.m in Sources */,
@@ -1336,6 +1433,7 @@
 				8C8E5A8B1DED2A7C007C370F /* BSMineCell.m in Sources */,
 				8C22258A1DE59FD500ABAD21 /* NSString+Extension.m in Sources */,
 				8C31EFBF1DD413B100CA3CEA /* BSUserGroupNetworkTool.m in Sources */,
+				8C8E5B0B1DEF7E96007C370F /* BSTitlteLeftButton.m in Sources */,
 				8C8E5AA41DED6724007C370F /* BSWebViewController.m in Sources */,
 				8C31EFC51DD41BC800CA3CEA /* UIImageView+Extension.m in Sources */,
 				8CA453311DE7E3BA00EA93DB /* BSCmtNetworkTool.m in Sources */,
@@ -1343,6 +1441,7 @@
 				8C2225971DE65C4D00ABAD21 /* BSEssenceTopCommentView.m in Sources */,
 				8C85E1301DE153CF007E53B4 /* BSEssenceResult.m in Sources */,
 				8C85E1791DE3E71E007E53B4 /* BSProgressView.m in Sources */,
+				8C8E5B541DEFC88C007C370F /* BSTagTextField.m in Sources */,
 				8CA453391DE8126C00EA93DB /* BSCommentCell.m in Sources */,
 				8C31EF9F1DD3026E00CA3CEA /* BSNetworkTool.m in Sources */,
 				8CA5E4A01DD09233001EDAF2 /* BSTabBarController.m in Sources */,
@@ -1350,6 +1449,7 @@
 				8C85E1261DE04E4A007E53B4 /* NSDate+Extension.m in Sources */,
 				8CA5E4631DD078E0001EDAF2 /* UIView+Extension.m in Sources */,
 				8C85E1331DE15407007E53B4 /* BSEssenceListModel.m in Sources */,
+				8C8E5AB51DEE26B2007C370F /* BSPlaceHolderTextView.m in Sources */,
 				8C2225901DE5D40800ABAD21 /* BSToolbarButton.m in Sources */,
 				8C2225A51DE6E2C100ABAD21 /* BSComentDetailViewController.m in Sources */,
 				8CA5E3E71DD07359001EDAF2 /* main.m in Sources */,
